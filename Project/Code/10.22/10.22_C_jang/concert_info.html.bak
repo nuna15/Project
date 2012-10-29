@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>공연 정보 페이지</title>
+	
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<!--	<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+-->
+	<script>
+	    $(function() {
+	        $( "#information" ).tabs();
+	    });
+	</script>
+</head>
+
+<body>
+<div id="information">
+
+	<ul>
+	    <li><a href="#now_concert">현재 상영작</a></li>
+	    <li><a href="#expected_concert">상영 예정작</a></li>
+	</ul>
+
+	<div id="now_concert">
+	   
+		<img src="http://www.mecenatticket.com/story/dataroom/product_img/1325052970/gi02.jpg" style="width:150px; height:190px; float:left;" hspace=5 vspace=15 />
+		<h3> 공연명 : 기막힌스캔들 </h3>
+		<p> 공연일정 : 2012년 1월 14일 ~ OPEN RUN</p>
+		<p> 관람등급 : 13세 관람가 </p>
+		<p> 출연 : 우진 역(김창호, 이종석, 이준영), 고은역(김두희, 김지혜, 김자영), ...</p>
+		<p> 줄거리 : <button class='1_1'> show </button>  <button id="hidr" class='1_1'>Hide</button>
+
+		</br>
+		<p class='1_1' style="display: none">
+
+		아내를 친정에 보내고 모델 애인과 기막힌 파티를 준비하는 양평펜션의 주인 우진.</br> 
+		오.마.이.갓! </br>
+		그러나 아내는 친정 나들이를 취소한다!! </br></br>
+		아내 몰래 바람피우는 남편, </br>
+		남편의 친구와 사랑에 빠진 아내, </br>
+		죽마고우의 부인과 사랑에 빠진 친구, </br>
+		명품과 사랑에 빠진 남편의 애인, </br>
+		그리고 돈이라면 무엇이든 다 하는 요리사까지..!! </br></br>
+		잠시도 눈을 뗼 수 없는 다섯 남녀의 기막힌 스캔들 현장. </br></br>
+		스캔들을 훔쳐보는 재미 아시죠? </br>
+		이제 대놓고 훔쳐보세요! </br>
+		<hr/>
+
+		<img src="http://www.mecenatticket.com/story/dataroom/product_img/1348116827/12.jpg" style="width:150px; height:190px; float:left;" hspace=5 vspace=15 />
+		<h3> 공연명 : 러브액츄얼리 </h3>
+		<p> 공연일정 : 2012년 5월 4일 ~ OPEN RUN</p>
+		<p> 관람등급 : 만9세 관람가 </p>
+		<p> 출연 : 이순원, 육소영, 윤홍규, 양유진, 장용석, 이은주, ... </p>
+		<p> 줄거리 : <button class='1_2'> show </button>  <button id="hidr" class='1_2'>Hide</button>
+		</br>
+		<p class='1_2' style="display: none">
+		100일 커플, 이제 사랑을 막 시작한 풋풋함이 느껴지는 커플. 아직은 함께한 시간이 많지는 않지만, 철민은 다슬에게 변치 않는 마음과 영원한 사랑을 약속한다. 다슬도 그런 철민이 너무 좋고, 마냥 설렌다. 다슬은 100일을 맞아 부모님께 사랑하는 남자친구를 소개 시켜주려고 하는데... 사랑을 하면서 가장 설레고, 두근거리는 시기인 100일. 그들이 말하는 ‘사랑’의 무게는 어떨까?</br></br>
+
+		1000일 커플, 연애 3년 차인 이 커플은 슬슬 권태기에 접어든다. 미진은 사소한 것에서 꼬투리를 잡으며, 이 모든 것은 영민이 자신에게 마음이 멀어졌기 때문이라 생각해서 온갖 짜증을 부린다. 영민은 이런 미진이 이해가 가지 않는다. 권태기인 커플의 반복되는 싸움과 화해. 이 속에서 그들은 진짜 사랑을 찾을 수 있을까? </br></br>
+
+		10년 커플, 다른 사람들은 이 커플을 보고 연인이기 보다는 부부 혹은 친구라 부른다. 그대들의 사랑은 사랑이 아닌 우정이라고. 용석의 기타 치는 모습을 보고 반한 은진. 그러나 10년 째, 기타만 치고 있는 용석. 이런 용석이 답답한 은진은 용석에게 결혼을 재촉한다. 그러나 용석은 사람 좋은 웃음으로 그 상황만을 모면하려고 하는데... 사랑 혹은 우정. 그리고 이상과 현실 사이에 서 있는 이들의 이야기. 10년 동안 지켜 온 그들의 사랑을 끝까지 지켜 낼 수 있을까?
+	</p>
+		<hr/>
+
+		<img src="http://www.mecenatticket.com/story/dataroom/product_img/1334127752/12.jpg" style="width:150px; height:190px; float:left;" hspace=5 vspace=15 />
+		<h3> 공연명 : 삼봉이발소 </h3>
+		<p> 공연일정 : 2012년 5월 2일 ~ OPEN RUN</p>
+		<p> 관람등급 : 만7세 관람가</p>
+		<p> 출연 : 양동선, 김영확, 류단, 박상현, 김상훈, 김나래, 송재연... </p>
+		<p> 줄거리 : <button class='1_3'> show </button>  <button id="hidr" class='1_3'>Hide</button>
+		</br>
+		<p class='1_3' style="display: none">
+		＂너무 불공평해. 태어날 때부터 인생의 반이 결정되어 있잖아!”</br>
+		모두가 공감하고 이해하지만 인정하고 싶지 않고 불편했던 진실‘외모지상주의’</br> 
+		외모 바이러스? 말하는 고양이? 다소 황당한 설정으로 무거운 소재를 유쾌하게 풀었다!</br></br>
+
+		장미는 못 생겨서 예쁜 짝과 항상 비교당해야 한다.</br>
+		이 때문에 큰 스트레스를 받던 장미는 어느 날 외모에 심각한 콤플렉스를 가진 사람들이 충격적인 이야기를 듣거나 자괴감에 빠져 시름시름 앓다가 작을 일으키는 ‘외모 바이러스’라는 병이 퍼진다는 소식을 듣고 두려움에 휩싸인다. </br>
+		그 때 TV에서 신비한 꽃미남 이발사 삼봉이가 커다란 가위를 들고 그들을 치료하러 다니는 모습을 보고, 삼봉이발소에서 아르바이트를 자원하는데…</br>
+
+		</p>
+		<hr/>
+	</div>
+
+	<div id="expected_concert">
+		   
+		<img src="http://www.mecenatticket.com/story/dataroom/product_img/1300244118/21.jpg" style="width:150px; height:190px; float:left;" hspace=5 vspace=15 />
+		<h3> 공연명 : 옥탑방 고양이 </h3>
+		<p> 공연일정 : 2010년 4월 6일 ~ OPEN RUN</p>
+		<p> 관람등급 : 13세 관람가 </p>
+		<p> 출연 : 박성훈, 장지우, 김지현, 이지연, 홍우정, 류지훈, 박상현... </p>
+		<p> 줄거리 : <button class='2_1'> show </button>  <button id="hidr" class='2_1'>Hide</button>
+		</br>
+		<p class='2_1' style="display: none">
+		옥탑방 하나를 두고 벌이는 레알버라이어티슈퍼울트라캡쏭짱</br>
+		미스터리액션코믹로맨스 </br></br>
+
+		작가의 부푼 꿈을 안고 서울로 상경한 경상도 엉시녀(엉뚱한 시골 여자) 정은 </br></br>
+
+		정체를 알 수 없는 미스테리 차도남(차가운 도시 남자) 경민 </br></br>
+
+		그들이 옥탑방으로 동시에 이사를 온다. </br>
+		알고보니 이!중!계!약! 집주인은 연!락!두!절!</br> 
+		옥탑방 하나를 두고 벌어지는 이들의 치열한 전투가 시작되는데~ </br>
+		과연 이들의 운명은 어떻게 될 것인가? </br></br>
+
+		게다가 옥탑방에는 말하는 고양이까지 살고 있다는데... 두둥 
+		</p>
+		<hr/>
+
+		<img src="http://www.mecenatticket.com/story/dataroom/product_img/1293000216/2.jpg" style="width:150px; height:190px; float:left;" hspace=5 vspace=15 />
+		<h3> 공연명 : 수상한 환자들 1탄 - 딱한 번만이 </h3>
+		<p> 공연일정 : 2011년 1월 1일 ~ OPEN RUN</p>
+		<p> 관람등급 : 만11세 관람가 </p>
+		<p> 출연 : 임진유, 김다영, 김정석, 김여중, 서윤하</p>
+		<p> 줄거리 : <button class='2_2'> show </button>  <button id="hidr" class='2_2'>Hide</button>
+		</br>
+		<p class='2_2' style="display: none">
+		새로 오픈한 작고 아담한 산부인과에서 병원장 `한번만`에게 찾아온 절대 평범할 수 없는 환자들로 인해 기상천외한 이야기는 웃음과 눈물로 관객의 마음을 사로잡는다.</br>
+		병원장 `한번만`은 병원에서 `고아라`와의 특별한 이벤트를 계획하였으나 임신했다 우기는 치매걸린 할머니, 조폭? 택시기사와 임신한 여고생의 등장으로 그 계획은 꼬여만 가는데...
+		</p>
+		<hr/>
+
+		<img src="http://www.mecenatticket.com/story/dataroom/product_img/1348040938/2.jpg" style="width:150px; height:190px; float:left;" hspace=5 vspace=15 />
+		<h3> 공연명 : 골 때리는 그녀 </h3>
+		<p> 공연일정 : 2012년 9월 7일 ~10월 28일</p>
+		<p> 관람등급 : 만10세 관람가 </p>
+		<p> 출연 : 류승범, 이요원, 조진웅</p>
+		<p> 줄거리 : <button class='2_3'> show </button>  <button id="hidr" class='2_3'>Hide</button>
+		</br>
+		<p class='2_3' style="display: none">
+		오래전부터 사랑고백을 준비해오던 간호사 하시은은</br>
+		고백할 타이밍을 노리며 남자 주위를 서성이고 있던 찰나에</br>
+		오랫동안 병원에 누워있던 환자 인호와 모종의 계약을 맺는다.</br>
+		하지만, 인호는 도움을 주면 줄수록 시은에게 마음을 빼앗기기 시작하는데...</br>
+		이들은 과연, 무사히 사랑을 고백할 수 있을까?
+		 </p>
+		<hr/>
+	</div>
+</div> 
+</body>
+	<script>
+    $("button.1_1").click(function () {
+    $("p.1_1").show("slow");
+    });
+    $("button.1_2").click(function () {
+    $("p.1_2").show("slow");
+    });
+    $("button.1_3").click(function () {
+    $("p.1_3").show("slow");
+    });
+    $("button.2_1").click(function () {
+    $("p.2_1").show("slow");
+    });
+    $("button.2_2").click(function () {
+    $("p.2_2").show("slow");
+    });
+    $("button.2_3").click(function () {
+    $("p.2_3").show("slow");
+    });
+    $("#hidr.1_1").click(function () {
+  	$("p.1_1").hide(1000)
+  	});
+    $("#hidr.1_2").click(function () {
+  	$("p.1_2").hide(1000);
+  	});
+    $("#hidr.1_3").click(function () {
+  	$("p.1_3").hide(1000);
+  	});
+    $("#hidr.2_1").click(function () {
+  	$("p.2_1").hide(1000);
+  	});
+    $("#hidr.2_2").click(function () {
+  	$("p.2_2").hide(1000);
+  	});
+    $("#hidr.2_3").click(function () {
+  	$("p.2_3").hide(1000);
+  	});
+    </script>
+</html>
