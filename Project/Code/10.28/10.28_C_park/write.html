@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+	<head>
+		<meta charset="utf-8">
+		<script src='jquery-1.8.2.min.js'></script>
+		<title>회원정보 작성</title>
+	</head>
+
+	<body>
+		<div id="wrap">
+			" 명지 극장에서 환영합니다! "<hr>
+			<div class="selction">
+				<form action="#">  
+					<div class="input">
+						<label for="name" class="label">이름</label>
+						<input type="text" id="name" name="name" style="width:191px">
+						<br>
+						<label for="year" class="label">생년월일</label>
+						<select name="year">
+						<option value="year">년도</option>
+						<option value="1950">1950년</option>	
+						<option value="1951">1951년</option>	
+						<option value="1952">1952년</option>	
+						<option value="1953">1953년</option>	
+						<option value="1954">1954년</option>	
+						<option value="1955">1955년</option>	
+						<option value="1956">1956년</option>	
+						<option value="1957">1957년</option>	
+						<option value="1958">1958년</option>	
+						<option value="1959">1959년</option>	
+						<option value="1960">1960년</option>	
+						<option value="1961">1961년</option>	
+						<option value="1962">1962년</option>	
+						<option value="1963">1963년</option>	
+						<option value="1964">1964년</option>	
+						<option value="1965">1965년</option>	
+						<option value="1966">1966년</option>	
+						<option value="1967">1967년</option>	
+						<option value="1968">1968년</option>	
+						<option value="1969">1969년</option>	
+						<option value="1970">1970년</option>	
+						<option value="1971">1971년</option>	
+						<option value="1972">1972년</option>	
+						<option value="1973">1973년</option>	
+						<option value="1974">1974년</option>	
+						<option value="1975">1975년</option>	
+						<option value="1976">1976년</option>	
+						<option value="1977">1977년</option>	
+						<option value="1978">1978년</option>	
+						<option value="1979">1979년</option>	
+						<option value="1980">1980년</option>	
+						<option value="1981">1981년</option>	
+						<option value="1982">1982년</option>	
+						<option value="1983">1983년</option>	
+						<option value="1984">1984년</option>	
+						<option value="1985">1985년</option>	
+						<option value="1986">1986년</option>	
+						<option value="1987">1987년</option>	
+						<option value="1988">1988년</option>	
+						<option value="1989">1989년</option>	
+						<option value="1990">1990년</option>	
+						<option value="1991">1991년</option>	
+						<option value="1992">1992년</option>	
+						<option value="1993">1993년</option>	
+						<option value="1994">1994년</option>	
+						<option value="1995">1995년</option>	
+						<option value="1996">1996년</option>	
+						<option value="1997">1997년</option>	
+						<option value="1998">1998년</option>	
+						<option value="1999">1999년</option>	
+						<option value="2000">2000년</option>	
+						</select>
+						<select name="month">
+						<option value="month">월</option>
+						<option value="1">1월</option>
+						<option value="2">2월</option>
+						<option value="3">3월</option>
+						<option value="4">4월</option>
+						<option value="5">5월</option>
+						<option value="6">6월</option>
+						<option value="7">7월</option>
+						<option value="8">8월</option>
+						<option value="9">9월</option>
+						<option value="10">10월</option>
+						<option value="11">11월</option>
+						<option value="12">12월</option>
+						</select>
+						<input type="text" id="day">
+						<br/>
+
+						<label for="성별" class="slabel">성별</label>
+						<input type="checkbox" id="sex" name="sex" title"성별 체크" value="m">남
+						<input type="checkbox" id="sex" name="sex" title"성별 체크" value="m">여
+						
+						<br/>
+						<br/>
+						<br/>
+						<div class="input">
+							
+							<legend>아이디와 비밀번호를 선택하세요.</legend><hr>
+						
+						<label for="id" class="label">아이디</label>
+						<input type="text" name="id" style="width:150px"><br/>
+						<label for="pwd" class="label">비밀번호</label>
+						<input type="password" name="pwd" style="width:133px"><br/>
+						<label for="pwdconfirm" class="label">재입력</label>
+						<input type="password" name="passwordconfirm" style="120px"><br/>
+						</div>
+						<br/>
+						<br/>
+						<br/>
+						<div class="find">
+							
+							<legned>아이디와 비밀번호 찾기를 위한 설정</legned><hr>
+							<div class="row" id="emailfield">
+								<label class="label" for="email">이메일 입력</label>
+								<div class="inputemail">
+									<input type="text" name="email" id="meail" value size="60" maxlength="60">
+								</div>
+							</div>
+								<div class="row" id="id_question">
+									<label class="label" for="question">확인 질문</label>
+									<div class="collection">
+										<select class="question" name="question">
+										<option value selected>- 선택하세요-</option>
+										<option value="어머니의 고향은?">어머니의 고향은?</option>
+										<option value="첫사랑의 이름은?">첫사랑의 이름은?</option>
+										<option value="제일 싫었던 친구는?">제일 싫었던 친구는?</option>
+										<option value="가장 좋아하는 가수는?">가장 좋아하는 가수는?</option>
+										<option value="가장 감명받은 책은?">가장 감명받은 책은?</option>
+										<option value="자신있는 노래는?">자신있는 노래는?</option>				
+										<option value="가장 좋아하는 음식은?">가장 좋아하는 음식은?</option>
+										</select>		 
+									</div>
+									<div class="row" id="id_answer">
+										<label class="label" for="answer">답변</label>
+										<div class="collection">
+											<input type="text" name="answer" id="answer" value size="60" maxlength="60">
+										</div>
+									</div>
+										<br/>
+
+
+										<input type="submit" value = "확인"/>
+                                 		<input type="submit" value = "취소"/>
+						
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+<script type="text/javascript">
+
+$(function() {
+	$("#day").val("일");
+});
+
+</script>
+
+

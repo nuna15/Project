@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+	
+	<head>
+		<meta charset="utf-8">
+		<script src='jquery-1.8.2.min.js'></script>
+		<title>로그인 페이지</title>
+	</head>
+
+	<body>
+	<div id="wrap">
+		<form action="#">
+			<table border="0">
+				<thead>
+			<tr>ID:<input type="text" name="id" id="id"><br></tr>
+			<tr>Password:<input type="password" name="password" id="pwd"><br></tr>
+				</thead>
+			 
+			<input type="button" value = "login"/>
+	 		<a href="agreement.html"><input type="button" value = "회원가입"></a>
+	 
+		</form>
+	</div>
+	</body>
+</html>
+
+<script type="text/javascript">
+
+
+
+$(function() {
+
+	$("#id").val("아이디");
+	$("#pwd").val("1234");
+
+});
+
+</script>
