@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>마이 페이지</title>
+	<link href="stylesheets/mypage.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div id="wrap"> <!--전체 크기 -->
+		<div id="header"> <!-- 이름 , 로그인 회원가입 전체를 이르는 크기-->
+			<div id="header_left"><!-- 헤더에서 이름 가르키는 크기-->
+				<img src="images/logo.jpg">
+			</div>
+			<div id="header_middle">
+				""
+			</div>	
+			<div id="header_right"><!-- 헤더에서 로그인,회원가입의 크기-->
+				<div id="header_right_top">
+					<a href="">로그인 &nbsp;</a>
+					<a href="">마이페이지 &nbsp;</a> 	 				
+					<a href="">회원가입</a> 
+				</div>
+			</div>
+		</div>
+		<div id="navbar"><!-- 공연 , 예매, 리뷰 , 멤버십 -->
+			<ul>
+				<li>
+						<a href class="selected" id="nomargin">공연</a>
+			
+				</li>
+				<li>
+					<a href>예약 </a>
+				</li>
+				<li>
+					<a href>리뷰</a>
+				</li>
+				<li>
+					<a href>멤버십</a>
+				</li>
+			</ul>
+		</div>
+		<div id"line"> <!-- navbar 와 maincontent의 사이 여백-->
+		</div>
+		<div id="content"><!-- 실직적으로 보여질 정보들-->
+			<div class="section_1" id="reserve_detail"><!--예매상세내역-->
+				    	<h1>&lt; MY PAGE &gt;</h1><br/><br/>
+				    	<div id="modify">
+       					<center><form class="well" action="_" method="post">
+				    	<h2>- 회원정보 수정 -</h2>
+				    		<table align="center" class="modi">
+				    			<tr>
+				    				<th>* ID</th>
+				    				<td>
+                                	<text readonly class="read">wkdrbtjdid</text>
+				    				</td>
+				    			</tr>
+				    			<tr>
+				    				<th>* Password</th>
+				    				<td>
+				    				<input type="password" name="PW" maxlength="10"/>
+				    				</td>
+				    			</tr>
+				    			<tr>
+				    				<th>* Password 확인</th>
+				    				<td>
+				    				<input type="password" name="PWcheck" maxlength="10"/>
+				    				</td>
+				    			</tr>
+				    			<tr>
+				    				<th>* 이름</th>
+				    				<td>
+                                	<text readonly class="read">홍길동</text>
+				    				</td>
+				    			</tr>	
+				    			<tr>
+				    				<th>* 주민등록 번호</th>
+				    				<td>
+                                	<text readonly class="read">951423 - *******</text>
+				    				</td>
+				    			</tr>	    		
+				    			<tr>
+				    				<th>* facebook 아이디&nbsp;</th>
+				    				<td>
+				    				<input type="text" name="FACEBOOKID" maxlength="30"/>
+				    				</td>
+				    			</tr>
+				    		</table>
+				    			<div class="submit">
+				    			<input type="submit" value="수정하기"/>
+				    			<input type="reset" value="취소"/>
+				    		</div>
+				    	</form></center>
+				    </div>
+
+
+
+<!-- 마이페이지 퀵메뉴 -->
+			<div>
+			<table>
+			<tr>
+				<td><A HREF="#"><img src="http://www.styleman.kr/web/qa/mypage_02.gif" width="190px" ></A></td>
+				<td><A HREF="#"><img src="http://www.styleman.kr/web/qa/mypage_03.gif" width="190px"></A></td>
+				<td><A HREF="#"><img src="http://www.styleman.kr/web/qa/mypage_04.gif" width="190px"></A></td>
+				<td><A HREF="#"><img src="http://www.styleman.kr/web/qa/mypage_07.gif" width="190px"></A></td>
+			</tr>
+			</table>
+			</div>
+
+        	</div>
+        </div>
+
+		<div id="footer"><!-- 하위 항목-->
+			<p>사이트소개 | 이용약관 | 개인정보취급방침 | 제휴문의 | 법적고지 | 고객센터 </p>
+			<p>
+					Copyright  © mjuProject. All rights reserved.
+			</p>
+		</div>
+	</div>
+</html>
