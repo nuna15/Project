@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>사이즈 잡기</title>
+	<link href="stylesheets/mainpage.css" rel="stylesheet" type="text/css">
+	<script src="slide/js/jquery-1.3.1.min.js"></script>
+	<script src="slide/js/jquery.easing.1.3.js"></script> 
+
+</head>
+<body>
+	<div id="wrap"> <!--전체 크기 -->
+		<div id="header"> <!-- 이름 , 로그인 회원가입 전체를 이르는 크기-->
+			<div id="header_left"><!-- 헤더에서 이름 가르키는 크기-->
+				<img src="images/logo.jpg">
+			</div>
+			<div id="header_middle">
+				""
+			</div>	
+			<div id="header_right"><!-- 헤더에서 로그인,회원가입의 크기-->
+				<div id="header_right_top">
+					<a href="">로그인 &nbsp;</a> 				
+					<a href="">회원가입</a> 
+				</div>
+			</div>
+		</div>
+		<div id="navbar"><!-- 공연 , 예매, 리뷰 , 멤버십 -->
+			<ul>
+				<li>
+				
+						<a href class="selected" id="nomargin">공연</a>
+			
+				</li>
+				<li>
+					<a href>예약 </a>
+				</li>
+				<li>
+					<a href>리뷰</a>
+				</li>
+				<li>
+					<a href>멤버십</a>
+				</li>
+			</ul>
+		</div>
+		<div id"line"> <!-- navbar 와 maincontent의 사이 여백-->
+		</div>
+		<div id="content"><!-- 실직적으로 보여질 정보들-->
+				<div class="section_1" id="concert"><!--예매상세내역-->
+					<h1> 공연정보 </h1>
+					<div class='slide'>
+					<div class='qitem'>
+						<a href="#"><img src="slide/1.jpg" alt="Test 1" width="126" height="126"/></a>
+						<span class="caption">
+						<h4>광해</h4>
+						<p>예매율 : 13.9% </p>
+						<p>배우 : 이병헌, 한효주 </p>
+						<p>상영시간 : 131분</p>
+						<p>개봉일2012.09.13</p>
+						</span>
+					</div>
+
+					<div class='qitem'>
+						<a href="#"><img src="slide/2.jpg" alt="Test 1" width="126" height="126"/></a>
+						<span class="caption">
+						<h4>007 스카이폴</h4>
+						<p>예매율 : 13.9% </p>
+						<p>배우 : 이병헌, 한효주 </p>
+						<p>상영시간 : 131분</p>
+						<p>개봉일2012.09.13</p>
+						</span>
+					</div>
+
+					<div class='clear'></div>
+
+					<div class='qitem'>
+						<a href="#"><img src="slide/3.jpg" alt="Test 1"  width="126" height="126"/></a>
+						<span class="caption">
+						<h4>아르고</h4>
+						<p>예매율 : 13.9% </p>
+						<p>배우 : 이병헌, 한효주 </p>
+						<p>상영시간 : 131분</p>
+						<p>개봉일2012.09.13</p>
+						</span>
+					</div>
+
+					<div class='qitem'>
+					<a href="#"><img src="slide/4.jpg" alt="Test 1" width="126" height="126"/></a>
+					<span class="caption">
+					<h4>용의자X</h4>
+					<p>예매율 : 13.9% </p>
+					<p>배우 : 이병헌, 한효주 </p>
+					<p>상영시간 : 131분</p>
+					<p>개봉일2012.09.13</p>
+					</span>
+					</div>
+				</div>
+				</div>
+
+				<div class="section_2" id="reserve"><!--결제내역-->
+					<h1> 예매 </h1>
+					<ul>
+						<li>
+						영화예매 <a href="#"><button onclick="location.href('#')">예매하러가기</button></a><br/>
+						<p class='box'>
+						사이트 상단의 예매하기 메뉴를 누르시거나 본 내용 상단의 예매하기를 누르시면 인터넷 예매가 가능합니다.
+						</p>
+						</li>
+						<li>
+						예매 가능 시간
+						<br/>
+						<p class='box'>
+						인터넷으로 예매가 가능한 시간은 해당 공연 상영 1시간 전까지 이며 이후 예매를 원하실 경우에는 영화관 현장에 직접 가셔서 예매를 하셔야합니다.
+						</p>
+						</li>
+						<li>
+						예매확인/취소 <a href="#"><button onclick="location.href('#')">예매확인/취소</button></a><br/>
+						<p class='box'>
+						- 예매 취소 및 환불 가능 시간은 해당 공영 상영 20분 전까지입니다.<br/>
+						- 관람권으로 교환한 입장권은 현금환불 및 취소가 되지 않습니다.
+						</p>
+						</li>
+					</ul>
+				</div>
+
+				<div class="section_3" id="review"><!--예매 취소-->
+					<h1> 리뷰 </h1>
+					<a href="#">
+					<p class="review_detail">
+						<img title="용의자X" src="http://image.maxmovie.com/movieinfo/image/poster/movie/Max2012suspectxkr_ver3.jpg" width="60px">
+						[기자] 원작 본연의 재미 위에 진한 감성을 더하다[네티즌] &lt;용의자X&gt; 류승범의 연기와 원작의 힘![네티즌] 한 여자를 진심으로 사랑한 한 남자의 이야기[네티즌] 한 여자를 진심으로 사랑한 한 관객평점8.82 
+					</p>
+					</a>
+					<hr/>
+					<a href="#">
+					<p class="review_detail">
+						<img title="용의자X" src="http://image.maxmovie.com/movieinfo/image/poster/movie/Max2012argo_ver2.jpg" width="60px">
+				
+						[기자] 원작 본연의 재미 위에 진한 감성을 더하다[네티즌] &lt;용의자X&gt; 류승범의 연기와 원작의 힘![네티즌] 한 여자를 진심으로 사랑한 한 남자의 이야기[네티즌] 한 여자를 진심으로 사랑한 한 관객평점8.82
+					</p>
+					</a>
+					<hr/>
+					<a href="#">
+					<p class="review_detail">
+						<img title="용의자X" src="http://image.maxmovie.com/movieinfo/image/poster/movie/Maxchosunking_ver2.jpg" width="60px">
+
+						[기자] 원작 본연의 재미 위에 진한 감성을 더하다[네티즌] &lt;용의자X&gt; 류승범의 연기와 원작의 힘![네티즌] 한 여자를 진심으로 사랑한 한 남자의 이야기[네티즌] 한 여자를 진심으로 사랑한 한 
+						관객평점8.82
+					</p>
+					</a>
+				</div>
+	
+				<div class="section_4" id="membership"><!--예매 취소-->
+					<h1> 멤버십 </h1>
+					<a href="#">		
+					<img src="http://img.cgv.co.kr/images/user/vip/new_vip/vip_main_img.jpg" height="80px"><br/><br/>
+					<img src="http://postfiles4.naver.net/20121101_243/exteria_1351705509889lbuBR_JPEG/vip.jpg?type=w3" height="120px">
+					<img src="http://postfiles12.naver.net/20121101_283/exteria_1351705509781vBdGm_JPEG/platinum.jpg?type=w3" height="90px">
+					<img src="http://postfiles14.naver.net/20121101_221/exteria_1351705509476d4AnB_JPEG/gold.jpg?type=w3" height="90px">
+					</a>
+				</div>
+		</div>
+		<div id="footer"><!-- 하위 항목-->
+			<p>사이트소개 | 이용약관 | 개인정보취급방침 | 제휴문의 | 법적고지 | 고객센터 </p>
+			<p>
+					Copyright  © mjuProject. All rights reserved.
+			</p>
+		</div>
+	</div>
+</html>
+
+<script>
+
+$(document).ready(function() {
+
+	//Custom settings
+	var style_in = 'easeOutBounce';
+	var style_out = 'jswing';
+	var speed_in = 1000;
+	var speed_out = 300;	
+
+	//Calculation for corners
+	var neg = Math.round($('.qitem').width() / 2) * (-1);	
+	var pos = neg * (-1);	
+	var out = pos * 2;
+	
+	$('.qitem').each(function () {
+	
+		url = $(this).find('a').attr('href');
+		img = $(this).find('img').attr('src');
+		alt = $(this).find('img').attr('img');
+		
+		$('img', this).remove();
+		$(this).append('<div class="topLeft"></div><div class="topRight"></div><div class="bottomLeft"></div><div class="bottomRight"></div>');
+		$(this).children('div').css('background-image','url('+ img + ')');
+
+		$(this).find('div.topLeft').css({top:0, left:0, width:pos , height:pos});	
+		$(this).find('div.topRight').css({top:0, left:pos, width:pos , height:pos});	
+		$(this).find('div.bottomLeft').css({bottom:0, left:0, width:pos , height:pos});	
+		$(this).find('div.bottomRight').css({bottom:0, left:pos, width:pos , height:pos});	
+
+	}).hover(function () {
+	
+		$(this).find('div.topLeft').stop(false, true).animate({top:neg, left:neg}, {duration:speed_out, easing:style_out});	
+		$(this).find('div.topRight').stop(false, true).animate({top:neg, left:out}, {duration:speed_out, easing:style_out});	
+		$(this).find('div.bottomLeft').stop(false, true).animate({bottom:neg, left:neg}, {duration:speed_out, easing:style_out});	
+		$(this).find('div.bottomRight').stop(false, true).animate({bottom:neg, left:out}, {duration:speed_out, easing:style_out});	
+				
+	},
+	
+	function () {
+
+		$(this).find('div.topLeft').stop(false, true).animate({top:0, left:0}, {duration:speed_in, easing:style_in});	
+		$(this).find('div.topRight').stop(false, true).animate({top:0, left:pos}, {duration:speed_in, easing:style_in});	
+		$(this).find('div.bottomLeft').stop(false, true).animate({bottom:0, left:0}, {duration:speed_in, easing:style_in});	
+		$(this).find('div.bottomRight').stop(false, true).animate({bottom:0, left:pos}, {duration:speed_in, easing:style_in});	
+	
+	}).click (function () {
+		window.location = $(this).find('a').attr('href');	
+	});
+	
+	
+
+});
+
+</script>
