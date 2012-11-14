@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+
+table.datatable {
+	text-align: center;
+	background-color: #AC2727;
+	border-style: double;
+	border-width: 1px;
+	border-top: 1px double #E5E5E5;
+	border-left: 1px double #E5E5E5;
+	border-bottom: 1px double #E5E5E5;
+	border-right: 1px double #E5E5E5;
+	width: 800 px;
+}
+
+#concert {
+	width: 800px;
+	padding-top: 50px;
+	margin: 0 auto;
+	border: 1px solid #B0B0B0;
+	text-align: center;
+}
