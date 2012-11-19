@@ -1,0 +1,90 @@
+
+li{list-style:none;}
+
+#content a { color:#000;}
+#content a:hover { text-decoration: underline;}
+
+
+#content{
+	width:960px;
+}
+
+#content div#reviewlist{
+	width:820px;
+	height:auto;
+	margin-top:20px;
+	margin-bottom:20px;
+	margin-left:69px;
+	border: 1px solid #d7e9f9;
+	border-radius: 5px;
+	float:bottom;
+}
+#content div.section_3 li{
+	margin-left:40px; display: block; width: 800px; height:200px; text-align: left; margin-right: 20px; margin-top: 20px;
+}
+#content div.section_3 img{
+	margin-right:20px; float:left;
+}
+
+.paging{
+    text-align:center;
+    line-height:1.3em;
+    margin-bottom: 10px;
+}
+.paging a,
+.paging strong{
+	color:#888;
+    padding:2px 15px;
+    border:1px solid #CCC;
+    display:inline-block;
+}
+.paging a:hover,
+.paging strong{
+    color:#000;
+    border:1px solid #666;
+    background:#F0F0F0;
+}
+
+p.title{ text-align: center; font-weight: bold; font-size: 25px; margin: 40px;}
+p.subtitle { font-size: 18px; margin :20px; font-weight: bold;}
+p.minititle { font-size:15px; font-weight: bold; margin-bottom: 15px;}
+
+/* 게시판 css */
+#board {width:600px;  
+		height:auto;
+			border-color:#288;
+			border-width:2px;
+			border-top-style:solid;
+			border-bottom-style:solid;
+			margin-top:15px;
+			padding:0;
+			float: left;
+
+}
+
+div.row{	border-color:#ccc;
+				
+					border-width:1px;
+					border-top-style:solid;
+					border-bottom-style:solid;
+					overflow:auto;
+}
+
+div.number{	width:80px; 						
+					text-align:center;
+					float:left;
+					font-weight: bold;
+}
+
+div.title{	 width:400px; 
+				float:left; 
+}
+
+#title_bar div.title{
+			text-align:center;
+}
+
+div.regid{width:100px; 
+				text-align:center; 
+				float:left;
+}
