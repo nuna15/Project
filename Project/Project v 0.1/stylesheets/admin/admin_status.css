@@ -1,0 +1,22 @@
+#content {
+	height:500px;
+}
+
+
+.sheet {
+	margin-left: 200px;
+	margin-right: 200px;		
+	width:560px;
+	text-align: center;
+	border: 1px solid #000;
+}
+
+.data {
+ 	font-weight: bold;
+	height:30px;
+}
+
+.number {
+	
+	height:60px;
+}

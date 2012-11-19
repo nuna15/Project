@@ -1,0 +1,27 @@
+#content {
+	height:500px;
+}
+
+.name {
+	width:350px;
+	height: 40px;
+	margin-top:px;
+	margin-left:260px;
+	margin-right:40px;
+	float: center;
+	font-size:20px;
+	text-align: center;
+	font-weight: bold;
+
+}
+
+#reserve {
+	width:825px;
+	height:300px;
+	margin-top:20px;
+	margin-bottom:20px;
+	margin-left:69px;
+	border: 1px solid #d7e9f9;
+	border-radius: 5px;
+	float:bottom;	
+}
