@@ -1,0 +1,20 @@
+#content img {width: 250px; height:300px; }
+#content div#reserve{
+	width:825px;
+	margin-bottom:20px;
+	margin-left:40px;
+	float:bottom;
+
+}
+#content div#ticket_detail{
+	width:825px;
+	margin-bottom:20px;
+	margin-left:40px;
+	float:bottom;
+    color:#FF0000;
+
+}
+.submit {height:30px; margin: 0 0 12px 10px;}
+#content div.section_2 .method{
+	font-weight: bold;
+}

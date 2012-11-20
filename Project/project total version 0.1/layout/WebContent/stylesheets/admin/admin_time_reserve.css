@@ -1,0 +1,31 @@
+.section_1_left{
+	width:400px;
+	margin-top:10px;
+	margin-left:30px;
+	height:200px;
+	float:left;
+	text-align: center;
+	border: 1px solid #d7e9f9;
+	border-radius: 5px;
+
+}
+
+.section_1_right{
+	width:400px;
+	margin-top:10px;
+	margin-right:65px;
+	height:200px;
+	float: right;
+	border: 1px solid #d7e9f9;
+	border-radius: 5px;
+}
+	
+#concert3 {
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+#concert4 {
+	margin-top:20px;
+	margin-bottom:20px;
+}
