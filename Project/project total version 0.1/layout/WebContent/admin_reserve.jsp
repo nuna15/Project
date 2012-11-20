@@ -8,7 +8,7 @@
 <link
 	href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css"
 	rel="stylesheet">
-<link href="stylesheets/mainpage_Layout.css" rel="stylesheet"
+<link href="stylesheets/Mainpage_Layout.css" rel="stylesheet"
 	type="text/css">
 <link href="stylesheets/admin/admin_reserve.css" rel="stylesheet"
 	type="text/css">
