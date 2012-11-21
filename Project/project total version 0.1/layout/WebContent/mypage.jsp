@@ -106,10 +106,10 @@ li:first-child a {
 			<div class="navbar-inner">
 				<div class="container">
 					<ul class="nav">
-						<li><a href>공연</a></li>
-						<li><a href>예약 </a></li>
-						<li><a href>리뷰</a></li>
-						<li><a href>멤버십</a></li>
+						<li><a href="informationsize.jsp">공연</a></li>
+						<li><a href="reservesize.jsp">예약 </a></li>
+						<li><a href="review.jsp">리뷰</a></li>
+						<li><a href="membership_bootstrap.jsp">멤버십</a></li>
 					</ul>
 				</div>
 			</div>

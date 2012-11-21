@@ -99,10 +99,10 @@ li:first-child a {
 			<div class="navbar-inner">
 				<div class="container">
 					<ul class="nav">
-						<li class="active"><a href="information.html">공연</a></li>
-						<li><a href="reserve.html">예약 </a></li>
-						<li><a href="review.html">리뷰</a></li>
-						<li><a href="membership.html">멤버십</a></li>
+						<li class="active"><a href="information.jsp">공연</a></li>
+						<li><a href="reserve.jsp">예약 </a></li>
+						<li><a href="review.jsp">리뷰</a></li>
+						<li><a href="membership.jsp">멤버십</a></li>
 					</ul>
 				</div>
 			</div>
