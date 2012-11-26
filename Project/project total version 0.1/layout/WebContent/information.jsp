@@ -118,7 +118,7 @@ li:first-child a {
 			<!-- 이름 , 로그인 회원가입 전체를 이르는 크기-->
 			<div id="header_left">
 				<!-- 헤더에서 이름 가르키는 크기-->
-				<img src="images/logo.jpg">
+				<a href="mainpage.jsp"><img src="images/logo.jpg"></a>
 			</div>
 			<div id="header_middle">""</div>
 			<div id="header_right">

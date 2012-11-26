@@ -86,7 +86,7 @@ li:first-child a {
 			<!-- 이름 , 로그인 회원가입 전체를 이르는 크기-->
 			<div id="header_left">
 				<!-- 헤더에서 이름 가르키는 크기-->
-				<img src="images/logo.jpg">
+				<a href="mainpage.jsp"><img src="images/logo.jpg"></a>
 			</div>
 			<div id="header_middle">""</div>
 			<div id="header_right">
@@ -101,10 +101,10 @@ li:first-child a {
 			<div class="navbar-inner">
 				<div class="container">
 					<ul class="nav">				
-						<li><a href="informationsize.jsp">공연</a></li>
-						<li><a href="reservesize.jsp">예약 </a></li>
+						<li><a href="information.jsp">공연</a></li>
+						<li><a href="reserve.jsp">예약 </a></li>
 						<li><a href="review.jsp">리뷰</a></li>
-						<li><a href="membership_bootstrap.jsp">멤버십</a></li>
+						<li><a href="membership.jsp">멤버십</a></li>
 					</ul>
 				</div>
 			</div>

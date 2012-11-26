@@ -1,18 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>마이페이지 정보수정</title>
-
+<title>로그인 페이지</title>
 <link
 	href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css"
 	rel="stylesheet">
 <link href="stylesheets/Mainpage_Layout.css" rel="stylesheet"
 	type="text/css">
-<link href="stylesheets/mypage/mypage_modify.css" rel="stylesheet"
+<link href="stylesheets/login/login.css" rel="stylesheet"
 	type="text/css">
+
 <style type="text/css">
 body {
 	padding-top: 20px;
@@ -59,8 +60,7 @@ li:first-child a {
 	border-radius: 0 3px 3px 0;
 }
 </style>
-<script
-	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/jquery.js"></script>
+
 <script
 	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap-transition.js"></script>
 <script
@@ -85,9 +85,9 @@ li:first-child a {
 	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap-carousel.js"></script>
 <script
 	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap-typeahead.js"></script>
+
 </head>
 <body>
-
 	<div id="wrap">
 		<!--전체 크기 -->
 
@@ -119,59 +119,30 @@ li:first-child a {
 			</div>
 		</div>
 		<div id="content">
-			<!-- 실직적으로 보여질 정보들-->
 			<div class="section_1" id="reserve_detail">
 				<!--예매상세내역-->
-				<h1>&lt; MY PAGE &gt;</h1>
-				<br />
-				<br />
-				<div id="modify">
-					<center>
-						<form class="well" action="_" method="post">
-							<h2>- 회원정보 수정 -</h2>
-							<table align="center" class="modi">
-								<tr>
-									<th>* ID</th>
-									<td><text readonly class="read">wkdrbtjdid</text></td>
-								</tr>
-								<tr>
-									<th>* Password</th>
-									<td><input type="password" name="PW" maxlength="10" /></td>
-								</tr>
-								<tr>
-									<th>* Password 확인</th>
-									<td><input type="password" name="PWcheck" maxlength="10" />
-									</td>
-								</tr>
-								<tr>
-									<th>* 이름</th>
-									<td><text readonly class="read">홍길동</text></td>
-								</tr>
-								<tr>
-									<th>* 주민등록 번호</th>
-									<td><text readonly class="read">951423 - *******</text></td>
-								</tr>
-								<tr>
-									<th>* facebook 아이디&nbsp;</th>
-									<td><input type="text" name="FACEBOOKID" maxlength="30" />
-									</td>
-								</tr>
-							</table>
-							<div class="submit">
-								<input type="submit" value="수정하기" /> <input type="reset"
-									value="취소" />
-							</div>
-						</form>
-					</center>
+				<div class="container">
+					<form class="well" action="_" method="post">
+						<p class="label">로그인</p>
+						<br />
+						<br /> <label>Email</label> <input type="text" class="span3"
+							placeholder="Your email here" name="email"> <br /> <label>Password</label>
+						<input type="password" class="span3" name="password"><br />
+						<input type="checkbox" class="check"> ID 저장 <br />
+						<button type="submit" class="btn">로그인</button>
+						<button type="button" class="btn">회원가입</button>
+						<button type="button" class="btn">아이디/비밀번호 찾기</button>
+					</form>
 				</div>
+
 			</div>
 		</div>
-
 
 		<div id="footer">
 			<!-- 하위 항목-->
 			<p>사이트소개 | 이용약관 | 개인정보취급방침 | 제휴문의 | 법적고지 | 고객센터</p>
 			<p>Copyright © mjuProject. All rights reserved.</p>
 		</div>
+</div>
 </body>
 </html>
