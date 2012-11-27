@@ -1,0 +1,46 @@
+#content h1 { font-size: 24px; font-weight: bold; text-align: center; margin-top: 20px;}
+#content h2 { font-size: 14px; font-weight: bold; text-align: center; margin-bottom: 20px;}
+#content h3 { font-size: 11px; font-weight: bold; text-align: center; margin-bottom: 10px;}
+#content tr, td {padding-left: 10px;}
+.section_1{
+	clear: both;
+	height: auto;
+	overflow: auto
+	
+}
+
+#content div#reserve_detail{
+	width:820px;
+	margin-top:20px;
+	margin-bottom:20px;
+	margin-left:69px;
+	border: 1px solid #d7e9f9;
+	border-radius: 5px;s
+	float:bottom;
+}
+#content table {
+    line-height: 35px;
+}
+
+#content th {
+    line-height: 35px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #F7F7F7;
+}
+.submit {
+    text-align: center; margin-top: 20px;
+}
+.read {
+    font-weight: bold;
+    text-align: left;
+}
+#modify {
+    vertical-align: center;
+}
+ul h2 {
+    margin: 20px;
+}
+.quick {
+    margin-top: 20px;
+}
