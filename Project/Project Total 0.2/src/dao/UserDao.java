@@ -115,7 +115,6 @@ public class UserDao {
 					.prepareStatement("select * from user where userid = ?");
 			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
-
 			if (rs.next()) {
 				member = new UserDataBean();
 				member.setUserid(rs.getString("userid"));

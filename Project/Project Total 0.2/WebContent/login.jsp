@@ -125,7 +125,7 @@ li:first-child a {
 					<form class="well" action="UserManageController" method="post">
 						<p class="label">로그인</p>
 						<br /> <br /> <label>Email</label> <input type="text"
-							class="span3" placeholder="Your email here" name="email">
+							class="span3" placeholder="Your email here" name="userid">
 						<br /> <label>Password</label> <input type="password"
 							class="span3" name="password"><br /> <input
 							type="checkbox" class="check"> ID 저장 <br />

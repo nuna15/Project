@@ -9,6 +9,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.apache.catalina.Session;
 
 import Constants.Constants;
 import dao.UserDao;
@@ -81,52 +84,31 @@ public class UserManageController extends HttpServlet {
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("on Post");
-		System.out.println("Total0.2");
-		boolean flag;
-		String actionUrl;
-		String msg;
-		String op = request.getParameter("op");
-		String id = request.getParameter("userid");
-
-		UserDataBean user = new UserDataBean();
-
 		request.setCharacterEncoding("utf-8");
-
-		if (request.getSession().getAttribute("id") != null) {
-			// 세션 검사 확실치 않음 재검토 필요
-			String userid = request.getParameter("userid");
-			String password = request.getParameter("password");
-			String passwordConfirm = request.getParameter("passwordConfirm");
-			String name = request.getParameter("name");
-			String facebookid = request.getParameter("facebook");
-		}
-		Vector<String> errorMsg = new Vector<String>();
-
-		// if(op.equals("update"){
-		// pushUpdate(request, response, id);
-		// }else if(op.equals("request")){
-		//
-		// }
-
-		if (op.equals("login")) {
-			pushLogin(request, response, id);
-		}
+		pushLogin(request, response);
+		response.sendRedirect("http://localhost:8080/Project_Total_0.2/mypage.jsp");
 	}
 
 	private void pushLogin(HttpServletRequest request,
-			HttpServletResponse response, String id) {
+			HttpServletResponse response) {
 		// TODO Auto-generated method stub
-		try {
-			UserDataBean user;
-			user = UserDao.getInstance().getMember(id);
 
-			request.setAttribute("user", user);
-			// request.setAttribute("reservation", reservation);
-			// request.setAttribute("review", review);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		if (loginConfirm(request, response)) {
+			try {
+				UserDataBean user;
+				user = UserDao.getInstance().getMember(
+						(String) request.getParameter("userid"));
+				HttpSession session = request.getSession();
+				session.setAttribute("userid", user.getUserid());
+				// RequestDispatcher dispatcher = getServletContext()
+				// .getRequestDispatcher("/mainpage.jsp");
+				// dispatcher.forward(request, response);
+				System.out.println("success");
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else {
+			System.out.println("Login no confirm");
 		}
 	}
 
@@ -154,6 +136,7 @@ public class UserManageController extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 	}
 
 	private void pushModify(HttpServletRequest request,
@@ -201,4 +184,18 @@ public class UserManageController extends HttpServlet {
 		}
 	}
 
+	private boolean loginConfirm(HttpServletRequest request,
+			HttpServletResponse response) {
+		if (request.getParameter("userid") != null
+				&& request.getParameter("password") != null) {
+//			try {
+//				UserDao.getInstance().confirmId(request.getParameter("userid"));
+//			} catch (Exception e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+			return true;
+		}
+		return false;
+	}
 }
