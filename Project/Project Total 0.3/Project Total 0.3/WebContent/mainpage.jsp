@@ -128,7 +128,7 @@ li:first-child a {
 			<div id="header_right">
 				<!-- 헤더에서 로그인,회원가입의 크기-->
 				<div id="header_right_top">
-					<a href="">로그인 &nbsp;</a> <a href="">회원가입</a>
+					<a href="login.jsp">로그인 &nbsp;</a> <a href="register.jsp">회원가입</a>
 				</div>
 			</div>
 		</div>
@@ -151,7 +151,7 @@ li:first-child a {
 				<h1>공연정보</h1>
 				<div class='slide'>
 					<div class='qitem'>
-						<a href="#"><img src="slide/1.jpg" alt="Test 1" width="126"
+						<a href="information.jsp"><img src="slide/1.jpg" alt="Test 1" width="126"
 							height="126" /></a> <span class="caption">
 							<h4>광해</h4>
 							<p>예매율 : 13.9%</p>
@@ -161,7 +161,7 @@ li:first-child a {
 						</span>
 					</div>
 					<div class='qitem'>
-						<a href="#"><img src="slide/2.jpg" alt="Test 1" width="126"
+						<a href="information.jsp"><img src="slide/2.jpg" alt="Test 1" width="126"
 							height="126" /></a> <span class="caption">
 							<h4>007 스카이폴</h4>
 							<p>예매율 : 13.9%</p>
@@ -172,7 +172,7 @@ li:first-child a {
 					</div>
 					<div class='clear'></div>
 					<div class='qitem'>
-						<a href="#"><img src="slide/3.jpg" alt="Test 1" width="126"
+						<a href="information.jsp"><img src="slide/3.jpg" alt="Test 1" width="126"
 							height="126" /></a> <span class="caption">
 							<h4>아르고</h4>
 							<p>예매율 : 13.9%</p>
@@ -182,7 +182,7 @@ li:first-child a {
 						</span>
 					</div>
 					<div class='qitem'>
-						<a href="#"><img src="slide/4.jpg" alt="Test 1" width="126"
+						<a href="information.jsp"><img src="slide/4.jpg" alt="Test 1" width="126"
 							height="126" /></a> <span class="caption">
 							<h4>용의자X</h4>
 							<p>예매율 : 13.9%</p>
@@ -197,7 +197,7 @@ li:first-child a {
 			<div class="section_2" id="reserve">
 				<h1>예매</h1>
 				<ul>
-					<li>영화예매 <a href="#"><button onclick="location.href('#')">예매하러가기</button></a><br />
+					<li>영화예매 <a href="reserve.jsp"><button onclick="location.href('#')">예매하러가기</button></a><br />
 						<p class='box'>사이트 상단의 예매하기 메뉴를 누르시거나 본 내용 상단의 예매하기를 누르시면 인터넷
 							예매가 가능합니다.</p>
 					</li>
@@ -205,7 +205,7 @@ li:first-child a {
 						<p class='box'>인터넷으로 예매가 가능한 시간은 해당 공연 상영 1시간 전까지 이며 이후 예매를
 							원하실 경우에는 영화관 현장에 직접 가셔서 예매를 하셔야합니다.</p>
 					</li>
-					<li>예매확인/취소 <a href="#"><button
+					<li>예매확인/취소 <a href="mypage_orderlist.jsp"><button
 								onclick="location.href('#')">예매확인/취소</button></a><br />
 						<p class='box'>
 							- 예매 취소 및 환불 가능 시간은 해당 공영 상영 20분 전까지입니다.<br /> - 관람권으로 교환한 입장권은
@@ -218,7 +218,7 @@ li:first-child a {
 			<div class="section_3" id="review">
 				<h1>리뷰</h1>
 
-				<a href="#">
+				<a href="review_detail01.jsp">
 					<p class="review_detail">
 						<img title="용의자X"
 							src="http://image.maxmovie.com/movieinfo/image/poster/movie/Max2012suspectxkr_ver3.jpg"
@@ -229,7 +229,7 @@ li:first-child a {
 				</a>
 				<hr />
 
-				<a href="#">
+				<a href="review_detail02.jsp">
 					<p class="review_detail">
 						<img title="용의자X"
 							src="http://image.maxmovie.com/movieinfo/image/poster/movie/Max2012argo_ver2.jpg"
@@ -240,7 +240,7 @@ li:first-child a {
 				</a>
 				<hr />
 
-				<a href="#">
+				<a href="review_detail03.jsp">
 					<p class="review_detail">
 						<img title="용의자X"
 							src="http://image.maxmovie.com/movieinfo/image/poster/movie/Maxchosunking_ver2.jpg"
@@ -253,7 +253,7 @@ li:first-child a {
 
 			<div class="section_4" id="membership">
 				<h1>멤버십</h1>
-				<a href="#"> <img src="images/vip_main_img.gif"><br /> <br />
+				<a href="membership.jsp"> <img src="images/vip_main_img.gif"><br /> <br />
 					<img src="images/platinum.jpg"> <img src="images/vip.jpg">
 					<img src="images/gold.jpg">
 				</a>

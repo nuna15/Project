@@ -132,7 +132,7 @@ li:first-child a {
 							<br /> 사진 첨부 : <input type="file" name="reviewPicture"></input>
 						</div>
 						<div class="bottom">
-							<input type="submit" value="문의하기">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="submit" value="글쓰기">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							<input type="submit" value="취소">
 						</div>
 					</form>

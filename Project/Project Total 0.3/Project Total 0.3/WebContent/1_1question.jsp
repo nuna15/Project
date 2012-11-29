@@ -100,7 +100,7 @@ li:first-child a {
 			<div id="header_right">
 				<!-- 헤더에서 로그인,회원가입의 크기-->
 				<div id="header_right_top">
-					<a href="">로그인 &nbsp;</a> <a href="">회원가입</a>
+					<a href="login.jsp">로그인 &nbsp;</a> <a href="register.jsp">회원가입</a>
 				</div>
 			</div>
 		</div>
@@ -120,10 +120,10 @@ li:first-child a {
 		<div class="contenet">
 			<div class="up_section_1">
 				<div class="left_up_section_1">
-					<a href="FAQ.html">FAQ</a>
+					<a href="FAQ.jsp">FAQ</a>
 				</div>
 				<div class="right_up_section_1">
-					<a href="oneonone.html">1:1문의</a>
+					<a href="1_1question.jsp">1:1문의</a>
 				</div>
 			</div>
 			<div class="down_section_1">

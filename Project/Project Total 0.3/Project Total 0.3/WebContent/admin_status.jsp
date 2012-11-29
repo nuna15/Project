@@ -73,7 +73,7 @@ li:first-child a {
 			<div id="header_right">
 				<!-- 헤더에서 로그인,회원가입의 크기-->
 				<div id="header_right_top">
-					<a href="">로그인 &nbsp;</a> <a href="">회원가입</a>
+					<a href="mypage.jsp">마이페이지 &nbsp;</a> <a href="login.jsp">로그아웃</a>
 				</div>
 			</div>
 		</div>

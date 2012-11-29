@@ -100,7 +100,7 @@ li:first-child a {
 			<div id="header_right">
 				<!-- 헤더에서 로그인,회원가입의 크기-->
 				<div id="header_right_top">
-					<a href="">로그인 &nbsp;</a> <a href="">회원가입</a>
+				<a href="login.jsp">로그인 &nbsp;</a> <a href="register.jsp">회원가입</a>
 				</div>
 			</div>
 		</div>
@@ -111,7 +111,7 @@ li:first-child a {
 					<ul class="nav">
 						<li><a href="information.jsp">공연</a></li>
 						<li><a href="reserve.jsp">예약 </a></li>
-						<li><a href="review.jsp">리뷰</a></li>
+						<li class="active"><a href="review.jsp">리뷰</a></li>
 						<li><a href="membership.jsp">멤버십</a></li>
 					</ul>
 				</div>
@@ -122,7 +122,7 @@ li:first-child a {
 			<div class="section_1" id="hotreview">
 				<!--인기리뷰-->
 				<p class="title">BEST REIVIEW</p>
-				<a href="review_detail01.html"> <img
+				<a href="review_detail01.jsp"> <img
 					src="http://img.cgv.co.kr/Movie/Thumbnail/StillCut/000076/76585/76585100354_727.jpg"
 					alt="위험한관계이미지">
 					<p class="subtitle">위험한 관계 - 위험하지 않은 사랑은 없다.</p> <span>
@@ -135,7 +135,7 @@ li:first-child a {
 				<!--리뷰 1,2,3의 묶음-->
 				<div class="section_2_left" id="review1">
 					<!--리뷰1-->
-					<a href="review_detail02.html">
+					<a href="review_detail02.jsp">
 						<p class="minititle">[퍼스트 포지션]</p> <br />
 						<p>
 							<b>내 어릴적 꿈은 뭐였지?</b>
@@ -150,7 +150,7 @@ li:first-child a {
 				<div class="section_2_middle" id="review2">
 					<!--리뷰2-->
 
-					<a href="review_detail03.html">
+					<a href="review_detail03.jsp">
 						<p class="minititle">[회사원]</p> <br />
 						<p>
 							<b>남자친구와 본 소지섭!</b>
@@ -165,7 +165,7 @@ li:first-child a {
 				<div class="section_2_right" id="review3">
 					<!--리뷰3-->
 
-					<a href="review_detail04.html">
+					<a href="review_detail04.jsp">
 						<p class="minititle">[비정한 도시]</p> <br />
 						<p>
 							<b>영화관에서 혼자 본 영화!</b>

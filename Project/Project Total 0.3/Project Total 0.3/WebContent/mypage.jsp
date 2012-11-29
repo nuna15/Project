@@ -97,7 +97,7 @@ li:first-child a {
 			<div id="header_right">
 				<!-- 헤더에서 로그인,회원가입의 크기-->
 				<div id="header_right_top">
-					<a href="">로그인 &nbsp;</a> <a href="">회원가입</a>
+					<a href="mypage.jsp">마이페이지 &nbsp;</a> <a href="login.jsp">로그아웃</a>
 				</div>
 			</div>
 		</div>
@@ -142,7 +142,7 @@ li:first-child a {
 						<td>5,000 point</td>
 					</tr>
 					</table>
-						<a href="mypage_modify.html"><button onclick="location.href('mypage_modify.html')">수정하러가기</button></a><br/>
+						<a href="mypage_modify.jsp"><button onclick="location.href('mypage_modify.jsp')">수정하러가기</button></a><br/>
 				</div>
 				
 				<div class="section_2" id="right"><!--결제내역-->
@@ -191,7 +191,7 @@ li:first-child a {
 							<div class="status">결제대기</div>
 							</div>
 						</div>
-						<a href="mypage_orderlist.html"><button onclick="location.href('mypage_orderlist.html')">자세히보기</button></a><br/>
+						<a href="mypage_orderlist.jsp"><button onclick="location.href('mypage_orderlist.jsp')">자세히보기</button></a><br/>
 			
 					</div>
 				

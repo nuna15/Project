@@ -98,7 +98,7 @@ li:first-child a {
 			<div id="header_right">
 				<!-- 헤더에서 로그인,회원가입의 크기-->
 				<div id="header_right_top">
-					<a href="">로그인 &nbsp;</a> <a href="">회원가입</a>
+					<a href="login.jsp">로그인 &nbsp;</a> <a href="register.jsp">회원가입</a>
 				</div>
 			</div>
 		</div>
@@ -107,10 +107,10 @@ li:first-child a {
 			<div class="navbar-inner">
 				<div class="container">
 					<ul class="nav">
-						<li><a href="informationsize.html">공연</a></li>
-						<li><a href="reservesize.html">예약 </a></li>
-						<li><a href="review.html">리뷰</a></li>
-						<li><a href="membership_bootstrap.html">멤버십</a></li>
+						<li><a href="information.jsp">공연</a></li>
+						<li><a href="reserve.jsp">예약 </a></li>
+						<li><a href="review.jsp">리뷰</a></li>
+						<li><a href="membership.jsp">멤버십</a></li>
 					</ul>
 				</div>
 			</div>
