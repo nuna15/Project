@@ -1,0 +1,47 @@
+#content h1 { font-size: 24px; font-weight: bold; text-align: center; margin-top: 20px;}
+#content h2 { font-size: 14px; font-weight: bold; text-align: center; margin-bottom: 20px;}
+#content h3 { font-size: 11px; font-weight: bold; text-align: center; margin-bottom: 10px;}
+
+.section_1{
+	clear: both;
+	height: auto;
+	overflow: auto
+	
+}
+
+#content div#reserve_detail{
+	width:820px;
+	margin-bottom:20px;
+	border-radius: 5px;
+	float:bottom;
+}
+#content div#reserve_note{
+    width:650px;
+    margin-bottom:20px;
+    margin-left: 100px;
+    border-radius: 5px;
+    float:bottom;
+    color:#FF0000;
+
+}
+#content h2 {
+    margin-right: 500px;
+}
+#content table {
+    line-height: 35px;
+    margin: 0 auto;
+    text-align: center; 
+}
+#content button {
+    margin-right: 10px;
+    width: 60px;
+}
+#content th {
+    line-height: 35px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #F7F7F7;
+}
+#content div#reserve_note li{
+    margin: 10px 10px 10px 0;
+}
