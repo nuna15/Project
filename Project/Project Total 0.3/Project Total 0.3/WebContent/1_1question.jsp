@@ -128,7 +128,7 @@ li:first-child a {
 			</div>
 			<div class="down_section_1">
 				<center>
-					<form class="well" action="_" method="post">
+					<form class="well" action="ConcertManageController" method="post">
 						<div class="report">
 							문의 제목 : <input type="text" name="questionTitle" class="title"></input><br />
 							문의 내용 :

@@ -82,7 +82,24 @@ li:first-child a {
 	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap-carousel.js"></script>
 <script
 	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap-typeahead.js"></script>
+<script>
+ function joinAgree(){
 
+
+  var chkEm = document.forms[0].chk;
+
+
+  if(!chkEm[0].checked){
+   alert("약관에 동의해 주십시오");
+   return false;
+  }else if(!chkEm[1].checked){
+   alert("개인정보취급방침에 동의해 주십시오");
+   return false;
+  }
+
+  return true; 
+ }
+</script>
 </head>
 <body>
 	<div id="wrap">
@@ -120,7 +137,7 @@ li:first-child a {
 			<!-- 실직적으로 보여질 정보들-->
 			<div class="section_1" id="reserve_detail">
 				<!--예매상세내역-->
-				<form class="well" action="UserManageController" method="post">
+				<form class="well" action="UserManageController" method="post" onsubmit="return joinAgree()">
 					<h2>&lt; 회 원 가 입 &gt;</h2>
 					<br /> <br />
 					<ul>
@@ -157,7 +174,7 @@ li:first-child a {
 								</tr>
 							</table>
 						</li>
-						<br />
+						<br/>
 						<li>
 							<div class="agree">
 								<div class="leftside">
@@ -278,7 +295,7 @@ li:first-child a {
 											</td>
 										</tr>
 									</table>
-									<input type="checkbox" class="check" name="apply" />약관에 동의합니다.
+									<input type="checkbox" class="check" name="chk" />약관에 동의합니다.
 								</div>
 								<div class="rightside">
 									<table>
@@ -318,7 +335,7 @@ li:first-child a {
 											</td>
 										</tr>
 									</table>
-									<input type="checkbox" class="check" name="apply" />약관에 동의합니다.
+									<input type="checkbox" class="check" name="chk" />약관에 동의합니다.
 								</div>
 							</div>
 						</li>

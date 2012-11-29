@@ -101,7 +101,7 @@ li:first-child a {
 			<div id="header_right">
 				<!-- 헤더에서 로그인,회원가입의 크기-->
 				<div id="header_right_top">
-					<a href="">로그인 &nbsp;</a> <a href="">회원가입</a>
+					<a href="login.jsp">로그인 &nbsp;</a> <a href="register.jsp">회원가입</a>
 				</div>
 			</div>
 		</div>
@@ -124,7 +124,7 @@ li:first-child a {
 				<!--예매상세내역-->
 				<h1>&lt; 리 뷰 작 성 &gt;</h1>
 				<center>
-					<form class="well" action="_" method="post">
+					<form class="well" action="ConcertManageController" method="post">
 						<div class="report">
 							리뷰 제목 : <input type="text" name="reviewtitle" class="title"></input><br />
 							리뷰 내용 :

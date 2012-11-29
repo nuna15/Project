@@ -19,7 +19,7 @@
 						<h4>아이디 찾기</h4>
 					</center>
 				</div>
-				<form action="./" method="post" name="findidform"
+				<form action="UserManageController" method="post" name="findidform"
 					onsubmit="return check_findidform(this)">
 					<input type="hidden" name="type" value="id_result"> <input
 						type="hidden" name="type2" value="normal">
@@ -52,7 +52,7 @@
 				</form>
 			</div>
 			<div class="box">
-				<form action="./" method="post" name=:findpwdform
+				<form action="UserManageController" method="post" name=:findpwdform
 					" onsubmit="return check_findpwdform(this)">
 					<input type="hidden" name="type" value="pwd_result"> <input
 						type="hidden" name="type2" value="normal">

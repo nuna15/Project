@@ -81,8 +81,8 @@ li:first-child a {
 			<div class="navbar-inner">
 				<div class="container">
 					<ul class="nav">
-						<li class="active"><a href="admin_status.jsp">사용현황</a></li>
-						<li><a href="admin_reserve.jsp">예매/취소율 </a></li>
+						<li><a href="admin_status.jsp">사용현황</a></li>
+						<li class="active"><a href="admin_reserve.jsp">예매/취소율 </a></li>
 						<li><a href="admin_master.jsp">권한 관리</a></li>
 						<li></li>
 					</ul>

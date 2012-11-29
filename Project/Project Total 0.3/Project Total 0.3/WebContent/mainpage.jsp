@@ -197,7 +197,7 @@ li:first-child a {
 			<div class="section_2" id="reserve">
 				<h1>예매</h1>
 				<ul>
-					<li>영화예매 <a href="reserve.jsp"><button onclick="location.href('#')">예매하러가기</button></a><br />
+					<li>영화예매 <a href="reserve.jsp"><button onclick="location.href('reserve.jsp')">예매하러가기</button></a><br />
 						<p class='box'>사이트 상단의 예매하기 메뉴를 누르시거나 본 내용 상단의 예매하기를 누르시면 인터넷
 							예매가 가능합니다.</p>
 					</li>
@@ -206,7 +206,7 @@ li:first-child a {
 							원하실 경우에는 영화관 현장에 직접 가셔서 예매를 하셔야합니다.</p>
 					</li>
 					<li>예매확인/취소 <a href="mypage_orderlist.jsp"><button
-								onclick="location.href('#')">예매확인/취소</button></a><br />
+								onclick="location.href('mypage_orderlist.jsp')">예매확인/취소</button></a><br />
 						<p class='box'>
 							- 예매 취소 및 환불 가능 시간은 해당 공영 상영 20분 전까지입니다.<br /> - 관람권으로 교환한 입장권은
 							현금환불 및 취소가 되지 않습니다.
