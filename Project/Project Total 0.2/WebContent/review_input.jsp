@@ -1,19 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>로그인 페이지</title>
+<title>리뷰작성 페이지</title>
+
 <link
 	href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css"
 	rel="stylesheet">
 <link href="stylesheets/Mainpage_Layout.css" rel="stylesheet"
 	type="text/css">
-<link href="stylesheets/login/login.css" rel="stylesheet"
+<link href="stylesheets/review/review_input.css" rel="stylesheet"
 	type="text/css">
-
 <style type="text/css">
 body {
 	padding-top: 20px;
@@ -60,7 +59,8 @@ li:first-child a {
 	border-radius: 0 3px 3px 0;
 }
 </style>
-
+<script
+	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/jquery.js"></script>
 <script
 	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap-transition.js"></script>
 <script
@@ -85,9 +85,9 @@ li:first-child a {
 	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap-carousel.js"></script>
 <script
 	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap-typeahead.js"></script>
-
 </head>
 <body>
+
 	<div id="wrap">
 		<!--전체 크기 -->
 
@@ -119,29 +119,33 @@ li:first-child a {
 			</div>
 		</div>
 		<div id="content">
+			<!-- 실직적으로 보여질 정보들-->
 			<div class="section_1" id="reserve_detail">
 				<!--예매상세내역-->
-				<div class="container">
-					<form class="well" action="UserManageController" method="post">
-						<p class="label">로그인</p>
-						<br /> <br /> <label>Email</label> <input type="text"
-							class="span3" placeholder="Your email here" name="id">
-						<br /> <label>Password</label> <input type="password"
-							class="span3" name="password"><br /> <input
-							type="checkbox" class="check"> ID 저장 <br />
-						<button type="submit" class="btn">로그인</button>
-						<button type="button" class="btn">회원가입</button>
-						<button type="button" class="btn">아이디/비밀번호 찾기</button>
+				<h1>&lt; 리 뷰 작 성 &gt;</h1>
+				<center>
+					<form class="well" action="_" method="post">
+						<div class="report">
+							리뷰 제목 : <input type="text" name="reviewtitle" class="title"></input><br />
+							리뷰 내용 :
+							<textarea class="textbox" name="reviewContent"></textarea>
+							<br /> 사진 첨부 : <input type="file" name="reviewPicture"></input>
+						</div>
+						<div class="bottom">
+							<input type="submit" value="문의하기">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="submit" value="취소">
+						</div>
 					</form>
-				</div>
+				</center>
 			</div>
 		</div>
+
 
 		<div id="footer">
 			<!-- 하위 항목-->
 			<p>사이트소개 | 이용약관 | 개인정보취급방침 | 제휴문의 | 법적고지 | 고객센터</p>
 			<p>Copyright © mjuProject. All rights reserved.</p>
 		</div>
-	</div>
+		</div>
 </body>
 </html>

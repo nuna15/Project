@@ -8,7 +8,7 @@
 <link
 	href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css"
 	rel="stylesheet">
-<link href="stylesheets/register.css" rel="stylesheet" type="text/css">
+<link href="stylesheets/login/register.css" rel="stylesheet" type="text/css">
 <link href="stylesheets/Mainpage_Layout.css" rel="stylesheet"
 	type="text/css">
 <style type="text/css">
@@ -129,30 +129,30 @@ li:first-child a {
 							<table>
 								<tr>
 									<th>희망 ID</th>
-									<td><input type="text" name="ID" maxlength="10" /> <input
+									<td><input type="text" name="id" maxlength="10" /> <input
 										type="button" name="IDcheck" value="중복확인" /></td>
 								</tr>
 								<tr>
 									<th>Password</th>
-									<td><input type="password" name="PW" maxlength="10" /></td>
+									<td><input type="password" name="password" maxlength="10" /></td>
 								</tr>
 								<tr>
 									<th>Password 확인</th>
-									<td><input type="password" name="PWcheck" maxlength="10" />
+									<td><input type="password" name="passwordCheck" maxlength="10" />
 									</td>
 								</tr>
 								<tr>
 									<th>성명(한글)</th>
-									<td><input type="text" name="NAME" maxlength="6" /></td>
+									<td><input type="text" name="name" maxlength="6" /></td>
 								</tr>
 								<tr>
 									<th>주민등록번호</th>
-									<td><input type="text" name="SNfront" maxlength="7" /> -<input
-										type="text" name="SNback" maxlength="7" /></td>
+									<td><input type="text" name="sereialNumberFront" maxlength="7" /> -<input
+										type="text" name="sereialNumberBack" maxlength="7" /></td>
 								</tr>
 								<tr>
 									<th>facebook 아이디&nbsp;</th>
-									<td><input type="text" name="FACEBOOKID" maxlength="30" />
+									<td><input type="text" name="facebookid" maxlength="30" />
 									</td>
 								</tr>
 							</table>

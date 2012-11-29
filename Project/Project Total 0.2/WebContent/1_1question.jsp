@@ -5,15 +5,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>로그인 페이지</title>
+<title>1:1문의 페이지</title>
 <link
 	href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css"
 	rel="stylesheet">
 <link href="stylesheets/Mainpage_Layout.css" rel="stylesheet"
 	type="text/css">
-<link href="stylesheets/login/login.css" rel="stylesheet"
+<link href="stylesheets/FAQ/1_1question.css" rel="stylesheet"
 	type="text/css">
-
 <style type="text/css">
 body {
 	padding-top: 20px;
@@ -60,7 +59,8 @@ li:first-child a {
 	border-radius: 0 3px 3px 0;
 }
 </style>
-
+<script
+	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/jquery.js"></script>
 <script
 	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap-transition.js"></script>
 <script
@@ -85,7 +85,6 @@ li:first-child a {
 	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap-carousel.js"></script>
 <script
 	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap-typeahead.js"></script>
-
 </head>
 <body>
 	<div id="wrap">
@@ -118,22 +117,30 @@ li:first-child a {
 				</div>
 			</div>
 		</div>
-		<div id="content">
-			<div class="section_1" id="reserve_detail">
-				<!--예매상세내역-->
-				<div class="container">
-					<form class="well" action="UserManageController" method="post">
-						<p class="label">로그인</p>
-						<br /> <br /> <label>Email</label> <input type="text"
-							class="span3" placeholder="Your email here" name="id">
-						<br /> <label>Password</label> <input type="password"
-							class="span3" name="password"><br /> <input
-							type="checkbox" class="check"> ID 저장 <br />
-						<button type="submit" class="btn">로그인</button>
-						<button type="button" class="btn">회원가입</button>
-						<button type="button" class="btn">아이디/비밀번호 찾기</button>
-					</form>
+		<div class="contenet">
+			<div class="up_section_1">
+				<div class="left_up_section_1">
+					<a href="FAQ.html">FAQ</a>
 				</div>
+				<div class="right_up_section_1">
+					<a href="oneonone.html">1:1문의</a>
+				</div>
+			</div>
+			<div class="down_section_1">
+				<center>
+					<form class="well" action="_" method="post">
+						<div class="report">
+							문의 제목 : <input type="text" name="questionTitle" class="title"></input><br />
+							문의 내용 :
+							<textarea class="textbox" name="questionContent"></textarea>
+							<br />
+						</div>
+						<div class="bottom">
+							<input type="submit" value="문의하기">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="submit" value="취소">
+						</div>
+					</form>
+				</center>
 			</div>
 		</div>
 

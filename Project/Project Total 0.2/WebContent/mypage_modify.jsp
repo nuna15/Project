@@ -136,11 +136,11 @@ li:first-child a {
 								</tr>
 								<tr>
 									<th>* Password</th>
-									<td><input type="password" name="PW" maxlength="10" /></td>
+									<td><input type="password" name="password" maxlength="10" /></td>
 								</tr>
 								<tr>
 									<th>* Password 확인</th>
-									<td><input type="password" name="PWcheck" maxlength="10" />
+									<td><input type="password" name="password" maxlength="10" />
 									</td>
 								</tr>
 								<tr>
@@ -153,7 +153,7 @@ li:first-child a {
 								</tr>
 								<tr>
 									<th>* facebook 아이디&nbsp;</th>
-									<td><input type="text" name="FACEBOOKID" maxlength="30" />
+									<td><input type="text" name="facebookid" maxlength="30" />
 									</td>
 								</tr>
 							</table>
