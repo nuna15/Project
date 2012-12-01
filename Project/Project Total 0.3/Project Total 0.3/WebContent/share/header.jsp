@@ -46,18 +46,38 @@ li:first-child a {
 	border-radius: 0 3px 3px 0;
 }
 </style>
-	
+
 <div id="header">
 	<!-- 이름 , 로그인 회원가입 전체를 이르는 크기-->
 	<div id="header_left">
 		<!-- 헤더에서 이름 가르키는 크기-->
 		<a href="mainpage.jsp"><img src="images/logo.jpg"></a>
 	</div>
-	<div id="header_middle">""</div>
+	<div id="header_middle"></div>
 	<div id="header_right">
 		<!-- 헤더에서 로그인,회원가입의 크기-->
 		<div id="header_right_top">
-			<a href="login.jsp">로그인 &nbsp;</a> <a href="register.jsp">회원가입&nbsp;</a> <a href="FAQ.jsp">고객센터</a>
+			<%
+				// if 관리자
+				if (request.getSession().getAttribute("userid")
+						.equals(new String("admin"))) {
+			%>
+			<a href="admin_master.jsp">관리자 페이지</a> <a href="mainpage.jsp">일반페이지</a>
+			<a href="login.jsp">로그아웃</a>
+			<%
+				//if 유저
+				} else if (request.getSession().getAttribute("userid") != null) {
+			%>
+			<a href="mypage.jsp">마이페이지</a><a href="FAQ.jsp">고객센터</a><a href="login.jsp">로그아웃</a>
+			<%
+				} else {
+			%>
+			<a href="login.jsp">로그인 &nbsp;</a> <a href="register.jsp">회원가입&nbsp;</a>
+			<a href="FAQ.jsp">고객센터</a>
+			<%
+				}
+			%>
+
 		</div>
 	</div>
 </div>
