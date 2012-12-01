@@ -58,23 +58,34 @@ li:first-child a {
 		<!-- 헤더에서 로그인,회원가입의 크기-->
 		<div id="header_right_top">
 			<%
+				System.out.println(request);
 				// if 관리자
-				if (request.getSession().getAttribute("userid")
-						.equals(new String("admin"))) {
+				if (request.getSession() != null) {
+					if (request.getSession().getAttribute("userid") != null) {
+						if (request.getSession().getAttribute("userid")
+								.equals(new String("admin"))) {
 			%>
-			<a href="admin_master.jsp">관리자 페이지</a> <a href="mainpage.jsp">일반페이지</a>
-			<a href="login.jsp">로그아웃</a>
+			<a href="admin_master.jsp">관리자</a>&nbsp; <a href="mainpage.jsp">일반페이지</a>&nbsp;
+			<a href="logout.jsp">로그아웃</a>
 			<%
 				//if 유저
-				} else if (request.getSession().getAttribute("userid") != null) {
+						} else if (request.getSession().getAttribute("userid") != null) {
 			%>
-			<a href="mypage.jsp">마이페이지</a><a href="FAQ.jsp">고객센터</a><a href="login.jsp">로그아웃</a>
+			<a href="mypage.jsp">마이페이지</a>&nbsp;<a href="FAQ.jsp">고객센터</a>&nbsp;
+			<a href="logout.jsp">로그아웃</a>
 			<%
 				} else {
 			%>
-			<a href="login.jsp">로그인 &nbsp;</a> <a href="register.jsp">회원가입&nbsp;</a>
+			<a href="login.jsp">로그인</a> &nbsp;<a href="register.jsp">회원가입</a>&nbsp;
 			<a href="FAQ.jsp">고객센터</a>
 			<%
+				}
+					} else {
+			%>
+			<a href="login.jsp">로그인</a> &nbsp;<a href="register.jsp">회원가입</a>&nbsp;
+			<a href="FAQ.jsp">고객센터</a>
+			<%
+				}
 				}
 			%>
 
