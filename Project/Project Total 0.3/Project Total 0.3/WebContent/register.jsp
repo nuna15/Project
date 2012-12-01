@@ -5,9 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>회원가입 페이지</title>
+<link href="stylesheets/login/register.css" rel="stylesheet" type="text/css">
 <link href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css" rel="stylesheet">
 <link href="stylesheets/Mainpage_Layout.css" rel="stylesheet" type="text/css">
-<link href="stylesheets/login/register.css" rel="stylesheet" type="text/css">
 <script src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap.js"></script>
 
 <script>
@@ -88,7 +88,6 @@
 								</tr>
 							</table>
 						</li>
-						<br />
 						<li>
 							<div class="agree">
 								<div class="leftside">

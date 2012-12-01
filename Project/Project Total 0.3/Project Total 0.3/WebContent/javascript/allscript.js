@@ -134,3 +134,57 @@ $(document)
 												.attr('href');
 									});
 				});
+
+/* datepicker (admin_concert_input.jsp) */
+$(function() {
+	var dates = $("#from, #to ")
+			.datepicker(
+					{
+						minDate : '-0d+1',
+						prevText : '이전 달',
+						nextText : '다음 달',
+						monthNames : [ '1월', '2월', '3월', '4월', '5월', '6월',
+								'7월', '8월', '9월', '10월', '11월', '12월' ],
+						monthNamesShort : [ '1월', '2월', '3월', '4월', '5월',
+								'6월', '7월', '8월', '9월', '10월', '11월', '12월' ],
+						dayNames : [ '일', '월', '화', '수', '목', '금', '토' ],
+						dayNamesShort : [ '일', '월', '화', '수', '목', '금', '토' ],
+						dayNamesMin : [ '일', '월', '화', '수', '목', '금', '토' ],
+						dateFormat : 'yy-mm-dd',
+						showMonthAfterYear : true,
+						yearSuffix : '년',
+						onSelect : function(selectedDate) {
+							var option = this.id == "from" ? "minDate"
+									: "maxDate", instance = $(this).data(
+									"datepicker"), date = $.datepicker
+									.parseDate(
+											instance.settings.dateFormat
+													|| $.datepicker._defaults.dateFormat,
+											selectedDate, instance.settings);
+							dates.not(this).datepicker("option", option,
+									date);
+						}
+					});
+});
+
+
+/* picturetype check script(admin_concert_input.jsp) */
+function UploadImg(fileObj) {
+	$('#bg_sub').show();
+	var filePath = fileObj.value;
+	var fileName = filePath.substring(filePath.lastIndexOf("\\") + 1);
+	var fileKind = fileName.split(".")[1];
+	if (fileKind != "jpg" && fileKind != "JPG" && fileKind != "bmp"
+			&& fileKind != "BMP" && fileKind != "gif" && fileKind != "GIF"
+			&& fileKind != "png" && fileKind != "PNG") {
+		alert("jpg, jpeg, gif, png 확장자를 가진 이미지 파일만 올려주세요.");
+		document.getElementById("concertPicture").value = "";
+		document.getElementById("concertPicture").select();
+		document.selection.clear();
+	}
+}
+
+/* jquery view script(admin_concert_input.jsp) */
+$(function() {
+	$(document).tooltip();
+});

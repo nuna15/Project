@@ -42,10 +42,8 @@
 							type="checkbox" class="check"> ID 저장 <br />
 
 						<button type="submit" class="btn">로그인</button>
-						<a href="register.jsp"><button type="button" class="btn">회원가입</button></a>
-						<a href="login.jsp"
-							onclick="window.open('IDPW.jsp',width=300,height=350,left=0,top=0)"><button
-								type="button" class="btn">아이디/비밀번호 찾기</button></a>
+						<a href="register.jsp"><button type="button" class="btn" onclick="location.href('register.jsp')">회원가입</button></a>
+						<a href="IDPW.jsp"><button type="button" class="btn" onclick="location.href('IDPW.jsp')">아이디/비밀번호 찾기</button></a>
 					</form>
 				</div>
 			</div>

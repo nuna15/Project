@@ -1,13 +1,21 @@
-
-
+#sel{
+  width:155px;
+  height:35px;
+  padding-bottom:10px;
+  background-color: #fff;
+    border: 1px solid #999;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+	
+}
 .textbox {
+	margin-top:10px;
 	width:400px;
 	height:300px;
     border: 1px solid #999;
     border-radius: 4px 4px 4px 4px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
 }
-
 input[type="text"]{
   width:390px;
   height:25px;
@@ -16,9 +24,29 @@ input[type="text"]{
     border-radius: 4px 4px 4px 4px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
 }
-#date{
-  width:100px;
+
+#check{
+	margin-left:1px;
+  margin-right:9px;
+}
+input[type="checkbox"]{
+  margin:0 10px 0 30px;
+}
+#from{
+	text-align:center;
+  width:155px;
   height:25px;
+  margin-right:24px;
+  background-color: #fff;
+    border: 1px solid #999;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+}
+#to{
+	text-align:center;
+  width:155px;
+  height:25px;
+  margin-left:24px;
   background-color: #fff;
     border: 1px solid #999;
     border-radius: 4px 4px 4px 4px;
