@@ -5,121 +5,34 @@
 <head>
 <meta charset="UTF-8">
 <title>회원가입 페이지</title>
-<link
-	href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css"
-	rel="stylesheet">
+<link href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css" rel="stylesheet">
+<link href="stylesheets/Mainpage_Layout.css" rel="stylesheet" type="text/css">
 <link href="stylesheets/login/register.css" rel="stylesheet" type="text/css">
-<link href="stylesheets/Mainpage_Layout.css" rel="stylesheet"
-	type="text/css">
-<style type="text/css">
-body {
-	padding-top: 20px;
-	padding-bottom: 60px;
-} /* Custom container */
-.container {
-	margin: 0 auto;
-	max-width: 1000px;
-}
+<script src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap.js"></script>
 
-.container>hr {
-	margin: 60px 0;
-} /* Main marketing message and sign up button */
-.navbar .navbar-inner {
-	padding: 0;
-}
-
-.navbar .nav {
-	margin: 0;
-}
-
-.navbar .nav li {
-	display: table-cell;
-	width: 1%;
-	float: none;
-}
-
-.navbar .nav li a {
-	font-weight: bold;
-	text-align: center;
-	border-left: 1px solid rgba(255, 255, 255, .75);
-	border-right: 1px solid rgba(0, 0, 0, .1);
-}
-
-.navbar .nav
-li:first-child a {
-	border-left: 0;
-	border-radius: 3px 0 0 3px;
-}
-
-.navbar
-.nav li:last-child a {
-	border-right: 0;
-	border-radius: 0 3px 3px 0;
-}
-</style>
-
-<script
-	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap-transition.js"></script>
-<script
-	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap-alert.js"></script>
-<script
-	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap-modal.js"></script>
-<script
-	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap-dropdown.js"></script>
-<script
-	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap-scrollspy.js"></script>
-<script
-	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap-tab.js"></script>
-<script
-	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap-tooltip.js"></script>
-<script
-	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap-popover.js"></script>
-<script
-	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap-button.js"></script>
-<script
-	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap-collapse.js"></script>
-<script
-	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap-carousel.js"></script>
-<script
-	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap-typeahead.js"></script>
 <script>
- function joinAgree(){
+	function joinAgree() {
 
+		var chkEm = document.forms[0].chk;
 
-  var chkEm = document.forms[0].chk;
+		if (!chkEm[0].checked) {
+			alert("약관에 동의해 주십시오");
+			return false;
+		} else if (!chkEm[1].checked) {
+			alert("개인정보취급방침에 동의해 주십시오");
+			return false;
+		}
 
-
-  if(!chkEm[0].checked){
-   alert("약관에 동의해 주십시오");
-   return false;
-  }else if(!chkEm[1].checked){
-   alert("개인정보취급방침에 동의해 주십시오");
-   return false;
-  }
-
-  return true; 
- }
+		return true;
+	}
 </script>
 </head>
+
 <body>
 	<div id="wrap">
+		<jsp:include page="share/header.jsp"></jsp:include>
+
 		<!--전체 크기 -->
-
-		<div id="header">
-			<!-- 이름 , 로그인 회원가입 전체를 이르는 크기-->
-			<div id="header_left">
-				<!-- 헤더에서 이름 가르키는 크기-->
-				<img src="images/logo.jpg">
-			</div>
-			<div id="header_middle">""</div>
-			<div id="header_right">
-				<!-- 헤더에서 로그인,회원가입의 크기-->
-				<div id="header_right_top">
-					<a href="login.jsp">로그인 &nbsp;</a> <a href="register.jsp">회원가입</a>
-				</div>
-			</div>
-		</div>
-
 		<div class="navbar">
 			<div class="navbar-inner">
 				<div class="container">
@@ -137,7 +50,8 @@ li:first-child a {
 			<!-- 실직적으로 보여질 정보들-->
 			<div class="section_1" id="reserve_detail">
 				<!--예매상세내역-->
-				<form class="well" action="UserManageController" method="post" onsubmit="return joinAgree()">
+				<form class="well" action="UserManageController" method="post"
+					onsubmit="return joinAgree()">
 					<h2>&lt; 회 원 가 입 &gt;</h2>
 					<br /> <br />
 					<ul>
@@ -155,8 +69,8 @@ li:first-child a {
 								</tr>
 								<tr>
 									<th>Password 확인</th>
-									<td><input type="password" name="passwordCheck" maxlength="10" />
-									</td>
+									<td><input type="password" name="passwordCheck"
+										maxlength="10" /></td>
 								</tr>
 								<tr>
 									<th>성명(한글)</th>
@@ -174,7 +88,7 @@ li:first-child a {
 								</tr>
 							</table>
 						</li>
-						<br/>
+						<br />
 						<li>
 							<div class="agree">
 								<div class="leftside">
@@ -349,10 +263,8 @@ li:first-child a {
 				</form>
 			</div>
 		</div>
-		<div id="footer">
-			<p>사이트소개 | 이용약관 | 개인정보취급방침 | 제휴문의 | 법적고지 | 고객센터</p>
-			<p>Copyright © mjuProject. All rights reserved.</p>
-		</div>
+
+		<jsp:include page="share/footer.jsp"></jsp:include>
 	</div>
 </body>
 </html>
