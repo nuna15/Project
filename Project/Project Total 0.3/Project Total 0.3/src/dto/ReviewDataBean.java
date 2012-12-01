@@ -7,6 +7,15 @@ public class ReviewDataBean {
 	private int score;
 	private int evaluateNumber;
 	private String contents;
+	private String reviewName;
+
+	public String getReviewName() {
+		return reviewName;
+	}
+
+	public void setReviewName(String reviewName) {
+		this.reviewName = reviewName;
+	}
 
 	public int getReviewid() {
 		return reviewid;

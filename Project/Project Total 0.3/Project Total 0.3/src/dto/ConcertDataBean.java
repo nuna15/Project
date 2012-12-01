@@ -8,6 +8,24 @@ public class ConcertDataBean {
 	private java.sql.Time startTime;
 	private java.sql.Time endTime;
 	private String concertName;
+	private String content;
+	private String Actor;
+
+	public String getContent() {
+		return content;
+	}
+
+	public String getActor() {
+		return Actor;
+	}
+
+	public void setActor(String actor) {
+		Actor = actor;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
 
 	public int getConcertId() {
 		return concertId;
@@ -41,19 +59,19 @@ public class ConcertDataBean {
 		this.allowNumber = allowNumber;
 	}
 
-	public java.sql.Time getStartTime() {
+	public java.sql.Time getStartDate() {
 		return startTime;
 	}
 
-	public void setStartTime(java.sql.Time startTime) {
+	public void setStartDate(java.sql.Time startTime) {
 		this.startTime = startTime;
 	}
 
-	public java.sql.Time getEndTime() {
+	public java.sql.Time getFinishDate() {
 		return endTime;
 	}
 
-	public void setEndTime(java.sql.Time endTime) {
+	public void setFinishDate(java.sql.Time endTime) {
 		this.endTime = endTime;
 	}
 

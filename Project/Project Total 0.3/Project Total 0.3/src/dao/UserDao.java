@@ -37,70 +37,13 @@ public class UserDao {
 			pstmt.setString(5, member.getSsn2());
 			pstmt.setDate(6, member.getSignDate());
 			pstmt.setString(7, member.getFacebookid());
+			
 			pstmt.executeUpdate();
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		} finally {
 			ConnectionManager.getInstance().close(pstmt, conn);
 		}
-	}
-
-	public int userCheck(String userid, String passwd) throws Exception {
-		Connection conn = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		String dbpasswd = "";
-		int x = -1;
-
-		try {
-			conn = getConnection();
-
-			pstmt = conn
-					.prepareStatement("select password from user where userid = ?");
-			pstmt.setString(1, userid);
-			rs = pstmt.executeQuery();
-
-			if (rs.next()) {
-				dbpasswd = rs.getString("password");
-				if (dbpasswd.equals(passwd))
-					x = 1; // ���� ����
-				else
-					x = 0; // ��й�ȣ Ʋ��
-			} else
-				x = -1;// �ش� ���̵� ����
-
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		} finally {
-			ConnectionManager.getInstance().close(rs, pstmt, conn);
-		}
-		return x;
-	}
-
-	public int confirmId(String id) throws Exception {
-		Connection conn = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		int x = -1;
-
-		try {
-			conn = getConnection();
-
-			pstmt = conn
-					.prepareStatement("select userid from user where userid = ?");
-			pstmt.setString(1, id);
-			rs = pstmt.executeQuery();
-
-			if (rs.next())
-				x = 1; // �ش� ���̵� ����
-			else
-				x = -1;// �ش� ���̵� ����
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		} finally {
-			ConnectionManager.getInstance().close(rs, pstmt, conn);
-		}
-		return x;
 	}
 
 	public UserDataBean getMember(String id) throws Exception {

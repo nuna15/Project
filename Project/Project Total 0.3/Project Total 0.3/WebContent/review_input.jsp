@@ -37,7 +37,8 @@
 				<center>
 					<form class="well" action="ConcertManageController" method="post">
 						<div class="report">
-							리뷰 제목 : <input type="text" name="reviewtitle" class="title"></input><br />
+							리뷰 제목 : <input type="text" name="reviewName" class="title"></input><br />
+							공연 제목 : <input type="text" name="concertName" class="title"></input><br />
 							리뷰 내용 :
 							<textarea class="textbox" name="reviewContent"></textarea>
 							<br /> 사진 첨부 : <input type="file" name="reviewPicture"></input>

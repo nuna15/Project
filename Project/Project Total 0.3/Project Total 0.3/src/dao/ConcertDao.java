@@ -25,20 +25,22 @@ public class ConcertDao {
 	public void insertConcert(ConcertDataBean concert) throws Exception {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
+
 		try {
 			conn = getConnection();
 
 			pstmt = conn
-					.prepareStatement("insert into user values (?,?,?,?,?,?,?)");
-			pstmt.setInt(1, concert.getConcertId());
-			pstmt.setInt(2, concert.getTimeNumber());
-			pstmt.setDate(3, concert.getConcertDate());
-			pstmt.setInt(4, concert.getAllowNumber());
-			pstmt.setTime(5, concert.getStartTime());
-			pstmt.setTime(6, concert.getEndTime());
-			pstmt.setString(7, concert.getConcertName());
-
+					.prepareStatement("insert into concert values (null,?,?,?,?,?,?,?,?)");
+			pstmt.setInt(1, concert.getTimeNumber());
+			pstmt.setDate(2, concert.getConcertDate());
+			pstmt.setInt(3, concert.getAllowNumber());
+			pstmt.setTime(4, concert.getStartDate());
+			pstmt.setTime(5, concert.getFinishDate());
+			pstmt.setString(6, concert.getConcertName());
+			pstmt.setString(7, concert.getContent());
+			pstmt.setString(8, concert.getActor());
 			pstmt.executeUpdate();
+
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		} finally {
@@ -58,15 +60,19 @@ public class ConcertDao {
 					.prepareStatement("select * from concert where concertid = ?");
 			pstmt.setInt(1, concertId);
 			rs = pstmt.executeQuery();
+
+			rs = pstmt.executeQuery();
 			if (rs.next()) {
 				concert = new ConcertDataBean();
 				concert.setConcertId(rs.getInt("concertid"));
-				concert.setTimeNumber(rs.getInt("timeNumber"));
-				concert.setConcertDate(rs.getDate("concertDate"));
-				concert.setAllowNumber(rs.getInt("allowNumber"));
-				concert.setStartTime(rs.getTime("startTime"));
-				concert.setEndTime(rs.getTime("endTime"));
-				concert.setConcertName(rs.getString("concertName"));
+				concert.setTimeNumber(rs.getInt("timenumber"));
+				concert.setConcertDate(rs.getDate("concertdate"));
+				concert.setAllowNumber(rs.getInt("allownumber"));
+				concert.setStartDate(rs.getTime("starttime"));
+				concert.setFinishDate(rs.getTime("endtime"));
+				concert.setConcertName(rs.getString("concertname"));
+				concert.setContent(rs.getString("content"));
+				concert.setActor(rs.getString("actor"));
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();
@@ -74,5 +80,43 @@ public class ConcertDao {
 			ConnectionManager.getInstance().close(rs, pstmt, conn);
 		}
 		return concert;
+	}
+
+	public ConcertDataBean getConcertId(String concertName) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		ConcertDataBean concert = null;
+		try {
+			conn = getConnection();
+
+			pstmt = conn
+					.prepareStatement("select * from concert where concertname = ?");
+			pstmt.setString(1, concertName);
+			rs = pstmt.executeQuery();
+
+			rs = pstmt.executeQuery();
+			if (rs.next()) {
+				concert = new ConcertDataBean();
+				concert.setConcertId(rs.getInt("concertid"));
+				concert.setTimeNumber(rs.getInt("timenumber"));
+				concert.setConcertDate(rs.getDate("concertdate"));
+				concert.setAllowNumber(rs.getInt("allownumber"));
+				concert.setStartDate(rs.getTime("starttime"));
+				concert.setFinishDate(rs.getTime("endtime"));
+				concert.setConcertName(rs.getString("concertname"));
+				concert.setContent(rs.getString("content"));
+				concert.setActor(rs.getString("actor"));
+			}
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		} finally {
+			ConnectionManager.getInstance().close(rs, pstmt, conn);
+		}
+		return concert;
+	}
+
+	public void updateConcert(ConcertDataBean concert) {
+
 	}
 }

@@ -29,13 +29,15 @@ public class ReviewDao {
 		try {
 			conn = getConnection();
 			pstmt = conn
-					.prepareStatement("insert into user values (?,?,?,?,?,?)");
-			pstmt.setInt(1, review.getReviewid());
-			pstmt.setString(2, review.getUserid());
-			pstmt.setInt(3, review.getConcertid());
-			pstmt.setInt(4, review.getScore());
-			pstmt.setInt(5, review.getEvaluateNumber());
-			pstmt.setString(6, review.getContents());
+					.prepareStatement("insert into review values (null,?,?,?,?,?,?)");
+			pstmt.setString(1, review.getUserid());
+			pstmt.setInt(2, review.getConcertid());
+			pstmt.setInt(3, review.getScore());
+			pstmt.setInt(4, review.getEvaluateNumber());
+			pstmt.setString(5, review.getContents());
+			pstmt.setString(6, review.getReviewName());
+
+			System.out.println(review.getUserid());
 			pstmt.executeUpdate();
 		} catch (Exception ex) {
 			ex.printStackTrace();
@@ -66,6 +68,7 @@ public class ReviewDao {
 				review.setScore(rs.getInt(rs.getInt("score")));
 				review.setEvaluateNumber(rs.getInt("evaluateNumber"));
 				review.setContents(rs.getString("contents"));
+				review.setReviewName(rs.getString("reviewname"));
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();
@@ -76,7 +79,34 @@ public class ReviewDao {
 	}
 
 	public int getReviewRate(int reviewId) {
-		// 리뷰의 등수 or 평점을 리턴
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		ReviewDataBean review = null;
+
+		try {
+			conn = getConnection();
+
+			pstmt = conn
+					.prepareStatement("select * from user where reviewid = ?");
+			pstmt.setInt(1, reviewId);
+			rs = pstmt.executeQuery();
+
+			if (rs.next()) {
+				review = new ReviewDataBean();
+				review.setReviewid(rs.getInt("password"));
+				review.setUserid(rs.getString("userid"));
+				review.setConcertid(rs.getInt("concertid"));
+				review.setScore(rs.getInt(rs.getInt("score")));
+				review.setEvaluateNumber(rs.getInt("evaluateNumber"));
+				review.setContents(rs.getString("contents"));
+				review.setReviewName(rs.getString("reviewname"));
+			}
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		} finally {
+			ConnectionManager.getInstance().close(rs, pstmt, conn);
+		}
 		return 0;
 	}
 

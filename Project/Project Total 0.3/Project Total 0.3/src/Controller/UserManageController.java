@@ -38,6 +38,7 @@ public class UserManageController extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		String requestUrl = request.getHeader("REFERER");
 		String op = request.getParameter("op");
 		String actionUrl = "";
 		boolean flag;
@@ -58,16 +59,17 @@ public class UserManageController extends HttpServlet {
 		String requestUrl = request.getHeader("REFERER");
 		boolean confirm = false;
 		request.setCharacterEncoding(Constants.MAIN_ENCODING);
+
 		if (requestUrl.equals(Constants.PAGE_SERVER_URL
-				+ Constants.PAGE_URL_LOGIN)) {
+				+ Constants.PAGE_URL_USER_LOGIN)) {
 			confirm = pushLogin(request, response);
 			forwarding(request, response, confirm);
 		} else if (requestUrl.equals(Constants.PAGE_SERVER_URL
-				+ Constants.PAGE_URL_MODIFY)) {
+				+ Constants.PAGE_URL_USER_MODIFY)) {
 			confirm = pushModify(request, response);
 			forwarding(request, response, confirm);
 		} else if (requestUrl.equals(Constants.PAGE_SERVER_URL
-				+ Constants.PAGE_URL_SIGNUP)) {
+				+ Constants.PAGE_URL_USER_SIGNUP)) {
 			confirm = pushInsertMember(request, response);
 			forwarding(request, response, confirm);
 		}
@@ -100,6 +102,8 @@ public class UserManageController extends HttpServlet {
 			user.setUserid(request.getParameter("userid"));
 			user.setPassword(request.getParameter("password"));
 			user.setName(request.getParameter("name"));
+			// user.setName(new String(request.getParameter("name").getBytes(
+			// "euc-kr"), "utf-8"));
 			user.setSsn1(request.getParameter("ssn1"));
 			user.setSsn2(request.getParameter("ssn2"));
 			user.setFacebookid(request.getParameter("facebookid"));
@@ -148,7 +152,7 @@ public class UserManageController extends HttpServlet {
 						.getRequestDispatcher(Constants.PAGE_URL_MAINPAGE);
 				view.forward(request, response);
 			} else {
-				response.sendRedirect(Constants.PAGE_URL_LOGIN);
+				response.sendRedirect(Constants.PAGE_URL_USER_LOGIN);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

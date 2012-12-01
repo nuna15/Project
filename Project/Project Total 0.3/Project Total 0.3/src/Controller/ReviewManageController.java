@@ -7,6 +7,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.ConcertDao;
+import dao.ReviewDao;
+import dao.UserDao;
+import dto.ConcertDataBean;
+import dto.ReviewDataBean;
+
+import Constants.Constants;
+
 /**
  * Servlet implementation class ReviewManageController
  */
@@ -38,6 +46,52 @@ public class ReviewManageController extends HttpServlet {
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		String requestUrl = request.getHeader("REFERER");
+		boolean confirm = false;
+		request.setCharacterEncoding(Constants.MAIN_ENCODING);
+
+		if (requestUrl.equals(Constants.PAGE_SERVER_URL
+				+ Constants.PAGE_URL_REVIEW_REGISTER)) {
+			confirm = pushReviewRegister(request, response);
+		}
+		// if (requestUrl.equals(Constants.PAGE_SERVER_URL
+		// + Constants.PAGE_URL_USER_LOGIN)) {
+		// confirm = pushLogin(request, response);
+		// forwarding(request, response, confirm);
+		// } else if (requestUrl.equals(Constants.PAGE_SERVER_URL
+		// + Constants.PAGE_URL_USER_MODIFY)) {
+		// confirm = pushModify(request, response);
+		// forwarding(request, response, confirm);
+		// } else if (requestUrl.equals(Constants.PAGE_SERVER_URL
+		// + Constants.PAGE_URL_USER_SIGNUP)) {
+		// confirm = pushInsertMember(request, response);
+		// forwarding(request, response, confirm);
 	}
 
+	private boolean pushReviewRegister(HttpServletRequest request,
+			HttpServletResponse response) {
+		// TODO Auto-generated method stub
+		if (request.getSession().getAttribute("userid") != null) {
+			try {
+				ReviewDataBean review = new ReviewDataBean();
+				review.setUserid((String) request.getSession().getAttribute(
+						"userid"));
+				review.setScore(0);
+				review.setEvaluateNumber(0);
+				review.setContents(request.getParameter("reviewContent"));
+				review.setReviewName(request.getParameter("reviewName"));
+				// Concert Id 가져오는 부분
+				ConcertDataBean concert = new ConcertDataBean();
+				concert = ConcertDao.getInstance().getConcertId(
+						request.getParameter("concertName"));
+				review.setConcertid(concert.getConcertId());
+
+				ReviewDao.getInstance().insertReview(review);
+				return true;
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return false;
+	}
 }
