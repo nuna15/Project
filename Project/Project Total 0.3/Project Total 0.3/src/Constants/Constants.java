@@ -14,5 +14,7 @@ public class Constants {
 	public static final String PAGE_URL_CONCERT_REGISTER = "admin_concert_input.jsp";
 	public static final String PAGE_URL_CONCERT_MAIN = "information.jsp";
 
+	public static final String PAGE_URL_RESERVATION_REGISTER = "reserve.jsp";
+	
 	public static final String PAGE_URL_REVIEW_REGISTER = "review_input.jsp";
 }

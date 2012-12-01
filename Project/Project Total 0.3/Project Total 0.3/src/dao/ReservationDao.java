@@ -28,14 +28,13 @@ public class ReservationDao {
 		try {
 			conn = getConnection();
 			pstmt = conn
-					.prepareStatement("insert into user values (?,?,?,?,?,?,?)");
-			pstmt.setInt(1, reservation.getReservationid());
-			pstmt.setString(2, reservation.getUserid());
-			pstmt.setInt(3, reservation.getConcertid());
-			pstmt.setInt(4, reservation.getTimeNumber());
-			pstmt.setDate(5, reservation.getReservationTime());
-			pstmt.setInt(6, reservation.getReservationStatus());
-			pstmt.setString(7, reservation.getSheetNumber());
+					.prepareStatement("insert into reservation values (null,?,?,?,?,?,?)");
+			pstmt.setString(1, reservation.getUserid());
+			pstmt.setInt(2, reservation.getConcertid());
+			pstmt.setInt(3, reservation.getTimeNumber());
+			pstmt.setDate(4, reservation.getReservationTime());
+			pstmt.setInt(5, reservation.getReservationStatus());
+			pstmt.setString(6, reservation.getSheetNumber());
 			pstmt.executeUpdate();
 		} catch (Exception ex) {
 			ex.printStackTrace();

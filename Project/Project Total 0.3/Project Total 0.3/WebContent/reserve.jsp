@@ -5,11 +5,17 @@
 <head>
 <meta charset="UTF-8">
 <title>예약페이지</title>
-<link href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css" rel="stylesheet">
-<link href="stylesheets/Mainpage_Layout.css" rel="stylesheet" type="text/css">
-<link href="stylesheets/reservation/reserve.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
-<script src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap.js"></script>
+<link
+	href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css"
+	rel="stylesheet">
+<link href="stylesheets/Mainpage_Layout.css" rel="stylesheet"
+	type="text/css">
+<link href="stylesheets/reservation/reserve.css" rel="stylesheet"
+	type="text/css">
+<link rel="stylesheet"
+	href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+<script
+	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap.js"></script>
 <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
 
@@ -40,15 +46,15 @@
 		</div>
 
 		<div id="content">
-			<form action="ReviewManageController" method="post">
+			<form action="ReservationManageController" method="post">
 				<div class="section_1" id="reserve">
 					<ul>
 						<li>
-							<h3>티 켓 선 택 / 매 수 선 택</h3> <select name="concert">
-								<option value="concert1">기막힌 스캔들</option>
+							<h3>티 켓 선 택 / 매 수 선 택</h3> <select name="concertName">
+								<option value="옥탑방 고양이">기막힌 스캔들</option>
 								<option value="concert2">러브액츄얼리</option>
 								<option value="concert3">삼봉이발소</option>
-						</select><br /> <select name="ticket_amount">
+						</select><br /> <select name="ticketAmountConcert">
 								<option value="num0">&nbsp; 0 &nbsp;</option>
 								<option value="num1">&nbsp; 1 &nbsp;</option>
 								<option value="num2">&nbsp; 2 &nbsp;</option>
@@ -58,12 +64,13 @@
 						</select><br />
 						</li>
 						<li>
-							<h3>공 연 날 짜 선 택</h3> Date: <input type="text" id="datepicker" />
+							<h3>공 연 날 짜 선 택</h3> Date: <input type="text" id="datepicker"
+							name="concertDate" />
 						</li>
 					</ul>
 					<ul>
 						<li>
-							<h3>공 연 좌 석 선 택</h3> <select name="ticket_amount">
+							<h3>공 연 좌 석 선 택</h3> <select name="ticketAmountSeat">
 								<option value="A">A석 - (1~10)</option>
 								<option value="B">B석 - (1~10)</option>
 								<option value="C">C석 - (1~10)</option>
@@ -79,9 +86,9 @@
 							</p>
 						</li>
 						<li>
-							<h3>최종 결제 금액 (vat포함)</h3> <input type="text" name="concertday"
-							value="15,050" size="5" /> <input type="submit" class="submit"
-							name="paybutton" value="예매하기" />
+							<h3>최종 결제 금액 (vat포함)</h3> <input type="text"
+							name="reservationCost" value="15,050" size="5" /> <input
+							type="submit" class="submit" name="paybutton" value="예매하기" />
 						</li>
 					</ul>
 				</div>

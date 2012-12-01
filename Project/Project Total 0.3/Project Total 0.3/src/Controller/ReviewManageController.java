@@ -1,6 +1,8 @@
 package Controller;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -53,19 +55,12 @@ public class ReviewManageController extends HttpServlet {
 		if (requestUrl.equals(Constants.PAGE_SERVER_URL
 				+ Constants.PAGE_URL_REVIEW_REGISTER)) {
 			confirm = pushReviewRegister(request, response);
+			if (confirm) {
+				RequestDispatcher view = request
+						.getRequestDispatcher(Constants.PAGE_URL_MAINPAGE);
+				view.forward(request, response);
+			}
 		}
-		// if (requestUrl.equals(Constants.PAGE_SERVER_URL
-		// + Constants.PAGE_URL_USER_LOGIN)) {
-		// confirm = pushLogin(request, response);
-		// forwarding(request, response, confirm);
-		// } else if (requestUrl.equals(Constants.PAGE_SERVER_URL
-		// + Constants.PAGE_URL_USER_MODIFY)) {
-		// confirm = pushModify(request, response);
-		// forwarding(request, response, confirm);
-		// } else if (requestUrl.equals(Constants.PAGE_SERVER_URL
-		// + Constants.PAGE_URL_USER_SIGNUP)) {
-		// confirm = pushInsertMember(request, response);
-		// forwarding(request, response, confirm);
 	}
 
 	private boolean pushReviewRegister(HttpServletRequest request,
