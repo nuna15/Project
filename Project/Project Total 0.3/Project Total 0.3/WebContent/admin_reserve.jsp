@@ -38,40 +38,44 @@
 			<!-- 실직적으로 보여질 정보들-->
 			<div class="name">예매율/취소율</div>
 			<div class="section_1" id="reserve">
-				<!--Load the AJAX API-->
-				<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-				<script type="text/javascript">
-					// Load the Visualization API and the piechart package.
-					google.load('visualization', '1.0', {
-						'packages' : [ 'corechart' ]
-					});
-					// Set a callback to run when the Google Visualization API is loaded.
-					google.setOnLoadCallback(drawChart);
-					// Callback that creates and populates a data table,
-					// instantiates the pie chart, passes in the data and
-					// draws it.
-					function drawChart() {
-						// Create the data table.
-						var data = new google.visualization.DataTable();
-						data.addColumn('string', 'howmuch');
-						data.addColumn('number', 'Slices');
-						data.addRows([ [ '기막힌스캔들', 5 ], [ '러브액츄얼리', 5 ],
-								[ '삼봉이발소', 2 ], [ '기막힌스캔들', 4 ],
-								[ '골때리는그녀', 2 ] ]);
-						// Set chart options
-						var options = {
-							'title' : '공연 예매율',
-							'width' : 400,
-							'height' : 300
-						};
-						// Instantiate and draw our chart, passing in some options.
-						var chart = new google.visualization.PieChart(document
-								.getElementById('chart_div'));
-						chart.draw(data, options);
-					}
-				</script>
-				<!--Div that will hold the pie chart-->
-				<div id="chart_div"></div>
+				<form class="well" action="ReservationManageController"
+					method="post">
+					<!--Load the AJAX API-->
+					<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+					<script type="text/javascript">
+						// Load the Visualization API and the piechart package.
+						google.load('visualization', '1.0', {
+							'packages' : [ 'corechart' ]
+						});
+						// Set a callback to run when the Google Visualization API is loaded.
+						google.setOnLoadCallback(drawChart);
+						// Callback that creates and populates a data table,
+						// instantiates the pie chart, passes in the data and
+						// draws it.
+						function drawChart() {
+							// Create the data table.
+							var data = new google.visualization.DataTable();
+							data.addColumn('string', 'howmuch');
+							data.addColumn('number', 'Slices');
+							data.addRows([ [ '기막힌스캔들', 5 ], [ '러브액츄얼리', 5 ],
+									[ '삼봉이발소', 2 ], [ '기막힌스캔들', 4 ],
+									[ '골때리는그녀', 2 ] ]);
+							// Set chart options
+							var options = {
+								'title' : '공연 예매율',
+								'width' : 400,
+								'height' : 300
+							};
+							// Instantiate and draw our chart, passing in some options.
+							var chart = new google.visualization.PieChart(
+									document.getElementById('chart_div'));
+							chart.draw(data, options);
+						}
+					</script>
+					<!--Div that will hold the pie chart-->
+					<div id="chart_div"></div>
+				</form>
+
 			</div>
 		</div>
 		<jsp:include page="share/footer.jsp"></jsp:include>

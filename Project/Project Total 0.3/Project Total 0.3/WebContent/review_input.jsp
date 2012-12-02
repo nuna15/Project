@@ -5,16 +5,21 @@
 <head>
 <meta charset="UTF-8">
 <title>리뷰작성 페이지</title>
-<link href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css" rel="stylesheet">
-<link href="stylesheets/Mainpage_Layout.css" rel="stylesheet" type="text/css">
-<link href="stylesheets/review/review_input.css" rel="stylesheet" type="text/css">
-<script src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap.js"></script>
+<link
+	href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css"
+	rel="stylesheet">
+<link href="stylesheets/Mainpage_Layout.css" rel="stylesheet"
+	type="text/css">
+<link href="stylesheets/review/review_input.css" rel="stylesheet"
+	type="text/css">
+<script
+	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap.js"></script>
 </head>
 
 <body>
 	<div id="wrap">
 		<jsp:include page="share/header.jsp"></jsp:include>
-	
+
 		<!--전체 크기 -->
 		<div class="navbar">
 			<div class="navbar-inner">
@@ -28,14 +33,18 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div id="content">
 			<!-- 실직적으로 보여질 정보들-->
 			<div class="section_1" id="reserve_detail">
 				<!--예매상세내역-->
 				<h1>&lt; 리 뷰 작 성 &gt;</h1>
 				<center>
-					<form class="well" action="ConcertManageController" method="post">
+					<%
+						if (request.getSession() != null) {
+							if(request.getSession().getAttribute("userid") != null) {
+					%>
+					<form class="well" action="ReviewManageController" method="post">
 						<div class="report">
 							리뷰 제목 : <input type="text" name="reviewName" class="title"></input><br />
 							공연 제목 : <input type="text" name="concertName" class="title"></input><br />
@@ -48,6 +57,24 @@
 							<input type="submit" value="취소">
 						</div>
 					</form>
+					<%
+							}else if(request.getSession().getAttribute("userid") == null) {
+					%>
+								<script type="text/javascript">
+									location.href("login.jsp")
+									alert("로그인 후 이용해주세요!");
+								</script>
+					<%
+							}else {
+					%>
+								<script type="text/javascript">
+									location.href("login.jsp")
+									alert("로그인 후 이용해주세요!");
+								</script>
+					<%
+							}
+						}
+					%>
 				</center>
 			</div>
 		</div>
