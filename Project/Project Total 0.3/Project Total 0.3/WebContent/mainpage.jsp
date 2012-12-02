@@ -32,7 +32,7 @@
 		</div>
 		<div id="content">
 			<div class="section_1" id="concert">
-				<h1>공연정보</h1>
+				<a href="information.jsp"><h1>공연정보</h1></a>
 				<div class='slide'>
 					<div class='qitem'>
 						<a href="information.jsp"><img src="slide/1.jpg" alt="Test 1"
@@ -79,10 +79,25 @@
 			</div>
 
 			<div class="section_2" id="reserve">
-				<h1>예매</h1>
-				<ul>
-					<li>영화예매 <a href="reserve.jsp"><button
-								onclick="location.href('reserve.jsp')">예매하러가기</button></a><br />
+				<a href="reserve.jsp"><h1>예매</h1></a>
+				<ul>			
+						<%
+							if (request.getSession() != null) {
+								if(request.getSession().getAttribute("userid") != null) {
+						%>
+							<li>영화예매<a href="reserve.jsp"><button onclick="location.href('reserve.jsp')">예매하러가기</button></a><br />	
+						<%
+							}else if(request.getSession().getAttribute("userid") == null) {
+						%>
+							<li>영화예매<a href=""><button onclick="location.href('#')">예매하러가기</button></a><br />
+						<%
+							}else {
+						%>
+							<li>영화예매<a href=""><button onclick="location.href('#')">예매하러가기</button></a><br />
+						<%
+							}
+						}
+						%>
 						<p class='box'>사이트 상단의 예매하기 메뉴를 누르시거나 본 내용 상단의 예매하기를 누르시면 인터넷
 							예매가 가능합니다.</p>
 					</li>
@@ -101,7 +116,7 @@
 			</div>
 
 			<div class="section_3" id="review">
-				<h1>리뷰</h1>
+				<a href="review.jsp"><h1>리뷰</h1></a>
 
 				<a href="review_detail01.jsp">
 					<p class="review_detail">
@@ -137,7 +152,7 @@
 			</div>
 
 			<div class="section_4" id="membership">
-				<h1>멤버십</h1>
+				<a href="membership.jsp"><h1>멤버십</h1></a>
 				<a href="membership.jsp"> <img src="images/vip_main_img.gif"><br />
 					<br /> <img src="images/platinum.jpg"> <img
 					src="images/vip.jpg"> <img src="images/gold.jpg">

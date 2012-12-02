@@ -24,6 +24,37 @@
 	$(function() {
 		$("#datepicker").datepicker();
 	});
+	/* 계산 임시
+	  function calculatePay() {
+		  var result = eval(document.mypay.ticketAmountConcert.options.value);
+		  document.mypay.reservationCost.value = result*7000;
+		  }
+	 */
+	 /* 최종결제금액 script */
+	function calculatePay() {
+		var result = document.mypay.ticketAmountConcert.options.value;
+		switch (result) {
+		case "num0":
+			result = 0;
+			break;
+		case "num1":
+			result = 1;
+			break;
+		case "num2":
+			result = 2;
+			break;
+		case "num3":
+			result = 3;
+			break;
+		case "num4":
+			result = 4;
+			break;
+		case "num5":
+			result = 5;
+		}
+
+		document.mypay.reservationCost.value = result * 7000;
+	}
 </script>
 </head>
 
@@ -46,7 +77,7 @@
 		</div>
 
 		<div id="content">
-			<form action="ReservationManageController" method="post">
+			<form name="mypay" action="ReservationManageController" method="post">
 				<div class="section_1" id="reserve">
 					<ul>
 						<li>
@@ -54,13 +85,14 @@
 								<option value="옥탑방 고양이">기막힌 스캔들</option>
 								<option value="concert2">러브액츄얼리</option>
 								<option value="concert3">삼봉이발소</option>
-						</select><br /> <select name="ticketAmountConcert">
-								<option value="num0">&nbsp; 0 &nbsp;</option>
-								<option value="num1">&nbsp; 1 &nbsp;</option>
-								<option value="num2">&nbsp; 2 &nbsp;</option>
-								<option value="num3">&nbsp; 3 &nbsp;</option>
-								<option value="num4">&nbsp; 4 &nbsp;</option>
-								<option value="num5">&nbsp; 5 &nbsp;</option>
+						</select><br /> <select size="1" name="ticketAmountConcert"
+							onChange="calculatePay()">
+								<option value="num0" selected>&nbsp; 매수를 선택하세요 &nbsp;</option>
+								<option value="num1">&nbsp; 1 매 &nbsp;</option>
+								<option value="num2">&nbsp; 2 매 &nbsp;</option>
+								<option value="num3">&nbsp; 3 매 &nbsp;</option>
+								<option value="num4">&nbsp; 4 매 &nbsp;</option>
+								<option value="num5">&nbsp; 5 매 &nbsp;</option>
 						</select><br />
 						</li>
 						<li>
@@ -87,7 +119,7 @@
 						</li>
 						<li>
 							<h3>최종 결제 금액 (vat포함)</h3> <input type="text"
-							name="reservationCost" value="15,050" size="5" /> <input
+							name="reservationCost" size="5" style="text-align: right;" />원 <input
 							type="submit" class="submit" name="paybutton" value="예매하기" />
 						</li>
 					</ul>

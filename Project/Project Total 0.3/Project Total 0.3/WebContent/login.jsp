@@ -6,10 +6,15 @@
 <head>
 <meta charset="UTF-8">
 <title>로그인 페이지</title>
-<link href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css" rel="stylesheet">
-<link href="stylesheets/Mainpage_Layout.css" rel="stylesheet" type="text/css">
-<link href="stylesheets/login/login.css" rel="stylesheet" type="text/css">
-<script src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap.js"></script>
+<link
+	href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css"
+	rel="stylesheet">
+<link href="stylesheets/Mainpage_Layout.css" rel="stylesheet"
+	type="text/css">
+<link href="stylesheets/login/login.css" rel="stylesheet"
+	type="text/css">
+<script
+	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap.js"></script>
 </head>
 
 <body>
@@ -42,8 +47,10 @@
 							type="checkbox" class="check"> ID 저장 <br />
 
 						<button type="submit" class="btn">로그인</button>
-						<a href="register.jsp"><button type="button" class="btn" onclick="location.href('register.jsp')">회원가입</button></a>
-						<a href="IDPW.jsp"><button type="button" class="btn" onclick="location.href('IDPW.jsp')">아이디/비밀번호 찾기</button></a>
+						<a href="register.jsp"><button type="button" class="btn"
+								onclick="location.href('register.jsp')">회원가입</button></a> <a
+							href="IDPW.jsp"><button type="button" class="btn"
+								onclick="location.href('IDPW.jsp')">아이디/비밀번호 찾기</button></a>
 					</form>
 				</div>
 			</div>
