@@ -1,4 +1,4 @@
-package Controller;
+package controller;
 
 import java.io.IOException;
 
@@ -9,13 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import constants.Constants;
+
 import dao.ConcertDao;
 import dao.ReviewDao;
 import dao.UserDao;
 import dto.ConcertDataBean;
 import dto.ReviewDataBean;
-
-import Constants.Constants;
 
 /**
  * Servlet implementation class ReviewManageController
@@ -39,6 +39,23 @@ public class ReviewManageController extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+
+		String action = request.getParameter("action");
+		request.setCharacterEncoding(Constants.MAIN_ENCODING);
+		if (action != null) {
+			if (action.equals("index")) {
+				pushIndexPage(request, response);
+				RequestDispatcher view = request
+						.getRequestDispatcher(Constants.PAGE_URL_REVIEW_MAIN);
+				view.forward(request, response);
+			}
+		}
+	}
+
+	private void pushIndexPage(HttpServletRequest request,
+			HttpServletResponse response) {
+		// TODO Auto-generated method stub
+
 	}
 
 	/**

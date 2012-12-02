@@ -19,9 +19,9 @@
 			<div class="navbar-inner">
 				<div class="container">
 					<ul class="nav">
-						<li><a href="information.jsp">공연</a></li>
-						<li><a href="reserve.jsp">예약 </a></li>
-						<li class="active"><a href="review.jsp">리뷰</a></li>
+						<li><a href="ConcertManageController?action=index">공연</a></li>
+						<li><a href="ReservationManageController?action=index">예약 </a></li>
+						<li class="active"><a href="ReviewManageController?action=index">리뷰</a></li>
 						<li><a href="membership.jsp">멤버십</a></li>
 					</ul>
 				</div>
@@ -30,6 +30,9 @@
 
 		<div id="content">
 			<!-- 실직적으로 보여질 정보들-->
+			<div class="review">
+			<a href="review_input.jsp"><input type="submit" value="글쓰기"></a> 
+			</div>
 			<div class="section_1" id="hotreview">
 				<!--인기리뷰-->
 				<p class="title">BEST REIVIEW</p>

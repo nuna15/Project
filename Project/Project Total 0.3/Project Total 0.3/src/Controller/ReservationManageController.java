@@ -1,4 +1,4 @@
-package Controller;
+package controller;
 
 import java.io.IOException;
 
@@ -9,11 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import constants.Constants;
+
 import dao.ConcertDao;
 import dao.ReservationDao;
 import dto.ReservationDataBean;
-
-import Constants.Constants;
 
 /**
  * Servlet implementation class ReservationManageController
@@ -37,6 +37,22 @@ public class ReservationManageController extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		String action = request.getParameter("action");
+		request.setCharacterEncoding(Constants.MAIN_ENCODING);
+		if (action != null) {
+			if (action.equals("index")) {
+				pushIndexPage(request, response);
+				RequestDispatcher view = request
+						.getRequestDispatcher(Constants.PAGE_URL_RESERVATION_REGISTER);
+				view.forward(request, response);
+			}
+		}
+	}
+
+	private void pushIndexPage(HttpServletRequest request,
+			HttpServletResponse response) {
+		// TODO Auto-generated method stub
+
 	}
 
 	/**

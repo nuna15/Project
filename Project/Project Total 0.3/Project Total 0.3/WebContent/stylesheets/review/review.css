@@ -28,6 +28,9 @@
 	margin:0px 20px 0px 20px; float:left; width: :180px; height: 120px;
 }
 
+.review a{
+	margin-left:850px;	
+}
 .paging{
     text-align:center;
     line-height:1.3em;

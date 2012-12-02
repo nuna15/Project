@@ -1,7 +1,6 @@
-package Controller;
+package controller;
 
 import java.io.IOException;
-import java.sql.Time;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,14 +8,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
+import constants.Constants;
 import dao.ConcertDao;
-import dao.UserDao;
 import dto.ConcertDataBean;
-import dto.UserDataBean;
-
-import Constants.Constants;
 
 /**
  * Servlet implementation class ConcertManager
@@ -40,6 +35,37 @@ public class ConcertManageController extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		String action = request.getParameter("action");
+		request.setCharacterEncoding(Constants.MAIN_ENCODING);
+		if (action != null) {
+			if (action.equals("index")) {
+				pushIndexPage(request, response);
+				RequestDispatcher view = request
+						.getRequestDispatcher(Constants.PAGE_URL_CONCERT_MAIN);
+				view.forward(request, response);
+			} else if (action.equals("concert")) {
+				pushRegisterPage(request, response);
+			} else if (action.equals("reservation")) {
+				pushReservationPage(request, response);
+			}
+		}
+	}
+
+	private void pushIndexPage(HttpServletRequest request,
+			HttpServletResponse response) {
+		// TODO Auto-generated method stub
+	}
+
+	private void pushReservationPage(HttpServletRequest request,
+			HttpServletResponse response) {
+		// TODO Auto-generated method stub
+
+	}
+
+	private void pushRegisterPage(HttpServletRequest request,
+			HttpServletResponse response) {
+		// TODO Auto-generated method stub
+
 	}
 
 	/**
@@ -79,7 +105,6 @@ public class ConcertManageController extends HttpServlet {
 			try {
 				ConcertDataBean concert = new ConcertDataBean();
 				concert.setTimeNumber(0);
-				concert.setConcertDate(null);
 				concert.setAllowNumber(0);
 				concert.setStartDate(null);
 				concert.setFinishDate(null);
@@ -107,7 +132,8 @@ public class ConcertManageController extends HttpServlet {
 				request.setAttribute("concertName", concert.getConcertName());
 				request.setAttribute("concertActor", concert.getActor());
 				request.setAttribute("concertStartDate", concert.getStartDate());
-				request.setAttribute("concertEndDate", concert.getFinishDate());
+				request.setAttribute("concertFinishDate",
+						concert.getFinishDate());
 				request.setAttribute("concertContent", concert.getContent());
 				return true;
 			} catch (Exception e) {

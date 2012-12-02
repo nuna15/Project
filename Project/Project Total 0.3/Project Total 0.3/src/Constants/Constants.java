@@ -1,4 +1,4 @@
-package Constants;
+package constants;
 
 public class Constants {
 	public static final String CONTROLLER_ERROR_String_VALUE = "Not found";
@@ -15,6 +15,7 @@ public class Constants {
 	public static final String PAGE_URL_CONCERT_MAIN = "information.jsp";
 
 	public static final String PAGE_URL_RESERVATION_REGISTER = "reserve.jsp";
-	
+
 	public static final String PAGE_URL_REVIEW_REGISTER = "review_input.jsp";
+	public static final String PAGE_URL_REVIEW_MAIN = "review.jsp";
 }

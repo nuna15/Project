@@ -25,9 +25,9 @@
 			<div class="navbar-inner">
 				<div class="container">
 					<ul class="nav">
-						<li><a href="information.jsp">공연</a></li>
-						<li><a href="reserve.jsp">예약 </a></li>
-						<li><a href="review.jsp">리뷰</a></li>
+						<li><a href="ConcertManageController?action=index">공연</a></li>
+						<li><a href="ReservationManageController?action=index">예약 </a></li>
+						<li><a href="ReviewManageController?action=index">리뷰</a></li>
 						<li><a href="membership.jsp">멤버십</a></li>
 					</ul>
 				</div>
@@ -60,16 +60,18 @@
 					<%
 							}else if(request.getSession().getAttribute("userid") == null) {
 					%>
+								
 								<script type="text/javascript">
-									location.href("login.jsp")
 									alert("로그인 후 이용해주세요!");
+									location.replace("login.jsp")
 								</script>
 					<%
 							}else {
 					%>
+								
 								<script type="text/javascript">
-									location.href("login.jsp")
 									alert("로그인 후 이용해주세요!");
+									location.replace("login.jsp")								
 								</script>
 					<%
 							}

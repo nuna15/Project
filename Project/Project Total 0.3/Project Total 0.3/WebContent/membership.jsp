@@ -20,9 +20,9 @@
 			<div class="navbar-inner">
 				<div class="container">
 					<ul class="nav">
-						<li><a href="information.jsp">공연</a></li>
-						<li><a href="reserve.jsp">예약 </a></li>
-						<li><a href="review.jsp">리뷰</a></li>
+						<li><a href="ConcertManageController?action=index">공연</a></li>
+						<li><a href="ReservationManageController?action=index">예약 </a></li>
+						<li><a href="ReviewManageController?action=index">리뷰</a></li>
 						<li class="active"><a href="membership.jsp">멤버십</a></li>
 					</ul>
 				</div>
@@ -66,8 +66,7 @@
 						<th>자격조건</th>
 					</tr>
 					<tr>
-						<td><img
-							src="http://postfiles4.naver.net/20121101_243/exteria_1351705509889lbuBR_JPEG/vip.jpg?type=w3"></td>
+						<td><img src="images/vip.jpg"></td>
 						<td>
 							<ol>
 								<li>공연 예매시 20% 할인</li>
@@ -84,8 +83,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td><img
-							src="http://postfiles12.naver.net/20121101_283/exteria_1351705509781vBdGm_JPEG/platinum.jpg?type=w3"></td>
+						<td><img src="images/platinum.jpg"></td>
 						<td>
 							<ol>
 								<li>공연 예매시 15% 할인</li>
@@ -102,8 +100,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td><img
-							src="http://postfiles14.naver.net/20121101_221/exteria_1351705509476d4AnB_JPEG/gold.jpg?type=w3"></td>
+						<td><img src="images/gold.jpg"></td>
 						<td>
 							<ol>
 								<li>공연 예매시 10% 할인</li>

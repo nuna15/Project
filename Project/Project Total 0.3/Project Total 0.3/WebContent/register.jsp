@@ -5,10 +5,15 @@
 <head>
 <meta charset="UTF-8">
 <title>회원가입 페이지</title>
-<link href="stylesheets/login/register.css" rel="stylesheet" type="text/css">
-<link href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css" rel="stylesheet">
-<link href="stylesheets/Mainpage_Layout.css" rel="stylesheet" type="text/css">
-<script src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap.js"></script>
+<link href="stylesheets/login/register.css" rel="stylesheet"
+	type="text/css">
+<link
+	href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css"
+	rel="stylesheet">
+<link href="stylesheets/Mainpage_Layout.css" rel="stylesheet"
+	type="text/css">
+<script
+	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap.js"></script>
 
 <script>
 	function joinAgree() {
@@ -37,9 +42,10 @@
 			<div class="navbar-inner">
 				<div class="container">
 					<ul class="nav">
-						<li><a href="information.jsp">공연</a></li>
-						<li><a href="reserve.jsp">예약 </a></li>
-						<li><a href="review.jsp">리뷰</a></li>
+						<li><a href="ConcertManageController?action=index">공연</a></li>
+						<li><a href="ReservationManageController?action=index">예약
+						</a></li>
+						<li><a href="ReviewManageController?action=index">리뷰</a></li>
 						<li><a href="membership.jsp">멤버십</a></li>
 					</ul>
 				</div>
@@ -254,8 +260,8 @@
 						</li>
 						<li>
 							<div class="submit">
-								<input type="submit" value="회원가입" /> <input type="reset"
-									value="취소" />
+								<input type="submit" value="회원가입" />
+								<input type="reset" value="취소" />
 							</div>
 						</li>
 					</ul>

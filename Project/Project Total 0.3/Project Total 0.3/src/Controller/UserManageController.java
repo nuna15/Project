@@ -1,4 +1,4 @@
-package Controller;
+package controller;
 
 import java.io.IOException;
 import java.sql.Date;
@@ -12,7 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.swing.JOptionPane;
 
-import Constants.Constants;
+import constants.Constants;
+
 import dao.UserDao;
 import dto.UserDataBean;
 
@@ -38,15 +39,18 @@ public class UserManageController extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String requestUrl = request.getHeader("REFERER");
-		String op = request.getParameter("op");
-		String actionUrl = "";
-		boolean flag;
-
-		String id = (String) request.getSession().getAttribute("userid");
-
-		RequestDispatcher dispatcher = request.getRequestDispatcher(actionUrl);
-		dispatcher.forward(request, response);
+		String action = request.getParameter("action");
+		if (action != null) {
+			if (action.equals("register")) {
+				pushRegisterPage(request, response);
+			} else if (action.equals("mypage")) {
+				pushInformationPage(request, response);
+			} else if (action.equals("focusConcert")) {
+				pushFocusConcertPage(request, response);
+			} else if (action.equals("myReservationHistoryPage")) {
+				pushReservationHistoryPage(request, response);
+			}
+		}
 	}
 
 	/**
@@ -73,6 +77,42 @@ public class UserManageController extends HttpServlet {
 			confirm = pushInsertMember(request, response);
 			forwarding(request, response, confirm);
 		}
+	}
+
+	private void pushReservationHistoryPage(HttpServletRequest request,
+			HttpServletResponse response) {
+		// TODO Auto-generated method stub
+
+	}
+
+	private void pushFocusConcertPage(HttpServletRequest request,
+			HttpServletResponse response) {
+		// TODO Auto-generated method stub
+
+	}
+
+	private void pushInformationPage(HttpServletRequest request,
+			HttpServletResponse response) {
+		// TODO Auto-generated method stub
+		try {
+			UserDataBean user = UserDao.getInstance().getMember(
+					(String) request.getSession().getAttribute("userid"));
+			request.setAttribute("user", user);
+			// request.setAttribute("userRank", user.getRank());
+			// request.setAttribute("userName", user.getName()); 주문금액 구현 해야함
+			// log테이블 이용
+			// request.setAttribute("userName", user.getName()); 사용가능 적립금
+			// request.setAttribute("userName", user.getName()); 사용된 적립금
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	private void pushRegisterPage(HttpServletRequest request,
+			HttpServletResponse response) {
+		// TODO Auto-generated method stub
+
 	}
 
 	private boolean pushLogin(HttpServletRequest request,
