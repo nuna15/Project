@@ -85,7 +85,7 @@
 							if (request.getSession() != null) {
 								if(request.getSession().getAttribute("userid") != null) {
 						%>
-							<li>영화예매<a href="reserve.jsp"><button onclick="location.href('reserve.jsp')">예매하러가기</button></a><br />	
+							<li>영화예매<a href="ReservationManageController?action=index"><button onclick="location.href('ReservationManageController?action=index')">예매하러가기</button></a><br />	
 						<%
 							}else if(request.getSession().getAttribute("userid") == null) {
 						%>
@@ -152,11 +152,7 @@
 			</div>
 
 			<div class="section_4" id="membership">
-				<a href="membership.jsp"><h1>멤버십</h1></a>
-				<a href="membership.jsp"> <img src="images/vip_main_img.gif"><br />
-					<br /> <img src="images/platinum.jpg"> <img
-					src="images/vip.jpg"> <img src="images/gold.jpg">
-				</a>
+				
 			</div>
 		</div>
 		

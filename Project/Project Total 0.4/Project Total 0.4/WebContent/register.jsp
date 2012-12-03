@@ -260,7 +260,7 @@
 						</li>
 						<li>
 							<div class="submit">
-								<input type="submit" value="회원가입" />
+								<a href="MainManageController?action=mainpage"><input type="submit" value="회원가입" /></a>
 								<input type="reset" value="취소" />
 							</div>
 						</li>

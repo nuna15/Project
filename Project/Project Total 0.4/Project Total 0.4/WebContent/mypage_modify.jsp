@@ -26,8 +26,7 @@
 				<div class="container">
 					<ul class="nav">
 						<li><a href="ConcertManageController?action=index">공연</a></li>
-						<li><a href="ReservationManageController?action=index">예약
-						</a></li>
+						<li><a href="ReservationManageController?action=index">예약</a></li>
 						<li><a href="ReviewManageController?action=index">리뷰</a></li>
 						<li><a href="membership.jsp">멤버십</a></li>
 					</ul>
@@ -74,8 +73,8 @@
 								</tr>
 							</table>
 							<div class="submit">
-								<input type="submit" value="수정하기" /> <input type="reset"
-									value="취소" />
+								<a href="UserManageController?action=login"><input type="submit" value="수정하기" /></a> 
+								<input type="reset" value="취소" />
 							</div>
 						</form>
 					</center>

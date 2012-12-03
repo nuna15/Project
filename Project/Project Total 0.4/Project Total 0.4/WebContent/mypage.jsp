@@ -70,8 +70,7 @@
 							<td>5,000 point</td>
 						</tr>
 					</table>
-					<a href="UserManageController?action=myReservationHistoryPage"><button
-							onclick="location.href('UserManageController?action=myReservationHistoryPage')">수정하러가기</button></a><br />
+					<a href="UserManageController?action=modify"><button onclick="location.href('UserManageController?action=modify')">수정하러가기</button></a><br />
 				</div>
 
 				<div class="section_2" id="right">
@@ -121,8 +120,7 @@
 							<div class="status">결제대기</div>
 						</div>
 					</div>
-					<a href="UserManageController?action=myReservationHistoryPage"><button
-							onclick="location.href('UserManageController?action=myReservationHistoryPage')">자세히보기</button></a><br />
+					<a href="UserManageController?action=myReservationHistoryPage"><button onclick="location.href('UserManageController?action=myReservationHistoryPage')">자세히보기</button></a><br />
 
 				</div>
 

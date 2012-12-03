@@ -17,7 +17,7 @@
 		} finally {
 	%>
 	<script language=javascript>
-		window.location.href = 'login.jsp'
+		window.location.href = 'UserManageController?action=login'
 	</script>
 	<%
 		}

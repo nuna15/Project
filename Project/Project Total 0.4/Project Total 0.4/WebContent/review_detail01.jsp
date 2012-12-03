@@ -55,7 +55,7 @@ h2 {text-align:center; line-height:40px; font-weight:bold;}
      		그래도 배우들의 같은 옷, 다른 느낌, 이라는 사진을 구경하는 것처럼 조선시대(스캔들 - 남녀상열지사)와 상하이 1930년대(위험한 관계)를 비교해보는 재미는 있다. 물론 둘이 승부를 겨룬다면, 개인적으론 스캔들의 승리라고 생각한다. 좀 더 인물들의 감정 흐름이 자연스럽다. 
 			<p><u>세상에 위험하지 않은 사랑은 없다. 사랑에 빠지면 판단력이 흐려지기 때문이다.</u><p>
      	</div>
-﻿		<center><a href="review.jsp"><input type="button" value=" 되 돌 아 가 기 "/></a></center>
+﻿		<center><a href="ReviewManageController?action=review"><input type="button" value=" 되 돌 아 가 기 "/></a></center>
    	</div>
 </div>
 

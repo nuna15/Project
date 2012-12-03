@@ -34,7 +34,7 @@ h2 {text-align:center; line-height:40px; font-weight:bold;}
 
 		</div>
 
-﻿		<center><a href="review.jsp"><input type="button" value=" 되 돌 아 가 기 "/></a></center>
+﻿		<center><a href="ReviewManageController?action=review"><input type="button" value=" 되 돌 아 가 기 "/></a></center>
    	</div>
 </div>
 </body>
