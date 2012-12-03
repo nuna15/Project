@@ -65,24 +65,24 @@ li:first-child a {
 						if (request.getSession().getAttribute("userid")
 								.equals(new String("admin"))) {
 			%>
-			<a href="AdminManageController?">관리자</a>&nbsp; <a
-				href="mainpage.jsp">일반페이지</a>&nbsp; <a href="logout.jsp">로그아웃</a>
+			<a href="AdminManageController?action=master">관리자</a>&nbsp; <a
+				href="MainManageController?action=mainpage">일반페이지</a>&nbsp; <a href="UserManageController?action=logout">로그아웃</a>
 			<%
 				//if 유저
 						} else if (request.getSession().getAttribute("userid") != null) {
 			%>
 			<a href="UserManageController?action=mypage">마이페이지</a>&nbsp;<a
-				href="FAQ.jsp">고객센터</a>&nbsp; <a href="logout.jsp">로그아웃</a>
+				href="FAQ.jsp">고객센터</a>&nbsp; <a href="UserManageController?action=logout">로그아웃</a>
 			<%
 				} else {
 			%>
-			<a href="login.jsp">로그인</a> &nbsp;<a href="register.jsp">회원가입</a>&nbsp;
+			<a href="UserManageController?action=login">로그인</a> &nbsp;<a href="UserManageController?action=register">회원가입</a>&nbsp;
 			<a href="FAQ.jsp">고객센터</a>
 			<%
 				}
 					} else {
 			%>
-			<a href="login.jsp">로그인</a> &nbsp;<a href="register.jsp">회원가입</a>&nbsp;
+			<a href="UserManageController?action=login">로그인</a> &nbsp;<a href="UserManageController?action=register">회원가입</a>&nbsp;
 			<a href="FAQ.jsp">고객센터</a>
 			<%
 				}

@@ -5,10 +5,15 @@
 <head>
 <meta charset="UTF-8">
 <title>마이페이지 정보수정</title>
-<link href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css" rel="stylesheet">
-<link href="stylesheets/Mainpage_Layout.css" rel="stylesheet" type="text/css">
-<link href="stylesheets/mypage/mypage_modify.css" rel="stylesheet" type="text/css">
-<script src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap.js"></script>
+<link
+	href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css"
+	rel="stylesheet">
+<link href="stylesheets/Mainpage_Layout.css" rel="stylesheet"
+	type="text/css">
+<link href="stylesheets/mypage/mypage_modify.css" rel="stylesheet"
+	type="text/css">
+<script
+	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap.js"></script>
 </head>
 
 <body>
@@ -21,14 +26,15 @@
 				<div class="container">
 					<ul class="nav">
 						<li><a href="ConcertManageController?action=index">공연</a></li>
-						<li><a href="ReservationManageController?action=index">예약 </a></li>
+						<li><a href="ReservationManageController?action=index">예약
+						</a></li>
 						<li><a href="ReviewManageController?action=index">리뷰</a></li>
 						<li><a href="membership.jsp">멤버십</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
-		
+
 		<div id="content">
 			<!-- 실직적으로 보여질 정보들-->
 			<div class="section_1" id="reserve_detail">
@@ -41,7 +47,7 @@
 							<table align="center" class="modi">
 								<tr>
 									<th>* ID</th>
-									<td><text readonly class="read">wkdrbtjdid</text></td>
+									<td>${user.userid}</td>
 								</tr>
 								<tr>
 									<th>* Password</th>
@@ -54,11 +60,12 @@
 								</tr>
 								<tr>
 									<th>* 이름</th>
-									<td><text readonly class="read">홍길동</text></td>
+									<td><text readonly class="read">${user.name}</text></td>
 								</tr>
 								<tr>
 									<th>* 주민등록 번호</th>
-									<td><text readonly class="read">951423 - *******</text></td>
+									<td><text readonly class="read">${user.ssn1} -
+										*******</text></td>
 								</tr>
 								<tr>
 									<th>* facebook 아이디&nbsp;</th>

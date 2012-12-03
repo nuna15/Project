@@ -1,14 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>리뷰 페이지</title>
-<link href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css" rel="stylesheet">
-<link href="stylesheets/Mainpage_Layout.css" rel="stylesheet" type="text/css">
-<link href="stylesheets/review/review.css" rel="stylesheet" type="text/css">
-<script	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap.js"></script>
+<link
+	href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css"
+	rel="stylesheet">
+<link href="stylesheets/Mainpage_Layout.css" rel="stylesheet"
+	type="text/css">
+<link href="stylesheets/review/review.css" rel="stylesheet"
+	type="text/css">
+<script
+	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap.js"></script>
 </head>
 <body>
 	<div id="wrap">
@@ -20,8 +26,10 @@
 				<div class="container">
 					<ul class="nav">
 						<li><a href="ConcertManageController?action=index">공연</a></li>
-						<li><a href="ReservationManageController?action=index">예약 </a></li>
-						<li class="active"><a href="ReviewManageController?action=index">리뷰</a></li>
+						<li><a href="ReservationManageController?action=index">예약
+						</a></li>
+						<li class="active"><a
+							href="ReviewManageController?action=index">리뷰</a></li>
 						<li><a href="membership.jsp">멤버십</a></li>
 					</ul>
 				</div>
@@ -31,7 +39,7 @@
 		<div id="content">
 			<!-- 실직적으로 보여질 정보들-->
 			<div class="review">
-			<a href="review_input.jsp"><input type="submit" value="글쓰기"></a> 
+				<a href="review_input.jsp"><input type="submit" value="글쓰기"></a>
 			</div>
 			<div class="section_1" id="hotreview">
 				<!--인기리뷰-->
@@ -44,8 +52,9 @@
 						하고 하고 싶은 건 해야 직성이 풀리는 성격이다. 모지에위는 자신을 배신한 남자에게 복수하기 위해 세이판에게 부탁을
 						한다. 때 묻지 않은 어린 소녀 베이베이를 탐해 달라는, 이것부터가 상당히 위험한 게임이다. 모지에위는 이른 나이에
 						남편을 잃고 험한 세상을 홀로 살아가면서 ...</span></a>
+
 			</div>
-			
+
 			<div class="section_2">
 				<!--리뷰 1,2,3의 묶음-->
 				<div class="section_2_left" id="review1">
@@ -91,13 +100,36 @@
 				<!-- 리뷰 리스트-->
 				<p class="title">REVIEW</p>
 				<ul>
+					<%
+						ArrayList<ReviewDataBean> reviews = (ArrayList<ReviewDataBean>) request
+								.getAttribute("reviews");
+						ReviewDataBean concert = reviews.get(0);
+						String tempString = new String();
+						if(tempString.length() >30)
+						{
+							for (int i = 0; i < 30; i++) {
+								tempString += concert.getContent().charAt(i);
+							}
+						}
+					%>
+					<c:forEach var="review" items="${reviews}">
+						<li><a href="#"> <img
+								src="http://img.cgv.co.kr/Movie/Thumbnail/StillCut/000076/76602/76602100880_727.jpg"
+								width="180px" height="120px" alt="아르고 이미지">
+								<p class="minititle">${review.reviewName}</p>
+								${review.reviewContent}<br /> <span> 10:23:39 | 조회수 740
+									| 추천수 3</span>
+						</a></li>
+					</c:forEach>
+				</ul>
+				<!--
 					<li><a href="#"> <img
 							src="http://img.cgv.co.kr/Movie/Thumbnail/StillCut/000076/76602/76602100880_727.jpg"
-							width="180px" height="120px" alt="아르고 이미지">
-							<p class="minititle">[ 아 르 고 ]</p> 워낙 미국에서 oscar buzz가 심했고, 몇주 전에
+							width="180px" height="120px" alt="아르고 이미지"> <!--  <p class="minititle">[ 아 르 고 ]</p> 워낙 미국에서 oscar buzz가 심했고, 몇주 전에
 							타임에서 벤 에플렉 기사를 읽었던터라 기대감이 굉장히 높았다. 그런 만큼 실망하면 어쩌나 하면서 봤지만, 존 굿먼,
-							앨런 아킨, 브라이언 크팬쇼... <br /> <span> 10:23:39 | 조회수 740 | 추천수
-								3</span></a></li>
+							앨런 아킨, 브라이언 크팬쇼... <br /><span> 10:23:39 | 조회수 740 | 추천수
+								3</span>
+					</a></li>
 					<li><a href="#"> <img
 							src="http://img.cgv.co.kr/Movie/Thumbnail/StillCut/000076/76430/76430100405_727.jpg"
 							width="180px" height="120px" alt="007스카이풀 이미지">
@@ -125,10 +157,11 @@
 							시리즈의 연이은 성공으로 1편에 대한 열광적인 호응이 일회성 해프닝이... <br /> <span>10:23:39
 								| 조회수 740 | 추천수 3</span></a></li>
 				</ul>
+				-->
 			</div>
 
 			<div class='paging'>
-				<a href="#">Prev</a> <a href="#">1</a> <strong>2</strong> <a
+				<a href="#">Prev</a> <strong>1</strong> <a href="#">2</a> <a
 					href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#">Next</a>
 			</div>
 		</div>

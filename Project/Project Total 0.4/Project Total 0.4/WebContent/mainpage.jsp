@@ -32,10 +32,10 @@
 		</div>
 		<div id="content">
 			<div class="section_1" id="concert">
-				<a href="information.jsp"><h1>공연정보</h1></a>
+				<a href="ConcertManageController?action=index"><h1>공연정보</h1></a>
 				<div class='slide'>
 					<div class='qitem'>
-						<a href="information.jsp"><img src="slide/1.jpg" alt="Test 1"
+						<a href="ConcertManageController?action=index"><img src="slide/1.jpg" alt="Test 1"
 							width="126" height="126" /></a> <span class="caption">
 							<h4>광해</h4>
 							<p>예매율 : 13.9%</p>
@@ -45,7 +45,7 @@
 						</span>
 					</div>
 					<div class='qitem'>
-						<a href="information.jsp"><img src="slide/2.jpg" alt="Test 1"
+						<a href="ConcertManageController?action=index"><img src="slide/2.jpg" alt="Test 1"
 							width="126" height="126" /></a> <span class="caption">
 							<h4>007 스카이폴</h4>
 							<p>예매율 : 13.9%</p>
@@ -56,7 +56,7 @@
 					</div>
 					<div class='clear'></div>
 					<div class='qitem'>
-						<a href="information.jsp"><img src="slide/3.jpg" alt="Test 1"
+						<a href="ConcertManageController?action=index"><img src="slide/3.jpg" alt="Test 1"
 							width="126" height="126" /></a> <span class="caption">
 							<h4>아르고</h4>
 							<p>예매율 : 13.9%</p>
@@ -66,7 +66,7 @@
 						</span>
 					</div>
 					<div class='qitem'>
-						<a href="information.jsp"><img src="slide/4.jpg" alt="Test 1"
+						<a href="ConcertManageController?action=index"><img src="slide/4.jpg" alt="Test 1"
 							width="126" height="126" /></a> <span class="caption">
 							<h4>용의자X</h4>
 							<p>예매율 : 13.9%</p>
@@ -79,7 +79,7 @@
 			</div>
 
 			<div class="section_2" id="reserve">
-				<a href="reserve.jsp"><h1>예매</h1></a>
+				<a href="ReservationManageController?action=index"><h1>예매</h1></a>
 				<ul>			
 						<%
 							if (request.getSession() != null) {
@@ -105,8 +105,8 @@
 						<p class='box'>인터넷으로 예매가 가능한 시간은 해당 공연 상영 1시간 전까지 이며 이후 예매를
 							원하실 경우에는 영화관 현장에 직접 가셔서 예매를 하셔야합니다.</p>
 					</li>
-					<li>예매확인/취소 <a href="mypage_orderlist.jsp"><button
-								onclick="location.href('mypage_orderlist.jsp')">예매확인/취소</button></a><br />
+					<li>예매확인/취소 <a href="UserManageController?action=myReservationHistoryPage"><button
+								onclick="location.href('UserManageController?action=myReservationHistoryPage')">예매확인/취소</button></a><br />
 						<p class='box'>
 							- 예매 취소 및 환불 가능 시간은 해당 공영 상영 20분 전까지입니다.<br /> - 관람권으로 교환한 입장권은
 							현금환불 및 취소가 되지 않습니다.
@@ -116,7 +116,7 @@
 			</div>
 
 			<div class="section_3" id="review">
-				<a href="review.jsp"><h1>리뷰</h1></a>
+				<a href="ReviewManageController?action=index"><h1>리뷰</h1></a>
 
 				<a href="review_detail01.jsp">
 					<p class="review_detail">
