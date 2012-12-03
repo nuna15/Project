@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import constants.WPConstants;
-
 import dao.ConcertDao;
 import dao.ReservationDao;
 import dto.ReservationDataBean;
@@ -55,18 +54,16 @@ public class ReservationManageController extends HttpServlet {
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String requestUrl = request.getHeader("REFERER");
 		boolean confirm = false;
 		request.setCharacterEncoding(WPConstants.MAIN_ENCODING);
 
-		if (requestUrl
-				.equals((WPConstants.PAGE_SERVER_URL + WPConstants.PAGE_URL_RESERVATION_REGISTER))) {
+		if (request.getParameter("action").equals("register")) {
 			confirm = pushReservationRegister(request, response);
 			if (confirm) {
 				RequestDispatcher view = request
 						.getRequestDispatcher(WPConstants.PAGE_URL_MAINPAGE);
 				view.forward(request, response);
-			} else { // 수정 안됨
+			} else {
 				RequestDispatcher view = request
 						.getRequestDispatcher(WPConstants.PAGE_URL_MAINPAGE);
 				view.forward(request, response);

@@ -51,6 +51,7 @@
 								onclick="location.href('UserManageController?action=register')">회원가입</button></a> <a
 							href="UserManageController?action=idpw"><button type="button" class="btn"
 								onclick="location.href('UserManageController?action=idpw')">아이디/비밀번호 찾기</button></a>
+								<input type="hidden" name="action" value="login"></input>
 					</form>
 				</div>
 			</div>

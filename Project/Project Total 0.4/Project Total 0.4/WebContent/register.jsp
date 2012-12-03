@@ -265,6 +265,7 @@
 							</div>
 						</li>
 					</ul>
+					<input type="hidden" name="action" value="register"></input>
 				</form>
 			</div>
 		</div>

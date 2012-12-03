@@ -49,6 +49,7 @@
 								src="https://www.ygosu.com/images/btn_ok5.gif" alt="확인">
 						</center>
 					</div>
+					<input type="hidden" name="action" value="check"></input>
 				</form>
 			</div>
 			<div class="box">
@@ -91,6 +92,7 @@
 								src="https://www.ygosu.com/images/btn_ok5.gif" alt="확인">
 						</center>
 					</div>
+					<input type="hidden" name="action" value="check"></input>
 				</form>
 			</div>
 		</div>

@@ -102,10 +102,10 @@ public class ReviewDao {
 
 			while (rs.next()) {
 				review = new ReviewDataBean();
-				review.setReviewid(rs.getInt("password"));
+				review.setReviewid(rs.getInt("reviewid"));
 				review.setUserid(rs.getString("userid"));
 				review.setConcertid(rs.getInt("concertid"));
-				review.setScore(rs.getInt(rs.getInt("score")));
+				review.setScore(rs.getInt("score"));
 				review.setEvaluateNumber(rs.getInt("evaluateNumber"));
 				review.setContents(rs.getString("contents"));
 				review.setReviewName(rs.getString("reviewname"));

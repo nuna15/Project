@@ -100,24 +100,12 @@
 				<!-- 리뷰 리스트-->
 				<p class="title">REVIEW</p>
 				<ul>
-					<%
-						ArrayList<ReviewDataBean> reviews = (ArrayList<ReviewDataBean>) request
-								.getAttribute("reviews");
-						ReviewDataBean concert = reviews.get(0);
-						String tempString = new String();
-						if(tempString.length() >30)
-						{
-							for (int i = 0; i < 30; i++) {
-								tempString += concert.getContent().charAt(i);
-							}
-						}
-					%>
 					<c:forEach var="review" items="${reviews}">
 						<li><a href="#"> <img
 								src="http://img.cgv.co.kr/Movie/Thumbnail/StillCut/000076/76602/76602100880_727.jpg"
 								width="180px" height="120px" alt="아르고 이미지">
 								<p class="minititle">${review.reviewName}</p>
-								${review.reviewContent}<br /> <span> 10:23:39 | 조회수 740
+								${review.contents}<br /> <span> 10:23:39 | 조회수 740
 									| 추천수 3</span>
 						</a></li>
 					</c:forEach>

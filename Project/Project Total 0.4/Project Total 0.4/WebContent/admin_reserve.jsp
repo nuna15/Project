@@ -74,6 +74,7 @@
 					</script>
 					<!--Div that will hold the pie chart-->
 					<div id="chart_div"></div>
+				<input type="hidden" name="action" value="register"></input>
 				</form>
 
 			</div>

@@ -76,6 +76,7 @@
 								<a href="UserManageController?action=login"><input type="submit" value="수정하기" /></a> 
 								<input type="reset" value="취소" />
 							</div>
+							<input type="hidden" name="action" value="modify"></input>
 						</form>
 					</center>
 				</div>

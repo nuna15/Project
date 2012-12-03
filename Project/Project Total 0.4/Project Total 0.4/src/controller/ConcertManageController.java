@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.sql.Date;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import utils.DateParser;
 import constants.WPConstants;
 import dao.ConcertDao;
 import dto.ConcertDataBean;
@@ -44,10 +46,8 @@ public class ConcertManageController extends HttpServlet {
 				RequestDispatcher view = request
 						.getRequestDispatcher(WPConstants.PAGE_URL_CONCERT_MAIN);
 				view.forward(request, response);
-			} else if (action.equals("concert")) {
-				pushRegisterPage(request, response);
 			} else if (action.equals("reservation")) {
-				pushReservationPage(request, response);
+				pushReservationPage(request, response); // 필요한것인가?
 			}
 		}
 	}
@@ -67,12 +67,6 @@ public class ConcertManageController extends HttpServlet {
 
 	}
 
-	private void pushRegisterPage(HttpServletRequest request,
-			HttpServletResponse response) {
-		// TODO Auto-generated method stub
-
-	}
-
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
@@ -80,15 +74,12 @@ public class ConcertManageController extends HttpServlet {
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String requestUrl = request.getHeader("REFERER");
 		boolean confirm = false;
 		request.setCharacterEncoding(WPConstants.MAIN_ENCODING);
 
-		if (requestUrl.equals(WPConstants.PAGE_SERVER_URL
-				+ WPConstants.PAGE_URL_CONCERT_MAIN)) {
+		if (request.getParameter("action").equals("")) {
 			confirm = pushConcertDetail(request, response);
-		} else if (requestUrl.equals(WPConstants.PAGE_SERVER_URL
-				+ WPConstants.PAGE_URL_CONCERT_REGISTER)) {
+		} else if (request.getParameter("action").equals("register")) {
 			confirm = pushConcertRegister(request, response);
 
 			if (confirm == true) {
@@ -108,14 +99,25 @@ public class ConcertManageController extends HttpServlet {
 		// TODO Auto-generated method stub
 		if (request.getSession().getAttribute("userid").equals("admin")) {
 			try {
+				Date startDate, finishDate;
+
+				startDate = DateParser.getInstance().calendarToDate(
+						request.getParameter("concertStartDate"));
+				finishDate = DateParser.getInstance().calendarToDate(
+						request.getParameter("concertFinishDate"));
+
 				ConcertDataBean concert = new ConcertDataBean();
-				concert.setTimeNumber(0);
+
+				// timeNumber 시간선택이 존재하지 않는다
+				// if(request.getParameter(arg0))
+
 				concert.setAllowNumber(0);
-				concert.setStartDate(null);
-				concert.setEndDate(null);
+				concert.setStartDate(startDate);
+				concert.setEndDate(finishDate);
 				concert.setConcertName(request.getParameter("concertTitle"));
 				concert.setContent(request.getParameter("concertContent"));
 				concert.setActor(request.getParameter("concertActor"));
+				concert.setSignDate(new Date(System.currentTimeMillis()));
 				ConcertDao.getInstance().insertConcert(concert);
 
 				return true;

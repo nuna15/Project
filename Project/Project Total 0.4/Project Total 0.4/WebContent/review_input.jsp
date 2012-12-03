@@ -56,6 +56,7 @@
 							<input type="submit" value="글쓰기">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							<input type="submit" value="취소">
 						</div>
+						<input type="hidden" name="action" value="register"></input>
 					</form>
 					<%
 							}else if(request.getSession().getAttribute("userid") == null) {

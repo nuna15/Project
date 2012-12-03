@@ -116,4 +116,17 @@ public class ReservationDao {
 		}
 		return reservations;
 	}
+
+	public ArrayList<ReservationDataBean> getReservations(String userid) {
+		// TODO Auto-generated method stub
+		ArrayList<ReservationDataBean> reservations = this.getReservations();
+		ArrayList<ReservationDataBean> userReservation = new ArrayList<ReservationDataBean>();
+
+		for (int i = 0; i < reservations.size(); i++) {
+			if (reservations.get(i).getUserid().equals(userid)) {
+				userReservation.add(reservations.get(i));
+			}
+		}
+		return userReservation;
+	}
 }

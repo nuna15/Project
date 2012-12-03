@@ -146,6 +146,7 @@
 				공연일정 변경시 예매금액은 전액 환불하여드립니다. <br/>
 				</p>-->
 				</div>
+				<input type="hidden" name="action" value="register"></input>
 			</form>
 		</div>
 
