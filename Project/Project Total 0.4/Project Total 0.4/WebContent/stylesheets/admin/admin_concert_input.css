@@ -1,0 +1,152 @@
+#sel{
+  width:155px;
+  height:35px;
+  padding-bottom:10px;
+  background-color: #fff;
+    border: 1px solid #999;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+	
+}
+.textbox {
+	margin-top:10px;
+	width:400px;
+	height:300px;
+    border: 1px solid #999;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+}
+input[type="text"]{
+  width:390px;
+  height:25px;
+  background-color: #fff;
+    border: 1px solid #999;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+}
+
+#check{
+	margin-left:1px;
+  margin-right:9px;
+}
+input[type="checkbox"]{
+  margin:0 10px 0 30px;
+}
+#from{
+	text-align:center;
+  width:155px;
+  height:25px;
+  margin-right:24px;
+  background-color: #fff;
+    border: 1px solid #999;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+}
+#to{
+	text-align:center;
+  width:155px;
+  height:25px;
+  margin-left:24px;
+  background-color: #fff;
+    border: 1px solid #999;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+}
+#time {
+	margin-left:10px;
+	  width:130px;
+  height:25px;
+  background-color: #fff;
+    border: 1px solid #999;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+}
+input[type="file"]{
+  width:400px;
+  height:25px;
+  background-color: #fff;
+  margin:10px 0px;
+    border: 1px solid #999;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+}
+
+
+.well {
+    width:750px;
+    height:530px;
+    background-color: #F5F5F5;
+    border: 1px solid #999;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    min-height: 20px;
+    padding: 30px 30px;
+}
+button.btn,
+input[type="submit"].btn {
+  *padding-top: 3px;
+  *padding-bottom: 3px;
+}
+
+
+button.btn::-moz-focus-inner,
+input[type="submit"].btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+button.btn.btn-large,
+input[type="submit"].btn.btn-large {
+  *padding-top: 7px;
+  *padding-bottom: 7px;
+}
+
+button.btn.btn-small,
+input[type="submit"].btn.btn-small {
+  *padding-top: 3px;
+  *padding-bottom: 3px;
+}
+
+button.btn.btn-mini,
+input[type="submit"].btn.btn-mini {
+  *padding-top: 1px;
+  *padding-bottom: 1px;
+}
+
+input[type="submit"]{
+  width:70px;
+  height:25px;
+}
+input[type="submit"].btn-block{
+  width: 100%;
+}
+
+
+input[type="submit"].btn {
+  *padding-top: 3px;
+  *padding-bottom: 3px;
+}
+
+button.btn::-moz-focus-inner,
+input[type="submit"].btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+button.btn.btn-large,
+input[type="submit"].btn.btn-large {
+  *padding-top: 7px;
+  *padding-bottom: 7px;
+}
+
+button.btn.btn-small,
+input[type="submit"].btn.btn-small {
+  *padding-top: 3px;
+  *padding-bottom: 3px;
+}
+
+button.btn.btn-mini,
+input[type="submit"].btn.btn-mini {
+  *padding-top: 1px;
+  *padding-bottom: 1px;
+}

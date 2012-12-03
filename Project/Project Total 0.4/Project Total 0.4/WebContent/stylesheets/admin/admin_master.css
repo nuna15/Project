@@ -1,0 +1,103 @@
+#content {
+	height:500px;
+}
+
+div.row {
+	color: #000;
+	background-color: #fff;
+	width: 800px;
+	height: 30px;
+	border-color: #ccc;
+	border-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	overflow: auto;
+	font-family: "dotum", "돋움";
+	font-size: 12px;
+	margin-left: 0px;
+}
+
+div.left {
+	width: 380px;
+	text-align: center;
+	float: left;
+	height: 25px;
+}
+
+div.right {
+	width: 380px;
+	text-align: center;
+	float: right;
+	height: 25px;
+}
+
+h1 {
+	
+	font-size: 15px;
+}
+
+.down_section_1 {
+	width: 960px;
+	height: 500px;
+}
+
+.faq_section_1 {
+	width: 800px;
+	height: auto;
+	margin-bottom: 20px;
+	margin-left: 80px;
+	margin-right: 80px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	
+}
+
+#board {
+	width: 800px;
+	border: 1px solid #ccc;
+	border-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	margin: 0;
+	padding: 0;
+}
+
+div.range {
+	width: 60px;
+	text-align: center;
+	float: left;
+}
+
+#title_bar div.title {
+	text-align: center;
+}
+
+div.master {
+	width: 50px;
+	text-align: left;
+	float: right;
+}
+
+.row_title {
+	text-align:center;
+	width: 800px;
+	height: 30px;
+	font-weight: bold;
+	float:left;
+}
+
+.row_title_left {
+	margin-left:160px;
+	text-align:center;
+	width:200px;
+	height:20px;
+	float:left;
+}
+
+.row_title_right {
+	text-align:right;
+	width:350px;
+	height: 20px;
+	float:left;
+}
+
