@@ -30,7 +30,7 @@
 		  document.mypay.reservationCost.value = result*7000;
 		  }
 	 */
-	 /* 최종결제금액 script */
+	/* 최종결제금액 script */
 	function calculatePay() {
 		var result = document.mypay.ticketAmountConcert.options.value;
 		switch (result) {
@@ -56,6 +56,11 @@
 		document.mypay.reservationCost.value = result * 7000;
 	}
 </script>
+<script>
+<!-- ----- 새창띄우기 -->
+
+</script>
+
 </head>
 
 <body>
@@ -68,7 +73,8 @@
 				<div class="container">
 					<ul class="nav">
 						<li><a href="ConcertManageController?action=index">공연</a></li>
-						<li class="active"><a href="ReservationManageController?action=index">예약 </a></li>
+						<li class="active"><a
+							href="ReservationManageController?action=index">예약 </a></li>
 						<li><a href="ReviewManageController?action=index">리뷰</a></li>
 						<li><a href="membership.jsp">멤버십</a></li>
 					</ul>
@@ -119,11 +125,12 @@
 						</li>
 						<li>
 							<h3>최종 결제 금액 (vat포함)</h3> <input type="text"
-							name="reservationCost" size="5" style="text-align: right;" />원 <input
-							type="submit" class="submit" name="paybutton" value="예매하기" />
+							name="reservationCost" size="5" style="text-align: right;" />원 
+				<a href="#"><input type="button" value="예매하기" onclick="javascript:window.open('sign.jsp','new','width=500,height=350')">예매하기</a>
 						</li>
 					</ul>
 				</div>
+				
 				<div class="section_2" id="ticket_detail">
 					<!--티켓예매 참고사항-->
 					<hr />
@@ -154,3 +161,4 @@
 	</div>
 </body>
 </html>
+

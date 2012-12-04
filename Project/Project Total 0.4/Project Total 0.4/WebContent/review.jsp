@@ -39,7 +39,7 @@
 		<div id="content">
 			<!-- 실직적으로 보여질 정보들-->
 			<div class="review">
-				<a href="review_input.jsp"><input type="submit" value="글쓰기"></a>
+				<a href="review_input.jsp"><img src="http://image.ygosu.com/images/btn_write.gif"></a>
 			</div>
 			<div class="section_1" id="hotreview">
 				<!--인기리뷰-->
