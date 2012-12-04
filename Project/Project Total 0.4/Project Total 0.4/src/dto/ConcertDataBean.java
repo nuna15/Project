@@ -10,7 +10,7 @@ public class ConcertDataBean {
 	private Date endTime;
 	private String concertName;
 	private String content;
-	private String Actor;
+	private String actor;
 	private Date signDate;
 
 	public Date getStartTime() {
@@ -42,11 +42,11 @@ public class ConcertDataBean {
 	}
 
 	public String getActor() {
-		return Actor;
+		return actor;
 	}
 
 	public void setActor(String actor) {
-		Actor = actor;
+		actor = actor;
 	}
 
 	public void setContent(String content) {

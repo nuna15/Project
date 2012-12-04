@@ -48,6 +48,10 @@ public class ConcertManageController extends HttpServlet {
 				view.forward(request, response);
 			} else if (action.equals("reservation")) {
 				pushReservationPage(request, response); // 필요한것인가?
+			} else if (action.equals("register")) {
+				RequestDispatcher view = request
+						.getRequestDispatcher(WPConstants.PAGE_URL_CONCERT_REGISTER);
+				view.forward(request, response);
 			}
 		}
 	}

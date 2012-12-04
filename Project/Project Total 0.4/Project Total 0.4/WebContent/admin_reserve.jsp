@@ -28,7 +28,7 @@
 						<li><a href="AdminManageController?action=status">사용현황</a></li>
 						<li class="active"><a href="AdminManageController?action=reserve">예매/취소율 </a></li>
 						<li><a href="AdminManageController?action=master">권한 관리</a></li>
-						<li><a href="AdminManageController?action=concert">공연추가 / 수정</a></li>
+						<li><a href="AdminManageController?action=register">공연추가 / 수정</a></li>
 						<li></li>
 					</ul>
 				</div>

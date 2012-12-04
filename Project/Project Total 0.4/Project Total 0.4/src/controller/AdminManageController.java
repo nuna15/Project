@@ -47,6 +47,8 @@ public class AdminManageController extends HttpServlet {
 																			// 등급으로
 																			// 판단해야
 																			// 함
+			String action = request.getParameter("action");
+
 			ArrayList<ConcertDataBean> concerts = ConcertDao.getInstance()
 					.getConcerts();
 			ArrayList<ReservationDataBean> reservations = ReservationDao
@@ -60,9 +62,19 @@ public class AdminManageController extends HttpServlet {
 			request.setAttribute("reviews", reviews);
 			request.setAttribute("users", users);
 
-			RequestDispatcher view = request
-					.getRequestDispatcher(WPConstants.PAGE_URL_ADMIN_MAIN);
-			view.forward(request, response);
+			if (action.equals("master")) {
+				RequestDispatcher view = request
+						.getRequestDispatcher(WPConstants.PAGE_URL_ADMIN_MAIN);
+				view.forward(request, response);
+			} else if (action.equals("status")) {
+				RequestDispatcher view = request
+						.getRequestDispatcher(WPConstants.PAGE_URL_ADMIN_STATUS);
+				view.forward(request, response);
+			} else if (action.equals("reserve")) {
+				RequestDispatcher view = request
+						.getRequestDispatcher(WPConstants.PAGE_URL_ADMIN_RESERVE);
+				view.forward(request, response);
+			}
 		}
 	}
 

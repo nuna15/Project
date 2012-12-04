@@ -1,10 +1,15 @@
 package constants;
 
 public class WPConstants {
+
+	// ERROR
 	public static final String CONTROLLER_ERROR_String_VALUE = "Not found";
 	public static final int CONTROLLER_ERROR_INT_VALUE = -1;
+
+	// ENCODING
 	public static final String MAIN_ENCODING = "utf-8";
 
+	// PAGES
 	public static final String PAGE_SERVER_URL = "http://localhost:8080/Project_Total_0.2/";
 	public static final String PAGE_URL_MAINPAGE = "mainpage.jsp";
 
@@ -22,4 +27,11 @@ public class WPConstants {
 	public static final String PAGE_URL_REVIEW_MAIN = "review.jsp";
 
 	public static final String PAGE_URL_ADMIN_MAIN = "admin_master.jsp";
+	public static final String PAGE_URL_ADMIN_RESERVE = "admin_reserve.jsp";
+	public static final String PAGE_URL_ADMIN_STATUS = "admin_status.jsp";
+
+	// Photo Upload
+	public static final String PHOTO_UPLOAD_PATH_MAIN = "";
+	public static final int PHOTO_UPLOAD_FILE_MAXSIZE = 10 * 1024 * 1024;
+
 }

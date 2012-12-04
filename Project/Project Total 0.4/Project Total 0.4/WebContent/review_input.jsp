@@ -26,7 +26,8 @@
 				<div class="container">
 					<ul class="nav">
 						<li><a href="ConcertManageController?action=index">공연</a></li>
-						<li><a href="ReservationManageController?action=index">예약 </a></li>
+						<li><a href="ReservationManageController?action=index">예약
+						</a></li>
 						<li><a href="ReviewManageController?action=index">리뷰</a></li>
 						<li><a href="membership.jsp">멤버십</a></li>
 					</ul>
@@ -42,15 +43,16 @@
 				<center>
 					<%
 						if (request.getSession() != null) {
-							if(request.getSession().getAttribute("userid") != null) {
+							if (request.getSession().getAttribute("userid") != null) {
 					%>
-					<form class="well" action="ReviewManageController" method="post">
+					<form class="well" action="ReviewManageController" method="post"
+						enctype="multipart/form-data">
 						<div class="report">
 							리뷰 제목 : <input type="text" name="reviewName" class="title"></input><br />
 							공연 제목 : <input type="text" name="concertName" class="title"></input><br />
 							리뷰 내용 :
 							<textarea class="textbox" name="reviewContent"></textarea>
-							<br /> 사진 첨부 : <input type="file" name="reviewPicture"></input>
+							<br /> 사진 첨부 : <input type="file" name="imgTitle"></input>
 						</div>
 						<div class="bottom">
 							<input type="submit" value="글쓰기">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -59,23 +61,23 @@
 						<input type="hidden" name="action" value="register"></input>
 					</form>
 					<%
-							}else if(request.getSession().getAttribute("userid") == null) {
+						} else if (request.getSession().getAttribute("userid") == null) {
 					%>
-								
-								<script type="text/javascript">
-									alert("로그인 후 이용해주세요!");
-									location.replace("UserManageController?action=login")
-								</script>
+
+					<script type="text/javascript">
+						alert("로그인 후 이용해주세요!");
+						location.replace("UserManageController?action=login")
+					</script>
 					<%
-							}else {
+						} else {
 					%>
-								
-								<script type="text/javascript">
-									alert("로그인 후 이용해주세요!");
-									location.replace("UserManageController?action=login")								
-								</script>
+
+					<script type="text/javascript">
+						alert("로그인 후 이용해주세요!");
+						location.replace("UserManageController?action=login")
+					</script>
 					<%
-							}
+						}
 						}
 					%>
 				</center>

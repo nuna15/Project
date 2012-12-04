@@ -5,6 +5,7 @@ import java.sql.Date;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -42,6 +43,7 @@ public class UserManageController extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+
 		String action = request.getParameter("action");
 		if (action != null) {
 			if (action.equals("register")) {
@@ -112,7 +114,7 @@ public class UserManageController extends HttpServlet {
 		} else if (request.getParameter("action").equals("modify")) {
 			confirm = pushModify(request, response);
 			forwarding(request, response, confirm);
-		} else if (request.getParameter("action").equals("signup")) {
+		} else if (request.getParameter("action").equals("register")) {
 			confirm = pushInsertMember(request, response);
 			forwarding(request, response, confirm);
 		}
@@ -128,7 +130,6 @@ public class UserManageController extends HttpServlet {
 					.getInstance().getReservations(user.getUserid());
 			request.setAttribute("user", user);
 			request.setAttribute("reservations", reservations);
-			
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

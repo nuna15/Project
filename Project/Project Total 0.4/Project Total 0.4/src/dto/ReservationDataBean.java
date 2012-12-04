@@ -7,7 +7,6 @@ public class ReservationDataBean {
 	private String userid;
 	private int concertid;
 	private int timeNumber;
-	private java.sql.Date reservationTime;
 	private int reservationStatus;
 	private String sheetNumber;
 	private Date signDate;
@@ -50,14 +49,6 @@ public class ReservationDataBean {
 
 	public void setTimeNumber(int timeNumber) {
 		this.timeNumber = timeNumber;
-	}
-
-	public java.sql.Date getReservationTime() {
-		return reservationTime;
-	}
-
-	public void setReservationTime(java.sql.Date reservationTime) {
-		this.reservationTime = reservationTime;
 	}
 
 	public int getReservationStatus() {

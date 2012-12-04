@@ -11,6 +11,15 @@ public class ReviewDataBean {
 	private String contents;
 	private String reviewName;
 	private Date signDate;
+	private String imgUrl;
+
+	public String getImgUrl() {
+		return imgUrl;
+	}
+
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
+	}
 
 	public Date getSignDate() {
 		return signDate;

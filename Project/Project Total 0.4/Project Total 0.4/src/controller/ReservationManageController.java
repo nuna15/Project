@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.sql.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,6 +9,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import utils.DateParser;
 
 import constants.WPConstants;
 import dao.ConcertDao;
@@ -78,16 +81,17 @@ public class ReservationManageController extends HttpServlet {
 		if (request.getSession().getAttribute("userid") != null) {
 			try {
 				ReservationDataBean reservation = new ReservationDataBean();
+
 				reservation.setUserid((String) request.getSession()
 						.getAttribute("userid"));
 				reservation.setConcertid(ConcertDao.getInstance()
 						.getConcertId(request.getParameter("concertName"))
 						.getConcertId());
 				reservation.setTimeNumber(0);
-				reservation.setReservationTime(null);
 				reservation.setReservationStatus(0);
 				reservation.setSheetNumber(request
 						.getParameter("ticketAmountSeat"));
+				reservation.setSignDate(new Date(System.currentTimeMillis()));
 
 				ReservationDao.getInstance().insertReservation(reservation);
 				return true;

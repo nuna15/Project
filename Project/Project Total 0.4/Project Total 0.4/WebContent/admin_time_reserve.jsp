@@ -5,10 +5,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>공연 시간대별 예매율</title>
-<link href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css" rel="stylesheet">
-<link href="stylesheets/Mainpage_Layout.css" rel="stylesheet" type="text/css">
-<link href="stylesheets/admin/admin_time_reserve.css" rel="stylesheet" type="text/css">
-<script src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap.js"></script>
+<link
+	href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css"
+	rel="stylesheet">
+<link href="stylesheets/Mainpage_Layout.css" rel="stylesheet"
+	type="text/css">
+<link href="stylesheets/admin/admin_time_reserve.css" rel="stylesheet"
+	type="text/css">
+<script
+	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap.js"></script>
 </head>
 
 <body>
@@ -21,9 +26,11 @@
 				<div class="container">
 					<ul class="nav">
 						<li><a href="AdminManageController?action=status">사용현황</a></li>
-						<li><a href="AdminManageController?action=reserve">예매/취소율 </a></li>
+						<li><a href="AdminManageController?action=reserve">예매/취소율
+						</a></li>
 						<li><a href="AdminManageController?action=master">권한 관리</a></li>
-						<li><a href="AdminManageController?action=concert">공연추가 / 수정</a></li>
+						<li><a href="AdminManageController?action=register">공연추가
+								/ 수정</a></li>
 						<li></li>
 					</ul>
 				</div>

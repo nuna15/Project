@@ -5,15 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>메인페이지</title>
-<link
-	href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css"
-	rel="stylesheet">
-<link href="stylesheets/Mainpage_Layout.css" rel="stylesheet"
-	type="text/css">
-<link href="stylesheets/main/Mainpage.css" rel="stylesheet"
-	type="text/css">
-<script
-	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap.js"></script>
+<link href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css" rel="stylesheet">
+<link href="stylesheets/Mainpage_Layout.css" rel="stylesheet" type="text/css">
+<link href="stylesheets/main/Mainpage.css" rel="stylesheet"	type="text/css">
+<script src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap.js"></script>
 <script src="slide/js/jquery-1.3.1.min.js"></script>
 <script src="slide/js/jquery.easing.1.3.js"></script>
 <script src="javascript/allscript.js"></script>
@@ -28,8 +23,7 @@
 				<div class="container">
 					<ul class="nav">
 						<li><a href="ConcertManageController?action=index">공연</a></li>
-						<li><a href="ReservationManageController?action=index">예약
-						</a></li>
+						<li><a href="ReservationManageController?action=index">예약 </a></li>
 						<li><a href="ReviewManageController?action=index">리뷰</a></li>
 						<li><a href="membership.jsp">멤버십</a></li>
 					</ul>
@@ -41,9 +35,8 @@
 				<a href="ConcertManageController?action=index"><h1>공연정보</h1></a>
 				<div class='slide'>
 					<div class='qitem'>
-						<a href="ConcertManageController?action=index"><img
-							src="slide/1.jpg" alt="Test 1" width="126" height="126" /></a> <span
-							class="caption">
+						<a href="ConcertManageController?action=index"><img src="slide/1.jpg" alt="Test 1"
+							width="126" height="126" /></a> <span class="caption">
 							<h4>광해</h4>
 							<p>예매율 : 13.9%</p>
 							<p>배우 : 이병헌, 한효주</p>
@@ -52,9 +45,8 @@
 						</span>
 					</div>
 					<div class='qitem'>
-						<a href="ConcertManageController?action=index"><img
-							src="slide/2.jpg" alt="Test 1" width="126" height="126" /></a> <span
-							class="caption">
+						<a href="ConcertManageController?action=index"><img src="slide/2.jpg" alt="Test 1"
+							width="126" height="126" /></a> <span class="caption">
 							<h4>007 스카이폴</h4>
 							<p>예매율 : 13.9%</p>
 							<p>배우 : 이병헌, 한효주</p>
@@ -64,9 +56,8 @@
 					</div>
 					<div class='clear'></div>
 					<div class='qitem'>
-						<a href="ConcertManageController?action=index"><img
-							src="slide/3.jpg" alt="Test 1" width="126" height="126" /></a> <span
-							class="caption">
+						<a href="ConcertManageController?action=index"><img src="slide/3.jpg" alt="Test 1"
+							width="126" height="126" /></a> <span class="caption">
 							<h4>아르고</h4>
 							<p>예매율 : 13.9%</p>
 							<p>배우 : 이병헌, 한효주</p>
@@ -75,9 +66,8 @@
 						</span>
 					</div>
 					<div class='qitem'>
-						<a href="ConcertManageController?action=index"><img
-							src="slide/4.jpg" alt="Test 1" width="126" height="126" /></a> <span
-							class="caption">
+						<a href="ConcertManageController?action=index"><img src="slide/4.jpg" alt="Test 1"
+							width="126" height="126" /></a> <span class="caption">
 							<h4>용의자X</h4>
 							<p>예매율 : 13.9%</p>
 							<p>배우 : 이병헌, 한효주</p>
@@ -90,24 +80,23 @@
 
 			<div class="section_2" id="reserve">
 				<a href="ReservationManageController?action=index"><h1>예매</h1></a>
-				<ul>
-					<%
-						if (request.getSession() != null) {
-							if (request.getSession().getAttribute("userid") != null) {
-					%>
-					<li>영화예매<a href="ReservationManageController?action=index"><button
-								onclick="location.href('ReservationManageController?action=index')">예매하러가기</button></a><br />
+				<ul>			
 						<%
-							} else if (request.getSession().getAttribute("userid") == null) {
+							if (request.getSession() != null) {
+								if(request.getSession().getAttribute("userid") != null) {
 						%>
-					<li>영화예매<a href=""><button onclick="location.href('#')">예매하러가기</button></a><br />
+							<li>영화예매<a href="ReservationManageController?action=index"><button onclick="location.href('ReservationManageController?action=index')">예매하러가기</button></a><br />	
 						<%
-							} else {
+							}else if(request.getSession().getAttribute("userid") == null) {
 						%>
-					<li>영화예매<a href=""><button onclick="location.href('#')">예매하러가기</button></a><br />
+							<li>영화예매<a href=""><button onclick="location.href('#')">예매하러가기</button></a><br />
+						<%
+							}else {
+						%>
+							<li>영화예매<a href=""><button onclick="location.href('#')">예매하러가기</button></a><br />
 						<%
 							}
-							}
+						}
 						%>
 						<p class='box'>사이트 상단의 예매하기 메뉴를 누르시거나 본 내용 상단의 예매하기를 누르시면 인터넷
 							예매가 가능합니다.</p>
@@ -116,25 +105,8 @@
 						<p class='box'>인터넷으로 예매가 가능한 시간은 해당 공연 상영 1시간 전까지 이며 이후 예매를
 							원하실 경우에는 영화관 현장에 직접 가셔서 예매를 하셔야합니다.</p>
 					</li>
-					<%
-						if (request.getSession() != null) {
-							if (request.getSession().getAttribute("userid") != null) {
-					%>
-					<li>예매확인/취소<a
-						href="UserManageController?action=myReservationHistoryPage"><button
+					<li>예매확인/취소 <a href="UserManageController?action=myReservationHistoryPage"><button
 								onclick="location.href('UserManageController?action=myReservationHistoryPage')">예매확인/취소</button></a><br />
-						<%
-							} else if (request.getSession().getAttribute("userid") == null) {
-						%>
-					<li>예매확인/취소<a href=""><button onclick="location.href('#')">예매확인/취소</button></a><br />
-						<%
-							} else {
-						%>
-					<li>예매확인/취소<a href=""><button onclick="location.href('#')">예매확인/취소</button></a><br />
-						<%
-							}
-							}
-						%>
 						<p class='box'>
 							- 예매 취소 및 환불 가능 시간은 해당 공영 상영 20분 전까지입니다.<br /> - 관람권으로 교환한 입장권은
 							현금환불 및 취소가 되지 않습니다.
@@ -144,8 +116,9 @@
 			</div>
 
 			<div class="section_3" id="review">
-				<a href="ReviewManageController?action=index"><h1>리뷰</h1></a> <a
-					href="review_detail01.jsp">
+				<a href="ReviewManageController?action=index"><h1>리뷰</h1></a>
+
+				<a href="review_detail01.jsp">
 					<p class="review_detail">
 						<img title="용의자X"
 							src="http://image.maxmovie.com/movieinfo/image/poster/movie/Max2012suspectxkr_ver3.jpg"
@@ -178,9 +151,11 @@
 				</a>
 			</div>
 
-			<div class="section_4" id="membership"></div>
+			<div class="section_4" id="membership">
+				
+			</div>
 		</div>
-
+		
 		<jsp:include page="share/footer.jsp"></jsp:include>
 	</div>
 </body>

@@ -105,6 +105,7 @@ public class ConcertDao {
 				concert.setConcertName(rs.getString("concertname"));
 				concert.setContent(rs.getString("content"));
 				concert.setActor(rs.getString("actor"));
+				concert.setSignDate(rs.getDate("signdate"));
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();
@@ -139,6 +140,7 @@ public class ConcertDao {
 				concert.setConcertName(rs.getString("concertname"));
 				concert.setContent(rs.getString("content"));
 				concert.setActor(rs.getString("actor"));
+				concert.setSignDate(rs.getDate("signdate"));
 				concerts.add(concert);
 			}
 		} catch (Exception ex) {

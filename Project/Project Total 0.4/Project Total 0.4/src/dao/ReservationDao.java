@@ -66,7 +66,7 @@ public class ReservationDao {
 			if (rs.next()) {
 				reservation = new ReservationDataBean();
 
-				reservation.setReservationid(rs.getInt("concertid"));
+				reservation.setReservationid(rs.getInt("reservationid"));
 				reservation.setUserid(rs.getString("userid"));
 				reservation.setConcertid(rs.getInt("concertid"));
 				reservation.setTimeNumber(rs.getInt("timenumber"));
@@ -93,13 +93,13 @@ public class ReservationDao {
 		try {
 			conn = getConnection();
 
-			pstmt = conn.prepareStatement("select * from concert");
+			pstmt = conn.prepareStatement("select * from reservation");
 
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				reservation = new ReservationDataBean();
 
-				reservation.setReservationid(rs.getInt("concertid"));
+				reservation.setReservationid(rs.getInt("reservationid"));
 				reservation.setUserid(rs.getString("userid"));
 				reservation.setConcertid(rs.getInt("concertid"));
 				reservation.setTimeNumber(rs.getInt("timenumber"));
