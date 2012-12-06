@@ -28,6 +28,11 @@ label {
 	width: 5em;
 }
 </style>
+<script>
+$(function() {
+	$(document).tooltip();
+});
+</script>
 </head>
 <body>
 	<div id="wrap">
