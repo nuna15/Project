@@ -1,0 +1,17 @@
+.con_wrap .headbx {
+	border-bottom: 1px solid #C2C2C2;
+	padding: 0 0 6px 10px;
+	margin-bottom: 18px;
+}
+
+.con_wrap .box_wrap .box {
+	float: left;
+	width: 350px;
+	height: 200px;
+	margin-right: 10px;
+	border:3px solid #D9D9D9;
+}
+
+.btn {
+	margin-top:20px;	
+}
