@@ -28,11 +28,6 @@ label {
 	width: 5em;
 }
 </style>
-<script>
-$(function() {
-	$(document).tooltip();
-});
-</script>
 </head>
 <body>
 	<div id="wrap">
@@ -49,7 +44,7 @@ $(function() {
 						<li><a href="AdminManageController?action=master">권한 관리</a></li>
 						<li class="active"><a
 							href="AdminManageController?action=register">공연추가 / 수정</a></li>
-						<li></li>
+						<li></lfi>
 					</ul>
 				</div>
 			</div>
@@ -61,7 +56,8 @@ $(function() {
 				<!--예매상세내역-->
 				<h1>&lt; 신규 공연 등록 &gt;</h1>
 				<center>
-					<form class="well" action="ConcertManageController" method="post">
+					<form class="well" action="ConcertManageController" method="post"
+						enctype="multipart/form-data">
 						<div class="report">
 							공연 제목&nbsp;&nbsp;&nbsp; : <input type="text" name="concertTitle"
 								class="title"></input><br /> 공연 출연자 : <input type="text"

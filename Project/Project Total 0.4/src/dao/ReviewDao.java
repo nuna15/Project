@@ -30,7 +30,9 @@ public class ReviewDao {
 		try {
 			conn = getConnection();
 			pstmt = conn
-					.prepareStatement("insert into review values (null,?,?,?,?,?,?,?,?)");
+			// .prepareStatement("insert into review values (null,?,?,?,?,?,?,?,?)");
+					.prepareStatement("insert into review(userid,concertid, score,evaluatenumber,contents,reviewname,signdate,imgurl) values (?,?,?,?,?,?,?,?)");
+
 			pstmt.setString(1, review.getUserid());
 			pstmt.setInt(2, review.getConcertid());
 			pstmt.setInt(3, review.getScore());
@@ -39,6 +41,7 @@ public class ReviewDao {
 			pstmt.setString(6, review.getReviewName());
 			pstmt.setDate(7, review.getSignDate());
 			pstmt.setString(8, review.getImgUrl());
+
 			pstmt.executeUpdate();
 		} catch (Exception ex) {
 			ex.printStackTrace();

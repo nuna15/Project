@@ -31,7 +31,8 @@ public class ConcertDao {
 			conn = getConnection();
 
 			pstmt = conn
-					.prepareStatement("insert into concert values (null,?,?,?,?,?,?,?,?,?)");
+					.prepareStatement("insert into concert(timenumber,allownumber, starttime,endtime,concertname,content,actor,signdate,imgurl,standseat,normalseat,sseat) values (?, ?,?,?,?,?,?,?,?,?,?,?)");
+
 			pstmt.setInt(1, concert.getTimeNumber());
 			pstmt.setInt(2, concert.getAllowNumber());
 			pstmt.setDate(3, concert.getStartDate());
@@ -41,6 +42,9 @@ public class ConcertDao {
 			pstmt.setString(7, concert.getActor());
 			pstmt.setDate(8, concert.getSignDate());
 			pstmt.setString(9, concert.getImgUrl());
+			pstmt.setInt(10, 0);
+			pstmt.setInt(11, 0);
+			pstmt.setInt(12, 0);
 
 			pstmt.executeUpdate();
 		} catch (Exception ex) {

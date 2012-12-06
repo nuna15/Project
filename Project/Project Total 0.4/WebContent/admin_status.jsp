@@ -30,7 +30,7 @@
 						<li><a href="AdminManageController?action=reserve">예매/취소율
 						</a></li>
 						<li><a href="AdminManageController?action=master">권한 관리</a></li>
-						<li><a href="AdminManageController?action=register">공연추가
+						<li><a href="ConcertManageController?action=register">공연추가
 								/ 수정</a></li>
 						<li></li>
 					</ul>

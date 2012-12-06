@@ -120,9 +120,6 @@ public class ConcertManageController extends HttpServlet {
 					concert.setConcertName(multi.getParameter("concertTitle"));
 					concert.setContent(multi.getParameter("concertContent"));
 					concert.setActor(multi.getParameter("concertActor"));
-
-					concert = ConcertDao.getInstance().getConcertId(
-							multi.getParameter("concertTitle"));
 					concert.setSignDate(new Date(System.currentTimeMillis()));
 					second = true;
 

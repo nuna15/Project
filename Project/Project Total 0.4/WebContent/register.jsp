@@ -5,11 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>회원가입 페이지</title>
+<link href="stylesheets/login/register.css" rel="stylesheet"
+	type="text/css">
 <link
 	href="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/css/bootstrap.css"
 	rel="stylesheet">
-<link href="stylesheets/login/register.css" rel="stylesheet"
-	type="text/css">
 <link href="stylesheets/Mainpage_Layout.css" rel="stylesheet"
 	type="text/css">
 <script
@@ -17,35 +17,6 @@
 
 <script>
 	function joinAgree() {
-
-		var userinput = eval("document.form1");
-		if (!userinput.userid.value) {//아이디를 입력하지 않으면 수행
-			alert("ID를 입력하세요");
-			return false;//사용자가 서비스를 요청한 시점으로 돌아감
-		}
-
-		if (!userinput.password.value) {//비밀번호를 입력하지 않으면 수행
-			alert("비밀번호를 입력하세요");
-			return false;
-		}
-		if (userinput.password.value != userinput.passwordCheck.value) {//비밀번호와 재입력비밀번호가 같지않으면 수행
-			alert("비밀번호를 동일하게 입력하세요");
-			return false;
-		}
-
-		if (!userinput.name.value) {//이름을 입력하지 않으면 수행
-			alert("사용자 이름을 입력하세요");
-			return false;
-		}
-		if (!userinput.ssn1.value || !userinput.ssn2.value) {//주민번호의 앞자리와 뒷자리를 입력하지 않으면 수행
-			alert("주민등록번호를 정확히 입력하세요");
-			return false;
-		}
-
-		if (!userinput.facebookid.value) {//이름을 입력하지 않으면 수행
-			alert("FacebookID를  입력하세요");
-			return false;
-		}
 
 		var chkEm = document.forms[0].chk;
 
@@ -55,42 +26,17 @@
 		} else if (!chkEm[1].checked) {
 			alert("개인정보취급방침에 동의해 주십시오");
 			return false;
-		} else {
-			return true;
 		}
 
-	}
-
-	function checkPwd() {
-		var f1 = document.form1;
-		var pw1 = f1.password.value;
-		var pw2 = f1.passwordCheck.value;
-		if (pw1 != pw2) {
-			document.getElementById('checkPwd').style.color = "red";
-			document.getElementById('checkPwd').innerHTML = "동일한 암호를 입력하세요.";
-		} else if (pw1 == pw2) {
-			document.getElementById('checkPwd').style.color = "black";
-			document.getElementById('checkPwd').innerHTML = "암호가 확인 되었습니다.";
-		} else if ((pw1 == 'NULL') || (pw2 == 'NULL')) {
-			document.getElementById('checkPwd').innerHTML = "암호를 입력하세요.";
-		}
+		return true;
 	}
 </script>
-<style type="text/css">
-#checkPwd {
-	float: left;
-}
-
-.pass {
-	float: left;
-	margin-right: 10px;
-}
-</style>
 </head>
 
 <body>
 	<div id="wrap">
 		<jsp:include page="share/header.jsp"></jsp:include>
+
 		<!--전체 크기 -->
 		<div class="navbar">
 			<div class="navbar-inner">
@@ -110,8 +56,8 @@
 			<!-- 실직적으로 보여질 정보들-->
 			<div class="section_1" id="reserve_detail">
 				<!--예매상세내역-->
-				<form class="well" name="form1" action="UserManageController"
-					method="post" onsubmit="return joinAgree()">
+				<form class="well" action="UserManageController" method="post"
+					onsubmit="return joinAgree()">
 					<h2>&lt; 회 원 가 입 &gt;</h2>
 					<br /> <br />
 					<ul>
@@ -129,9 +75,8 @@
 								</tr>
 								<tr>
 									<th>Password 확인</th>
-									<td><input type="password" class="pass"
-										name="passwordCheck" maxlength="10" onkeyup="checkPwd()" />&nbsp;
-										<div id="checkPwd"></div></td>
+									<td><input type="password" name="passwordCheck"
+										maxlength="10" /></td>
 								</tr>
 								<tr>
 									<th>성명(한글)</th>
@@ -315,8 +260,8 @@
 						</li>
 						<li>
 							<div class="submit">
-								<a href="MainManageController?action=mainpage"><input
-									type="submit" value="회원가입" /></a> <input type="reset" value="취소" />
+								<a href="MainManageController?action=mainpage"><input type="submit" value="회원가입" /></a>
+								<input type="reset" value="취소" />
 							</div>
 						</li>
 					</ul>

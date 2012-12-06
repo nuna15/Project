@@ -114,6 +114,8 @@ public class ReviewManageController extends HttpServlet {
 					review.setContents(multi.getParameter("reviewContent"));
 					review.setReviewName(multi.getParameter("reviewName"));
 					ConcertDataBean concert = new ConcertDataBean();
+
+					System.out.println(multi.getParameter("concertName"));
 					concert = ConcertDao.getInstance().getConcertId(
 							multi.getParameter("concertName"));
 					review.setConcertid(concert.getConcertId());

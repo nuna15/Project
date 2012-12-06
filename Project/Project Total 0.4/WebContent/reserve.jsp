@@ -14,11 +14,10 @@
 	type="text/css">
 <link rel="stylesheet"
 	href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
-<script	
+<script
 	src="stylesheets/twitter-bootstrap-3b3dd3a/docs/assets/js/bootstrap.js"></script>
 <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
-<script src="javascript/allscript.js"></script>
 
 <script>
 	/* 달력선택 script */
@@ -97,7 +96,7 @@
 						</select><br />
 						</li>
 						<li>
-							<h3>공 연 날 짜 선 택</h3> Date: <input type="text" id="rdate"
+							<h3>공 연 날 짜 선 택</h3> Date: <input type="text" id="datepicker"
 							name="concertDate" />
 						</li>
 					</ul>
