@@ -34,4 +34,19 @@ public class WPConstants {
 	public static final String PHOTO_UPLOAD_PATH_MAIN = "";
 	public static final int PHOTO_UPLOAD_FILE_MAXSIZE = 10 * 1024 * 1024;
 
+	public static final int RESERVATION_COST = 7000;
+
+	public static enum EUserLevelItems {
+		normal("일반회원"), exellent("우수회원"), admin("관리자");
+
+		private String name;
+
+		private EUserLevelItems(String s) {
+			this.name = s;
+		}
+
+		public String getName() {
+			return this.name;
+		}
+	}
 }

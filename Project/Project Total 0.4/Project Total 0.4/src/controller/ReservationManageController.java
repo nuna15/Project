@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 import java.sql.Date;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,8 +15,13 @@ import utils.DateParser;
 
 import constants.WPConstants;
 import dao.ConcertDao;
+import dao.LogDao;
 import dao.ReservationDao;
+import dao.UserDao;
+import dto.ConcertDataBean;
+import dto.LogDataBean;
 import dto.ReservationDataBean;
+import dto.UserDataBean;
 
 /**
  * Servlet implementation class ReservationManageController
@@ -43,6 +49,9 @@ public class ReservationManageController extends HttpServlet {
 		request.setCharacterEncoding(constants.WPConstants.MAIN_ENCODING);
 		if (action != null) {
 			if (action.equals("index")) {
+				ArrayList<ConcertDataBean> concerts = ConcertDao.getInstance()
+						.getConcerts();
+				request.setAttribute("concerts", concerts);
 				RequestDispatcher view = request
 						.getRequestDispatcher(WPConstants.PAGE_URL_RESERVATION_REGISTER);
 				view.forward(request, response);
@@ -94,9 +103,32 @@ public class ReservationManageController extends HttpServlet {
 				reservation.setSignDate(new Date(System.currentTimeMillis()));
 
 				ReservationDao.getInstance().insertReservation(reservation);
-				return true;
-				// reservation.setConcertid(concertid);
 
+				/* User 회원 등급 부분 */
+				UserDataBean user = UserDao.getInstance().getMember(
+						(String) request.getSession().getAttribute("userid"));
+				user.setBuyMoney(user.getBuyMoney()
+						+ WPConstants.RESERVATION_COST);
+				user.setPoint((int) (user.getPoint() + WPConstants.RESERVATION_COST * 0.1));
+
+				if (user.getBuyMoney() > 2000000) {
+					user.setLevel(4);
+				} else if (user.getBuyMoney() > 1000000) {
+					user.setLevel(3);
+				} else if (user.getBuyMoney() > 500000) {
+					user.setLevel(2);
+				}
+				UserDao.getInstance().updateMember(user);
+
+				/* Log */
+				LogDataBean log = new LogDataBean();
+				log.setLogName("Reservation Register");
+				log.setLogRegisterTime(new Date(System.currentTimeMillis()));
+				log.setCost(String.valueOf(WPConstants.RESERVATION_COST));
+				log.setUserid(request.getParameter("userid"));
+				LogDao.getInstance().insertMember(log);
+
+				return true;
 			} catch (Exception e) {
 
 			}

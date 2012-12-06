@@ -91,11 +91,15 @@ public class UserDao {
 			conn = getConnection();
 
 			pstmt = conn
-					.prepareStatement("update user set password=?,facebookid=?"
+					.prepareStatement("update user set password=?,facebookid=?, level=?, buymoney=?, point=?"
 							+ "where userid=?");
 			pstmt.setString(1, member.getPassword());
 			pstmt.setString(2, member.getFacebookid());
-			pstmt.setString(3, member.getUserid());
+			pstmt.setInt(3, member.getLevel());
+			pstmt.setInt(4, member.getBuyMoney());
+			pstmt.setInt(5, member.getPoint());
+
+			pstmt.setString(6, member.getUserid());
 			pstmt.executeUpdate();
 
 		} catch (Exception ex) {
@@ -150,5 +154,9 @@ public class UserDao {
 			ConnectionManager.getInstance().close(rs, pstmt, conn);
 		}
 		return users;
+	}
+
+	public void deleteMember(UserDataBean user) {
+
 	}
 }

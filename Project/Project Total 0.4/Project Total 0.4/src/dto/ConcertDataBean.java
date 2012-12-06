@@ -12,6 +12,10 @@ public class ConcertDataBean {
 	private String content;
 	private String actor;
 	private Date signDate;
+	private String imgUrl;
+	private int standSeat;
+	private int normalSeat;
+	private int sSeat;
 
 	public Date getStartTime() {
 		return startTime;
@@ -33,6 +37,30 @@ public class ConcertDataBean {
 		return signDate;
 	}
 
+	public int getStandSeat() {
+		return standSeat;
+	}
+
+	public void setStandSeat(int standSeat) {
+		this.standSeat = standSeat;
+	}
+
+	public int getNormalSeat() {
+		return normalSeat;
+	}
+
+	public void setNormalSeat(int normalSeat) {
+		this.normalSeat = normalSeat;
+	}
+
+	public int getsSeat() {
+		return sSeat;
+	}
+
+	public void setsSeat(int sSeat) {
+		this.sSeat = sSeat;
+	}
+
 	public void setSignDate(Date signDate) {
 		this.signDate = signDate;
 	}
@@ -46,7 +74,7 @@ public class ConcertDataBean {
 	}
 
 	public void setActor(String actor) {
-		actor = actor;
+		this.actor = actor;
 	}
 
 	public void setContent(String content) {
@@ -99,6 +127,14 @@ public class ConcertDataBean {
 
 	public void setConcertName(String concertName) {
 		this.concertName = concertName;
+	}
+
+	public String getImgUrl() {
+		return imgUrl;
+	}
+
+	public void setImgUrl(String imgurl) {
+		this.imgUrl = imgurl;
 	}
 
 }

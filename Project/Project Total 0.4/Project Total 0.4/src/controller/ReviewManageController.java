@@ -140,10 +140,10 @@ public class ReviewManageController extends HttpServlet {
 		}
 		if (!first || !second) {
 			System.out.println("notcommit" + request);
-			// RequestDispatcher view = request
-			// .getRequestDispatcher(WPConstants.PAGE_URL_MAINPAGE);
-			// view.forward(request, response);
-			response.sendRedirect(WPConstants.PAGE_URL_REVIEW_MAIN);
+			RequestDispatcher view = request
+					.getRequestDispatcher(WPConstants.PAGE_URL_MAINPAGE);
+			view.forward(request, response);
+			// response.sendRedirect(WPConstants.PAGE_URL_REVIEW_MAIN);
 		}
 		// 이미지는 결국 올라가게 되지만 계속 덮어 씌우도록 할 수 있기 때문에 문제 되지 않을 것
 	}

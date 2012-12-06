@@ -31,7 +31,7 @@ public class ConcertDao {
 			conn = getConnection();
 
 			pstmt = conn
-					.prepareStatement("insert into concert values (null,?,?,?,?,?,?,?,?)");
+					.prepareStatement("insert into concert values (null,?,?,?,?,?,?,?,?,?)");
 			pstmt.setInt(1, concert.getTimeNumber());
 			pstmt.setInt(2, concert.getAllowNumber());
 			pstmt.setDate(3, concert.getStartDate());
@@ -40,8 +40,9 @@ public class ConcertDao {
 			pstmt.setString(6, concert.getContent());
 			pstmt.setString(7, concert.getActor());
 			pstmt.setDate(8, concert.getSignDate());
-			pstmt.executeUpdate();
+			pstmt.setString(9, concert.getImgUrl());
 
+			pstmt.executeUpdate();
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		} finally {
@@ -73,6 +74,7 @@ public class ConcertDao {
 				concert.setContent(rs.getString("content"));
 				concert.setActor(rs.getString("actor"));
 				concert.setSignDate(rs.getDate("signdate"));
+				concert.setImgUrl(rs.getString("imgurl"));
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();
@@ -106,6 +108,7 @@ public class ConcertDao {
 				concert.setContent(rs.getString("content"));
 				concert.setActor(rs.getString("actor"));
 				concert.setSignDate(rs.getDate("signdate"));
+				concert.setImgUrl(rs.getString("imgurl"));
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();
@@ -141,6 +144,7 @@ public class ConcertDao {
 				concert.setContent(rs.getString("content"));
 				concert.setActor(rs.getString("actor"));
 				concert.setSignDate(rs.getDate("signdate"));
+				concert.setImgUrl(rs.getString("imgurl"));
 				concerts.add(concert);
 			}
 		} catch (Exception ex) {
