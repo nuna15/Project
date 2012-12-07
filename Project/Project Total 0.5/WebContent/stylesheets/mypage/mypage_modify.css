@@ -1,0 +1,244 @@
+
+#content h1 { font-size: 24px; font-weight: bold; text-align: center; margin-top: 20px;}
+#content h2 { font-size: 14px; font-weight: bold; text-align: center; margin-bottom: 20px;}
+#content h3 { font-size: 11px; font-weight: bold; text-align: center; margin-bottom: 10px;}
+#content tr, td {padding-left: 10px; height: 50px;}
+#wrap {width:960px; margin :0 auto; background-color:#fff; border: 1px solid #B0B0B0; }
+.section_1{
+	clear: both;
+	height: auto;
+	overflow: auto
+	
+}
+
+#content div#reserve_detail{
+	width:820px;
+	margin-top:20px;
+	margin-bottom:20px;
+	margin-left:69px;
+	border: 1px solid #d7e9f9;
+	border-radius: 5px;
+	float:bottom;
+}
+#content table {
+    line-height: 35px;
+}
+
+#content th {
+    line-height: 35px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #F7F7F7;
+}
+.submit {
+    text-align: center; margin-top: 20px;
+}
+.read {
+    font-weight: bold;
+    text-align: left;
+}
+#modify {
+    vertical-align: center;
+}
+ul h2 {
+    margin: 20px;
+}
+.quick {
+    margin-top: 20px;
+}
+
+
+/* login css */
+
+.container:after {
+    clear: both;
+}
+.container:before, .container:after {
+    content: "";
+    display: table;
+}
+.container:before, .container:after {
+    content: "";
+    display: table;
+}
+.container {
+}
+.container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+    width: 400px;
+}
+
+.container h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+    font-family: inherit;
+    font-weight: bold;
+    margin: 0;
+    text-rendering: optimizelegibility;
+}
+
+.container h2 {
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.container h3 {
+    font-size: 12px;
+    line-height: 30px;
+}
+.well {
+    width:450px;
+    height:430px;
+    background-color: #F5F5F5;
+    border: 1px solid #999;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    min-height: 20px;
+    padding: 30px 30px;
+    padding-bottom:10px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    float: left;
+    width:80px;
+    padding: 5px 5px 5px 5px;
+}
+label, input, button, select, textarea {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+
+}
+input.check {
+    float:none;
+}
+input.span3, textarea.span3, .uneditable-input.span3 {
+    width: 210px;
+}
+input[class*="span"], select[class*="span"], textarea[class*="span"], .uneditable-input[class*="span"], .row-fluid input[class*="span"], .row-fluid select[class*="span"], .row-fluid textarea[class*="span"], .row-fluid .uneditable-input[class*="span"] {
+    float: none;
+    margin-left: 0;
+}
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], 
+.uneditable-input {
+    -moz-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    color: #555555;
+    display: inline-block;
+    font-size: 13px;
+    height: 18px;
+    line-height: 18px;
+    margin-bottom: 9px;
+    padding: 4px;
+}
+:-moz-placeholder {
+    color: #999999;
+}
+.span3 {
+    width: 220px;
+}
+[class*="span"] {
+    float: left;
+    margin-left: 20px;
+}
+label, input, button, select, textarea {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+    height:30px;
+}
+input, textarea, .uneditable-input {
+    margin-left: 0;
+}
+textarea {
+    width: 100px;
+    height: 25px;
+}
+input {
+    width:100px; height:30px;
+}
+input.check {
+    width: 20px; height: 20px;
+}
+input, button, select, textarea {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+button, input {
+    line-height: normal; 
+}
+button, input, select, textarea {
+    font-size: 100%;
+    vertical-align: middle;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    cursor: pointer;;
+}
+
+button.btn, input.btn[type="submit"] {
+}
+
+.btn {
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+.btn {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #F5F5F5;
+    background-image: -moz-linear-gradient(center top , #FFFFFF, #E6E6E6);
+    background-repeat: repeat-x;
+    border-color: #E6E6E6 #E6E6E6 #B3B3B3;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 0;
+    padding: 4px 10px;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+}
+
+.btn:hover {
+    -moz-transition: background-position 0.1s linear 0s;
+    background-color: #E6E6E6;
+    background-position: 0 -15px;
+    color: #333333;
+    text-decoration: none;
+}
+.btn:focus {
+    outline: thin dotted #333333;
+    outline-offset: -2px;
+}
+.btn.active, .btn:active {
+    background-color: #E6E6E6;
+    background-image: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    outline: 0 none;
+}
+
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+    outline: 0 none;
+}
+
+button.btn::-moz-focus-inner, input.btn[type="submit"]::-moz-focus-inner {
+    border: 0 none;
+    padding: 0;
+}
+p.label {
+    font-size: 18px; text-align: center;;
+}

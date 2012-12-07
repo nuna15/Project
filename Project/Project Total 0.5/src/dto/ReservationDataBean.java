@@ -1,0 +1,70 @@
+package dto;
+
+import java.sql.Date;
+
+public class ReservationDataBean {
+	private int reservationid;
+	private String userid;
+	private int concertid;
+	private int timeNumber;
+	private int reservationStatus;
+	private String sheetNumber;
+	private Date signDate;
+
+	public Date getSignDate() {
+		return signDate;
+	}
+
+	public void setSignDate(Date signDate) {
+		this.signDate = signDate;
+	}
+
+	public int getReservationid() {
+		return reservationid;
+	}
+
+	public void setReservationid(int reservationid) {
+		this.reservationid = reservationid;
+	}
+
+	public String getUserid() {
+		return userid;
+	}
+
+	public void setUserid(String userid) {
+		this.userid = userid;
+	}
+
+	public int getConcertid() {
+		return concertid;
+	}
+
+	public void setConcertid(int concertid) {
+		this.concertid = concertid;
+	}
+
+	public int getTimeNumber() {
+		return timeNumber;
+	}
+
+	public void setTimeNumber(int timeNumber) {
+		this.timeNumber = timeNumber;
+	}
+
+	public int getReservationStatus() {
+		return reservationStatus;
+	}
+
+	public void setReservationStatus(int reservationStatus) {
+		this.reservationStatus = reservationStatus;
+	}
+
+	public String getSheetNumber() {
+		return sheetNumber;
+	}
+
+	public void setSheetNumber(String sheetNumber) {
+		this.sheetNumber = sheetNumber;
+	}
+
+}
