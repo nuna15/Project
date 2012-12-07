@@ -1,0 +1,39 @@
+#content {
+	height:auto;
+}
+
+.name {
+	width:350px;
+	height: 40px;
+	margin-top:px;
+	margin-left:260px;
+	margin-right:40px;
+	float: center;
+	font-size:20px;
+	text-align: center;
+	font-weight: bold;
+
+}
+
+#reserve {
+	width:825;
+	height:300px;
+	margin-top:20px;
+	margin-bottom:20px;
+	margin-left:69px;
+	float:left;	
+}
+
+.section_1_left {
+	width:400px;
+	float:left;
+}
+
+.section_1_right {
+	width:400p;
+	float:right;
+	font-size:20px;
+	text-align: center;
+	font-weight: bold;
+	
+}

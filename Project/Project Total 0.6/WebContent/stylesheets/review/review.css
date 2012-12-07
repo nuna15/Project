@@ -1,0 +1,55 @@
+#content a { color:#000;}
+#content a:hover { text-decoration: underline;}
+.section_3 img {
+	width:180px;
+	height:120px;
+}
+#content{
+	width:960px;
+	height:auto;
+}
+#content div.section_1 {
+	margin: 20px;
+	line-height: 30px;
+	font-size: 15px;
+	height:310px;
+}
+#content div.section_1 img{
+	float:left; width:450px; margin-right: 20px;
+}
+
+#content div.section_2 div{
+	width: 250px; display:block; float:left; margin:20px; padding: 15px;
+}
+#content div.section_2 img {
+	margin-top:20px; width:240px; height:170px;
+}
+#content div.section_3 li{
+	display: block; height:150px; text-align: left; margin-right: 20px; margin-top: 20px;
+}
+#content div.section_3 img{
+	margin:0px 20px 0px 20px; float:left; width: :180px; height: 120px;
+}
+
+.paging{
+    text-align:center;
+    line-height:1.3em;
+    margin-bottom: 10px;
+}
+.paging a,
+.paging strong{
+	color:#888;
+    padding:2px 15px;
+    border:1px solid #CCC;
+    display:inline-block;
+}
+.paging a:hover,
+.paging strong{
+    color:#000;
+    border:1px solid #666;
+    background:#F0F0F0;
+}
+
+p.title{ text-align: center; font-weight: bold; font-size: 25px; margin: 40px;}
+p.subtitle { font-size: 18px; margin :20px; font-weight: bold;}
+p.minititle { font-size:15px; font-weight: bold; }
