@@ -5,7 +5,6 @@ import java.sql.Date;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,13 +12,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import utils.LogUpdater;
+import org.omg.CosNaming.IstringHelper;
 
+import utils.DateParser;
+import utils.LogUpdater;
 import constants.WPConstants;
 import dao.ConcertDao;
+import dao.ConcertInstanceDao;
 import dao.ReservationDao;
 import dao.UserDao;
 import dto.ConcertDataBean;
+import dto.ConcertInstanceDataBean;
 import dto.ReservationDataBean;
 import dto.UserDataBean;
 
@@ -120,10 +123,85 @@ public class UserManageController extends HttpServlet {
 			forwarding(request, response, confirm);
 		} else if (request.getParameter("action").equals("register")) {
 			confirm = pushInsertMember(request, response);
-			LogUpdater.getInstance().updateLog(WPConstants.LOG_USER_REGISTER,
-					null, (String) request.getSession().getAttribute("userid"));
+			forwarding(request, response, confirm);
+		} else if (request.getParameter("action").equals("cancel")) {
+			confirm = pushCancleReservation(request, response);
 			forwarding(request, response, confirm);
 		}
+	}
+
+	private boolean pushCancleReservation(HttpServletRequest request,
+			HttpServletResponse response) {
+		// TODO Auto-generated method stub
+		try {
+			int reserveid = Integer.parseInt(request
+					.getParameter("reservationid"));
+			ReservationDataBean reservation = ReservationDao.getInstance()
+					.getReservationInformation(reserveid);
+			UserDataBean user = UserDao.getInstance().getMember(
+					reservation.getUserid());
+
+			ArrayList<ConcertInstanceDataBean> instances = ConcertInstanceDao
+					.getInstance().getUserConcertInstances(
+							reservation.getUserid());
+
+			// id,
+			for (int i = 0; i < instances.size(); i++) {
+				if (reservation.getConcertid() == instances.get(i)
+						.getConcertid()) {
+					if (DateParser.getInstance().dateCompare(
+							reservation.getConcertDate(),
+							instances.get(i).getConcertDate())) {
+						ConcertInstanceDataBean instance = instances.get(i);
+						String seatType = reservation.getSeatType();
+
+						switch (seatType) {
+						case "A":
+							instance.setaSeat(-(Integer.parseInt(reservation
+									.getSheetNumber())));
+							break;
+						case "B":
+							instance.setbSeat(-(Integer.parseInt(reservation
+									.getSheetNumber())));
+							break;
+						case "C":
+							instance.setcSeat(-(Integer.parseInt(reservation
+									.getSheetNumber())));
+							break;
+						case "D":
+							instance.setdSeat(-(Integer.parseInt(reservation
+									.getSheetNumber())));
+							break;
+						case "E":
+							instance.seteSeat(-(Integer.parseInt(reservation
+									.getSheetNumber())));
+							break;
+						default:
+							break;
+						}
+						break;
+					}
+				}
+			}
+			user.setBuyMoney(user.getBuyMoney()
+					- Integer.parseInt(reservation.getSheetNumber())
+					* WPConstants.RESERVATION_COST);
+			user.setPoint(user.getPoint()
+					- (int) (Integer.parseInt(reservation.getSheetNumber())
+							* WPConstants.RESERVATION_COST * 0.1));
+
+			// Access
+			ReservationDao.getInstance().deleteReservation(reserveid);
+			UserDao.getInstance().updateMember(user);
+			LogUpdater.getInstance().updateLog(
+					WPConstants.LOG_USER_DELETERESERVATION, null,
+					(String) request.getSession().getAttribute("userid"));
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
 	}
 
 	private void pushReservationHistoryPage(HttpServletRequest request,
@@ -134,11 +212,23 @@ public class UserManageController extends HttpServlet {
 					(String) request.getSession().getAttribute("userid"));
 			ArrayList<ReservationDataBean> reservations = ReservationDao
 					.getInstance().getReservations(user.getUserid());
+			ArrayList<ConcertDataBean> concerts = ConcertDao.getInstance()
+					.getConcerts();
+			ArrayList<String> concertNames = new ArrayList<String>();
+
+			for (int i = 0; i < reservations.size(); i++) {
+				int con = reservations.get(i).getConcertid();
+				for (int j = 0; j < concerts.size(); j++) {
+					if (concerts.get(j).getConcertId() == con) {
+						concertNames.add(concerts.get(i).getConcertName());
+						break;
+					}
+				}
+			}
 			request.setAttribute("user", user);
 			request.setAttribute("reservations", reservations);
-
+			request.setAttribute("concertNames", concertNames);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -204,6 +294,9 @@ public class UserManageController extends HttpServlet {
 			user.setLevel(1);
 			user.setBuyMoney(0);
 
+			LogUpdater.getInstance().updateLog(WPConstants.LOG_USER_REGISTER,
+					null, (String) request.getSession().getAttribute("userid"));
+
 			UserDao.getInstance().insertMember(user);
 			return true;
 		} catch (Exception e) {
@@ -220,6 +313,9 @@ public class UserManageController extends HttpServlet {
 			user.setPassword(request.getParameter("password"));
 			user.setFacebookid(request.getParameter("facebookid"));
 			UserDao.getInstance().updateMember(user);
+			LogUpdater.getInstance().updateLog(WPConstants.LOG_USER_MODIFY,
+					null, (String) request.getSession().getAttribute("userid"));
+
 			return true;
 		} catch (Exception e) {
 			e.printStackTrace();

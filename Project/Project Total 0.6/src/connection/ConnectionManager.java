@@ -23,7 +23,7 @@ public class ConnectionManager {
 	public Connection getConnection() throws Exception {
 		Context initCtx = new InitialContext();
 		Context envCtx = (Context) initCtx.lookup("java:comp/env");
-		DataSource ds = (DataSource) envCtx.lookup("jdbc/Test");
+		DataSource ds = (DataSource) envCtx.lookup("jdbc/TestDB");
 		return ds.getConnection();
 	}
 

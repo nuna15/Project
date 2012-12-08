@@ -207,6 +207,42 @@ public class ConcertInstanceDao {
 		return instances;
 	}
 
+	public ArrayList<ConcertInstanceDataBean> getUserConcertInstances(
+			String userid) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		ConcertInstanceDataBean instance = null;
+		ArrayList<ConcertInstanceDataBean> instances = new ArrayList<ConcertInstanceDataBean>();
+		try {
+			conn = getConnection();
+			pstmt = conn
+					.prepareStatement("select * from con_instance where userid = ?");
+			pstmt.setString(1, userid);
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				instance = new ConcertInstanceDataBean();
+				instance.setInstanceid(rs.getInt("instanceid"));
+				instance.setTimeNumber(rs.getInt("timenumber"));
+				instance.setSeatCount(rs.getInt("seatcount"));
+				instance.setConcertDate(rs.getDate("concertdate"));
+				instance.setConcertid(rs.getInt("concertid"));
+				instance.setaSeat(rs.getInt("aseat"));
+				instance.setbSeat(rs.getInt("bseat"));
+				instance.setcSeat(rs.getInt("cseat"));
+				instance.setdSeat(rs.getInt("dseat"));
+				instance.seteSeat(rs.getInt("eseat"));
+
+				instances.add(instance);
+			}
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		} finally {
+			ConnectionManager.getInstance().close(rs, pstmt, conn);
+		}
+		return instances;
+	}
+
 	public void updateInstance(ConcertInstanceDataBean tempConcert) {
 		// TODO Auto-generated method stub
 		Connection conn = null;

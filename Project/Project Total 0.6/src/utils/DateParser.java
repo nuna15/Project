@@ -48,6 +48,17 @@ public class DateParser {
 	}
 
 	public boolean dateCompare(Date one, Date two) {
+
+		Calendar cal1 = dateToCalendar(one);
+		Calendar cal2 = dateToCalendar(two);
+
+		if (cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR)) {
+			if (cal1.get(Calendar.MONTH) == cal2.get(Calendar.MONTH)) {
+				if (cal1.get(Calendar.DATE) == cal2.get(Calendar.DATE)) {
+					return true;
+				}
+			}
+		}
 		return false;
 	}
 }

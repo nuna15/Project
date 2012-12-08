@@ -74,6 +74,10 @@ public class AdminManageController extends HttpServlet {
 				RequestDispatcher view = request
 						.getRequestDispatcher(WPConstants.PAGE_URL_ADMIN_RESERVE);
 				view.forward(request, response);
+			} else if (action.equals("analysis")) {
+				RequestDispatcher view = request
+						.getRequestDispatcher(WPConstants.PAGE_URL_ADMIN_RESERVE);
+				view.forward(request, response);
 			}
 		}
 	}

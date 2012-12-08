@@ -31,19 +31,18 @@ public class ConcertDao {
 			conn = getConnection();
 
 			pstmt = conn
-					.prepareStatement("insert into concert(timenumber,allownumber, starttime,endtime,concertname,content,actor,signdate,imgurl, score, clickcount) values (?, ?,?,?,?,?,?,?,?,?,?)");
+					.prepareStatement("insert into concert(timenumber, starttime,endtime,concertname,content,actor,signdate,imgurl, score, clickcount) values (?, ?,?,?,?,?,?,?,?,?)");
 
 			pstmt.setInt(1, concert.getTimeNumber());
-			pstmt.setInt(2, concert.getAllowNumber());
-			pstmt.setDate(3, concert.getStartDate());
-			pstmt.setDate(4, concert.getEndDate());
-			pstmt.setString(5, concert.getConcertName());
-			pstmt.setString(6, concert.getContent());
-			pstmt.setString(7, concert.getActor());
-			pstmt.setDate(8, concert.getSignDate());
-			pstmt.setString(9, concert.getImgUrl());
-			pstmt.setInt(10, concert.getScore());
-			pstmt.setInt(11, concert.getClickCount());
+			pstmt.setDate(2, concert.getStartDate());
+			pstmt.setDate(3, concert.getEndDate());
+			pstmt.setString(4, concert.getConcertName());
+			pstmt.setString(5, concert.getContent());
+			pstmt.setString(6, concert.getActor());
+			pstmt.setDate(7, concert.getSignDate());
+			pstmt.setString(8, concert.getImgUrl());
+			pstmt.setInt(9, concert.getScore());
+			pstmt.setInt(10, concert.getClickCount());
 
 			pstmt.executeUpdate();
 		} catch (Exception ex) {
@@ -70,7 +69,6 @@ public class ConcertDao {
 				concert = new ConcertDataBean();
 				concert.setConcertId(rs.getInt("concertid"));
 				concert.setTimeNumber(rs.getInt("timenumber"));
-				concert.setAllowNumber(rs.getInt("allownumber"));
 				concert.setStartDate(rs.getDate("starttime"));
 				concert.setEndDate(rs.getDate("endtime"));
 				concert.setConcertName(rs.getString("concertname"));
@@ -106,7 +104,6 @@ public class ConcertDao {
 				concert = new ConcertDataBean();
 				concert.setConcertId(rs.getInt("concertid"));
 				concert.setTimeNumber(rs.getInt("timenumber"));
-				concert.setAllowNumber(rs.getInt("allownumber"));
 				concert.setStartDate(rs.getDate("starttime"));
 				concert.setEndDate(rs.getDate("endtime"));
 				concert.setConcertName(rs.getString("concertname"));
@@ -144,7 +141,6 @@ public class ConcertDao {
 				concert = new ConcertDataBean();
 				concert.setConcertId(rs.getInt("concertid"));
 				concert.setTimeNumber(rs.getInt("timenumber"));
-				concert.setAllowNumber(rs.getInt("allownumber"));
 				concert.setStartDate(rs.getDate("starttime"));
 				concert.setEndDate(rs.getDate("endtime"));
 				concert.setConcertName(rs.getString("concertname"));

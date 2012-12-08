@@ -116,6 +116,9 @@ public class ReservationManageController extends HttpServlet {
 				reservation.setReservationStatus(WPConstants.RESERVATION_OK);
 				reservation.setSignDate(new Date(System.currentTimeMillis()));
 				reservation.setInstanceid(tempConcert.getInstanceid());
+				reservation.setConcertDate(tempConcert.getConcertDate());
+				reservation.setSeatType(seat);
+
 				String cost = request.getParameter("ticketAmountConcert");
 
 				if (cost.equals("num1")) {

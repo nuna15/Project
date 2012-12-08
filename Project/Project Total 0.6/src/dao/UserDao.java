@@ -159,10 +159,12 @@ public class UserDao {
 
 	}
 
-	public boolean checkPassword(String id, String password) {
+	public boolean checkId(String id) {
 		try {
 			UserDataBean user = this.getMember(id);
-			return user.getPassword().equals(password);
+			if (user != null)
+				return false;
+			return true;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

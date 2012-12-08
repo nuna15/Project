@@ -5,7 +5,6 @@ import java.sql.Date;
 public class ConcertDataBean {
 	private int concertId;
 	private int timeNumber;
-	private int allowNumber;
 	private Date startTime;
 	private Date endTime;
 	private String concertName;
@@ -86,14 +85,6 @@ public class ConcertDataBean {
 
 	public void setTimeNumber(int timeNumber) {
 		this.timeNumber = timeNumber;
-	}
-
-	public int getAllowNumber() {
-		return allowNumber;
-	}
-
-	public void setAllowNumber(int allowNumber) {
-		this.allowNumber = allowNumber;
 	}
 
 	public Date getStartDate() {

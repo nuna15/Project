@@ -11,6 +11,24 @@ public class ReservationDataBean {
 	private String sheetNumber;
 	private Date signDate;
 	private int instanceid;
+	private Date concertDate;
+	private String seatType;
+
+	public String getSeatType() {
+		return seatType;
+	}
+
+	public void setSeatType(String seatType) {
+		this.seatType = seatType;
+	}
+
+	public Date getConcertDate() {
+		return concertDate;
+	}
+
+	public void setConcertDate(Date concertDate) {
+		this.concertDate = concertDate;
+	}
 
 	public int getInstanceid() {
 		return instanceid;

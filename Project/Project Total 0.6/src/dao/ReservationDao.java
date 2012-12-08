@@ -30,7 +30,7 @@ public class ReservationDao {
 		try {
 			conn = getConnection();
 			pstmt = conn
-					.prepareStatement("insert into reservation values (null,?,?,?,?,?,?,?)");
+					.prepareStatement("insert into reservation values (null,?,?,?,?,?,?,?,?,?)");
 			pstmt.setString(1, reservation.getUserid());
 			pstmt.setInt(2, reservation.getConcertid());
 			pstmt.setInt(3, reservation.getTimeNumber());
@@ -38,6 +38,8 @@ public class ReservationDao {
 			pstmt.setString(5, reservation.getSheetNumber());
 			pstmt.setDate(6, reservation.getSignDate());
 			pstmt.setInt(7, reservation.getInstanceid());
+			pstmt.setDate(8, reservation.getConcertDate());
+			pstmt.setString(9, reservation.getSeatType());
 
 			pstmt.executeUpdate();
 		} catch (Exception ex) {
@@ -49,6 +51,24 @@ public class ReservationDao {
 
 	public void deleteReservation(int reservationId) {
 		// 예매 취소
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+
+		try {
+			conn = getConnection();
+
+			pstmt = conn
+					.prepareStatement("update reservation set reservationstat=? where reservationid=?");
+			pstmt.setInt(1, 0);
+			pstmt.setInt(2, reservationId);
+
+			pstmt.executeUpdate();
+
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		} finally {
+			ConnectionManager.getInstance().close(pstmt, conn);
+		}
 	}
 
 	public ReservationDataBean getReservationInformation(int reservationId) {
@@ -76,6 +96,8 @@ public class ReservationDao {
 				reservation.setSheetNumber(rs.getString("sheetnumber"));
 				reservation.setSignDate(rs.getDate("signdate"));
 				reservation.setInstanceid(rs.getInt("instanceid"));
+				reservation.setConcertDate(rs.getDate("concertdate"));
+				reservation.setSeatType(rs.getString("seattype"));
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();
@@ -110,6 +132,9 @@ public class ReservationDao {
 				reservation.setSheetNumber(rs.getString("sheetnumber"));
 				reservation.setSignDate(rs.getDate("signdate"));
 				reservation.setInstanceid(rs.getInt("instanceid"));
+				reservation.setConcertDate(rs.getDate("concertdate"));
+				reservation.setSeatType(rs.getString("seattype"));
+
 				reservations.add(reservation);
 			}
 		} catch (Exception ex) {

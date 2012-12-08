@@ -116,7 +116,6 @@ public class ConcertManageController extends HttpServlet {
 					ConcertDataBean concert = new ConcertDataBean();
 
 					concert.setTimeNumber(0);
-					concert.setAllowNumber(0);
 					concert.setStartDate(startDate);
 					concert.setEndDate(finishDate);
 					concert.setConcertName(multi.getParameter("concertTitle"));
@@ -134,14 +133,8 @@ public class ConcertManageController extends HttpServlet {
 						concert.setImgUrl(concert.getImgUrl()
 								.replace("/", "\\"));
 						System.out.println(folderPath);
-						ConcertDao.getInstance().insertConcert(concert);
 
 						/* Log */
-						LogUpdater.getInstance().updateLog(
-								WPConstants.LOG_CONCERT_REGISTER,
-								null,
-								(String) request.getSession().getAttribute(
-										"userid"));
 
 						Calendar startCal = DateParser.getInstance()
 								.dateToCalendar(startDate);
@@ -151,6 +144,14 @@ public class ConcertManageController extends HttpServlet {
 						long diff = (finishCal.getTimeInMillis() - startCal
 								.getTimeInMillis()) / 1000;
 						long diffDay = diff / (60 * 60 * 24);
+
+						// Insert Dao
+						ConcertDao.getInstance().insertConcert(concert);
+						LogUpdater.getInstance().updateLog(
+								WPConstants.LOG_CONCERT_REGISTER,
+								null,
+								(String) request.getSession().getAttribute(
+										"userid"));
 						for (int i = 0; i <= diffDay; i++) {
 							ConcertInstanceDataBean instance = new ConcertInstanceDataBean();
 							ConcertDataBean con = ConcertDao.getInstance()
@@ -166,15 +167,12 @@ public class ConcertManageController extends HttpServlet {
 
 							ConcertInstanceDao.getInstance()
 									.insertConcertInstance(instance);
-
 							LogUpdater.getInstance().updateLog(
 									WPConstants.LOG_CONCERT_INSTANCE_REGISTER,
 									null,
 									(String) request.getSession().getAttribute(
 											"userid"));
 						}
-
-						// 공연 인스턴스 등록
 					}
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block

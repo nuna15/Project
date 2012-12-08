@@ -45,6 +45,8 @@ public class WPConstants {
 	public static final String LOG_RESERVATION_REGISTER = "Reservation Register";
 	public static final String LOG_REVIEW_REGISTER = "Review Register";
 	public static final String LOG_USER_REGISTER = "User Register";
+	public static final String LOG_USER_MODIFY = "User MODIFY";
+	public static final String LOG_USER_DELETERESERVATION = "User Delete Reservation";
 
 	public static enum EUserLevelItems {
 		normal("일반회원"), exellent("우수회원"), admin("관리자");

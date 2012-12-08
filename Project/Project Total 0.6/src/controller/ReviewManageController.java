@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import utils.LogUpdater;
+import utils.ReviewSortManager;
 
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
@@ -75,8 +76,9 @@ public class ReviewManageController extends HttpServlet {
 			HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		int reviewId = Integer.parseInt(request.getParameter("reviewid"));
+		int rating = Integer.parseInt(request.getParameter("rating"));
 		ReviewDataBean bean = ReviewDao.getInstance().getReview(reviewId);
-		bean.setScore(bean.getScore() + 1); // score는 파라메터로 넘어온것으로 수정
+		bean.setScore(bean.getScore() + rating); // score는 파라메터로 넘어온것으로 수정
 		bean.setScore(bean.getEvaluateNumber() + 1);
 		ReviewDao.getInstance().updateReview(bean);
 	}
@@ -95,6 +97,19 @@ public class ReviewManageController extends HttpServlet {
 		// TODO Auto-generated method stub
 		ArrayList<ReviewDataBean> reviews = ReviewDao.getInstance()
 				.getReviews();
+		ArrayList<ReviewDataBean> reviewRankingList = ReviewDao.getInstance()
+				.getRankReviews();
+		if (reviewRankingList != null) {
+			if (reviewRankingList.size() > 2) {
+				ReviewSortManager.getInstance().sortingArrayList(
+						reviewRankingList);
+
+				for (int i = 0; i < reviewRankingList.size(); i++) {
+					System.out.println(reviewRankingList.get(i).toString());
+				}
+				request.setAttribute("reviewRanking", reviewRankingList);
+			}
+		}
 		request.setAttribute("reviews", reviews);
 	}
 

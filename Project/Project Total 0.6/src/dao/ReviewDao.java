@@ -149,11 +149,14 @@ public class ReviewDao {
 		return reviews;
 	}
 
-	// public ArrayList<ReviewDataBean> getReviewRankList() {
-	// ArrayList<ReviewDataBean> reviews = this.getReviews();
-	//
-	// // for(int i=0; )
-	//
-	// }
+	public ArrayList<ReviewDataBean> getRankReviews() {
+		// TODO Auto-generated method stub
+		ArrayList<ReviewDataBean> reviews = this.getReviews();
+
+		for (int i = 0; i < reviews.size(); i++) {
+
+		}
+		return null;
+	}
 
 }
